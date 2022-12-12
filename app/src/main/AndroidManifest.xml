@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sleepkerapp">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_apk"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_apk_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SleepkerApp">
+        <activity android:name="com.example.sleepkerapp.Mood"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.example.sleepkerapp.Analysis"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Tracker"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.UserSettings"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Recording"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Clock"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Welcome"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.ForgotPass"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Assessment"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Signup"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.example.sleepkerapp.ForegroundService"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

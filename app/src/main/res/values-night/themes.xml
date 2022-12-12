@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SleepkerApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryVariant">@color/subtitle</item>
+        <item name="colorOnPrimary">@color/accent</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/boxbg</item>
+        <item name="colorSecondaryVariant">@color/button</item>
+        <item name="colorOnSecondary">@color/nude</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

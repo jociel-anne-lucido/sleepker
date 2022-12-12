@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Clock">
+
+    <View
+        android:id="@+id/bgtop1"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_alignEnd="@+id/greetingsub"
+        android:layout_marginEnd="-40dp"
+        android:background="@drawable/ic_top1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/card1"
+        android:layout_width="323dp"
+        android:layout_height="87dp"
+        android:layout_below="@+id/greetingsub"
+        android:layout_alignStart="@+id/greetings"
+        android:layout_alignEnd="@+id/profile"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="-2dp"
+        android:background="@drawable/rectangle"
+        app:backgroundTint="#9FC3C4" />
+
+    <TextView
+        android:id="@+id/greetingsub1"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_below="@+id/card1"
+        android:text="Your previous record"
+        android:layout_alignStart="@+id/card1"
+        android:layout_alignEnd="@+id/card1"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:textColor="@color/subtitle"
+        android:textSize="17sp"
+        android:textStyle="normal"></TextView>
+
+    <TextView
+        android:id="@+id/old_duration"
+        android:layout_width="97dp"
+        android:layout_height="76dp"
+        android:layout_alignStart="@+id/card2"
+        android:layout_alignTop="@+id/card2"
+        android:layout_alignEnd="@+id/card3"
+        android:layout_alignBottom="@+id/card2"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:text="@string/no_text"
+        android:textAlignment="center"
+        android:textColor="@color/accent"
+        android:textSize="24sp" />
+    <ImageView
+        android:id="@+id/card2"
+        android:layout_width="92dp"
+        android:layout_height="95dp"
+        android:layout_below="@+id/card1"
+        android:layout_alignStart="@+id/greetings"
+        android:layout_alignEnd="@+id/profile"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="228dp"
+        android:background="@drawable/rectangle"
+        app:backgroundTint="#E3EDF1" />
+
+    <ImageView
+        android:id="@+id/card3"
+        android:layout_width="207dp"
+        android:layout_height="93dp"
+        android:layout_below="@+id/card1"
+        android:layout_alignStart="@+id/greetings"
+        android:layout_alignEnd="@+id/digital_clock"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="-2dp"
+        android:background="@drawable/rectangle"
+        app:backgroundTint="#C8E2E3" />
+
+    <ImageView
+        android:id="@+id/card"
+        android:layout_width="144dp"
+        android:layout_height="93dp"
+        android:layout_below="@+id/card1"
+        android:layout_alignStart="@+id/card2"
+        android:layout_alignEnd="@+id/digital_clock"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="168dp"
+        android:background="@drawable/rectangle"
+        app:backgroundTint="#C8E2E3" />
+
+    <ImageView
+        android:id="@+id/card4"
+        android:layout_width="144dp"
+        android:layout_height="93dp"
+        android:layout_below="@+id/card1"
+        android:layout_alignStart="@+id/card2"
+        android:layout_alignEnd="@+id/digital_clock"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/rectangle"
+        app:backgroundTint="#C8E2E3" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        app:itemBackground="@color/navig"
+        app:itemTextColor="@color/white"
+        app:backgroundTint="@color/white"
+        app:itemIconTint="@color/white"
+        app:menu="@menu/menu_button"
+        android:layout_alignParentBottom="true" />
+
+    <DigitalClock
+        android:id="@+id/digital_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/card1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="9dp"
+        android:gravity="center"
+        android:textColor="@color/background"
+        android:textSize="25sp"
+        android:textStyle="bold"></DigitalClock>
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-29dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/profile"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:textColor="@color/heading"
+        android:textSize="38sp"
+        android:textStyle="normal"></TextView>
+
+    <TextView
+        android:id="@+id/greetings1"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/greetings"
+        android:layout_alignStart="@+id/greetings"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:textColor="@color/heading"
+        android:textSize="35sp"
+        android:textStyle="normal"></TextView>
+
+    <TextView
+        android:id="@+id/greetingsub"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_below="@+id/greetings1"
+        android:layout_alignStart="@+id/greetings1"
+        android:layout_alignEnd="@+id/card1"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="-5dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:textColor="@color/subtitle"
+        android:textSize="16sp"
+        android:textStyle="normal"></TextView>
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="204dp"
+        android:layout_height="22dp"
+        android:layout_below="@id/digital_clock"
+        android:layout_alignStart="@+id/card1"
+        android:layout_alignEnd="@+id/card1"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="-121dp"
+        android:layout_marginEnd="106dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:textColor="@color/white"
+        android:textSize="18sp"></TextView>
+
+    <ImageView
+        android:id="@+id/moon_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignStart="@+id/card1"
+        android:layout_alignEnd="@+id/card1"
+        android:layout_alignBottom="@+id/card1"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/moon"
+        android:padding="2dp"></ImageView>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="243dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/digital_clock"
+        android:layout_alignStart="@+id/card1"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="-92dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="normal"></TextView>
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/user_pics"
+        android:padding="2dp"></ImageView>
+
+
+</RelativeLayout>

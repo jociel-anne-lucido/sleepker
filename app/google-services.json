@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "496505989665",
+    "project_id": "sleepker-app",
+    "storage_bucket": "sleepker-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496505989665:android:65bfbb1384cfa2e5af5160",
+        "android_client_info": {
+          "package_name": "com.example.sleepkerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496505989665-8o80cdshie9s8ede7m2ltkov2pub5h5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4InYFV18O7CoI-nSB7UNm4EFxA-QEIOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496505989665-8o80cdshie9s8ede7m2ltkov2pub5h5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Sleepker App</string>
+
+    <!-- Questions for Assessment -->
+
+    <string name="first_ques">What time do you usually go to sleep at night?</string>
+    <string name="second_ques">How long does it take you to fall into a deep sleep?</string>
+    <string name="third_ques">How many nights a week do you have trouble sleeping?</string>
+    <string name="fourth_ques">How many hours did you sleep each night on average?</string>
+    <string name="fifth_ques">How would you rate your sleeping quality on average?</string>
+
+    <!-- Choices for Question 1 -->
+
+    <string name="first_choice">Between 8 PM to 9 PM</string>
+    <string name="second_choice">Between 10 PM to 11 PM</string>
+    <string name="third_choice">Between 11 PM and midnight</string>
+    <string name="fourth_choice">Depends if school nights or weekends</string>
+    <string name="fifth_choice">Depends on my mood</string>
+
+    <!-- Sub-heading Text -->
+
+    <string name="welcome_page">Sleepker app is designed to help you monitor your sleeping patterns.
+        Before we get started, please login or sign up to continue.</string>
+    <string name="login_page">To keep tracking your sleep, please login using your personal information.</string>
+    <string name="signup_page">Let\'s get you all set up so you can start exploring the app.</string>
+    <string name="forgotpass_page">Please enter your registered email address and we\'ll send you a link
+        to reset your password.</string>
+    <string name="assess_page">Now let\'s get to know you and your sleeping habits to validate your sign
+        up request.</string>
+    <string name="editprofile_page">Enter your new data in the provided field and press update to save your changes.</string>
+    <string name="mood_page">To help us determine your sleep quality, please select your wake up mood below.</string>
+
+    <string name="no_text">---</string>
+
+    <!-- Buttons -->
+
+    <string name="submit_btn">Submit</string>
+    <string name="next_btn">Next</string>
+    <string name="good_btn">Good</string>
+    <string name="bad_btn">Bad</string>
+    <string name="soso_btn">So-so</string>
+    <string name="relax_btn">Relaxing</string>
+    <string name="worst_btn">Worst</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+
+
+</resources>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    tools:context=".Analysis">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="Your Sleep Cycle"
+            android:textColor="@color/heading"
+            android:textSize="31sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/title_text"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="12 May 2021"
+            android:textColor="@color/subtitle"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/title_text"
+            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+        <ImageView
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="117dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle"
+            app:backgroundTint="#D9D9D9"
+            app:layout_constraintEnd_toStartOf="@+id/card2"
+            app:layout_constraintStart_toStartOf="@+id/title_text"
+            app:layout_constraintTop_toBottomOf="@+id/date_text" />
+
+        <ImageView
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@+id/card1"
+            android:background="@drawable/rectangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card1"
+            app:layout_constraintTop_toTopOf="@+id/card1" />
+
+        <ImageView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/card2"
+            app:layout_constraintStart_toStartOf="@+id/title_text"
+            app:layout_constraintTop_toBottomOf="@+id/card1" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/card3"
+            app:layout_constraintEnd_toEndOf="@+id/card3"
+            app:layout_constraintStart_toStartOf="@+id/card3"
+            app:layout_constraintTop_toTopOf="@+id/card3" />
+
+        <TextView
+            android:id="@+id/sleepdur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="Sleep Duration"
+            android:textColor="@color/heading"
+            app:layout_constraintEnd_toEndOf="@+id/card1"
+            app:layout_constraintStart_toStartOf="@+id/card1"
+            app:layout_constraintTop_toTopOf="@+id/card1" />
+
+        <TextView
+            android:id="@+id/new_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="@string/no_text"
+            android:textAlignment="center"
+            android:textColor="@color/accent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/card1"
+            app:layout_constraintStart_toStartOf="@+id/card1"
+            app:layout_constraintTop_toBottomOf="@+id/sleepdur" />
+
+        <TextView
+            android:id="@+id/lastdur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="Last Recorded"
+            android:textColor="@color/heading"
+            app:layout_constraintEnd_toEndOf="@+id/card1"
+            app:layout_constraintStart_toStartOf="@+id/card1"
+            app:layout_constraintTop_toBottomOf="@+id/new_duration" />
+
+        <TextView
+            android:id="@+id/old_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="@string/no_text"
+            android:textAlignment="center"
+            android:textColor="@color/accent"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/card1"
+            app:layout_constraintEnd_toEndOf="@+id/card1"
+            app:layout_constraintStart_toStartOf="@+id/card1"
+            app:layout_constraintTop_toBottomOf="@+id/lastdur" />
+
+        <TextView
+            android:id="@+id/sleepqual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="Sleep Quality"
+            android:textColor="@color/heading"
+            app:layout_constraintEnd_toEndOf="@+id/card2"
+            app:layout_constraintStart_toStartOf="@+id/card2"
+            app:layout_constraintTop_toTopOf="@+id/card1" />
+
+        <TextView
+            android:id="@+id/average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="@string/no_text"
+            android:textAlignment="center"
+            android:textColor="@color/accent"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@+id/card2"
+            app:layout_constraintEnd_toEndOf="@+id/card2"
+            app:layout_constraintStart_toStartOf="@+id/card2"
+            app:layout_constraintTop_toBottomOf="@+id/sleepqual" />
+
+        <TextView
+            android:id="@+id/sleepinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:text="Sleep Information"
+            android:textColor="@color/heading"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/card3"
+            app:layout_constraintTop_toBottomOf="@+id/card3" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/card3"
+            app:layout_constraintStart_toStartOf="@+id/card3"
+            app:layout_constraintTop_toBottomOf="@+id/sleepinfo"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/wokeup"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/sunrise" />
+
+            <TextView
+                android:id="@+id/wokeup_title"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@+id/wokeup"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="Woke Up Time"
+                android:textColor="@color/heading" />
+
+            <TextView
+                android:id="@+id/wokeupTime"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="42dp"
+                android:layout_toEndOf="@+id/wokeup"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="@string/no_text"
+                android:textAlignment="center"
+                android:textColor="@color/accent"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/sleep"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/wokeup"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/sleep_symbol" />
+
+            <TextView
+                android:id="@+id/sleep_title"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="84dp"
+                android:layout_toEndOf="@+id/sleep"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="Sleep Time"
+                android:textColor="@color/heading" />
+
+            <TextView
+                android:id="@+id/sleepTime"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="105dp"
+                android:layout_toEndOf="@+id/sleep"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="@string/no_text"
+                android:textAlignment="center"
+                android:textColor="@color/accent"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/sleepdrtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="23dp"
+                android:layout_toEndOf="@id/wokeup_title"
+                android:background="@drawable/wallclock" />
+
+            <TextView
+                android:id="@+id/sleepdur_title"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@+id/sleepdrtn"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="Total Duration"
+                android:textColor="@color/heading" />
+
+            <TextView
+                android:id="@+id/sleepdurTime"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="44dp"
+                android:layout_toEndOf="@+id/sleepdrtn"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="@string/no_text"
+                android:textAlignment="center"
+                android:textColor="@color/accent"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mood"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/wokeup"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="19dp"
+                android:layout_toEndOf="@id/sleep_title"
+                android:background="@drawable/happy" />
+
+            <TextView
+                android:id="@+id/mood_title"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="84dp"
+                android:layout_toEndOf="@+id/mood"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="Mood"
+                android:textColor="@color/heading" />
+
+            <TextView
+                android:id="@+id/moodText"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="105dp"
+                android:layout_toEndOf="@+id/mood"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="@string/no_text"
+                android:textAlignment="center"
+                android:textColor="@color/accent"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/white"
+        app:itemBackground="@color/accent"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu_button">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</RelativeLayout>
