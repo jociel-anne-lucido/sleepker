@@ -1,9 +1,12 @@
 package com.example.sleepkerapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,8 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,21 +30,28 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.UUID;
 
 public class UserSettings extends AppCompatActivity {
 
     private TextView nameviewer;
     private EditText new_name, new_email, new_pass;
     private ProgressBar progressBar;
+    ImageView profileImage;
 
     String name, email, pass, uid, oldName, oldEmail, oldPass;
 
     FirebaseAuth auth;
     FirebaseUser user;
+    StorageReference storageReference;
     DatabaseReference ref;
 
     SharedPreferences pref;
@@ -51,16 +64,26 @@ public class UserSettings extends AppCompatActivity {
         ImageView button_logout = findViewById(R.id.logout_button);
         ImageView button_back = findViewById(R.id.back_button);
         Button button_update = findViewById(R.id.update_button);
+        Button button_profile = findViewById(R.id.updateprofile_button);
         progressBar = findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.GONE);
 
         nameviewer = findViewById(R.id.nametxt);
+        profileImage = findViewById(R.id.imageView);
         new_name = findViewById(R.id.upd_name);
         new_email = findViewById(R.id.upd_email);
         new_pass = findViewById(R.id.upd_pass);
 
         auth = FirebaseAuth.getInstance();
         ref = FirebaseDatabase.getInstance().getReference().child("UserData");
+        storageReference = FirebaseStorage.getInstance().getReference();
+        StorageReference profileRef = storageReference.child("users/"+auth.getCurrentUser().getUid()+"/profile.jpg");
+        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(profileImage);
+            }
+        });
         user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
 
@@ -77,6 +100,46 @@ public class UserSettings extends AppCompatActivity {
         button_back.setOnClickListener(v -> startActivity(new Intent(UserSettings.this, Clock.class)));
 
         button_update.setOnClickListener(v -> UpdateData());
+        button_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //
+                Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(openGalleryIntent, 1000);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1000){
+            if(resultCode == Activity.RESULT_OK){
+                Uri imageUri = data.getData();
+                //profileImage.setImageURI(imageUri);
+                uploadImageToFirebase(imageUri);
+            }
+        }
+    }
+
+    private void uploadImageToFirebase(Uri imageUri) {
+        final StorageReference fileRef = storageReference.child("users/"+auth.getCurrentUser().getUid()+"/profile.jpg");
+        fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Picasso.get().load(uri).into(profileImage);
+                    }
+                });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(UserSettings.this, "Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void GetPrefData() {
@@ -199,6 +262,26 @@ public class UserSettings extends AppCompatActivity {
 
         } else if (pass.length() < 6) {
             new_pass.setError("Password should be at least 6 characters long.");
+            new_pass.requestFocus();
+            return false;
+
+        } else if (!pass.matches(".*[0-9].*")) {
+            new_pass.setError("Password should contain at least one digit.");
+            new_pass.requestFocus();
+            return false;
+
+        } else if (!pass.matches(".*[A-Z].*")) {
+            new_pass.setError("Password should contain at least one uppercase.");
+            new_pass.requestFocus();
+            return false;
+
+        } else if (!pass.matches(".*[a-z].*")) {
+            new_pass.setError("Password should contain at least one lowercase.");
+            new_pass.requestFocus();
+            return false;
+
+        } else if (!pass.matches(".*[#?!@_.$%^&*-].*")) {
+            new_pass.setError("Password should contain at least one character #?!@$%^&*-.");
             new_pass.requestFocus();
             return false;
 

@@ -26,7 +26,7 @@ public class Signup extends AppCompatActivity {
     private ImageView button_back;
     private ProgressBar progressBar;
 
-    String name, age, gender, email, password, uid;
+    String name, age, gender, email, password, uid, profile;
 
     FirebaseAuth auth;
     SharedPreferences pref;
@@ -66,10 +66,11 @@ public class Signup extends AppCompatActivity {
                     FirebaseUser user = auth.getCurrentUser();
                     uid = user.getUid();
                     DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("UserData").child(uid);
-
+                    String profile = " ";
+                    dbRef.setValue(profile);
                     // stores user attributes to db
 
-                    User data = new User(name, age, gender, email, password);
+                    User data = new User(name, age, gender, email, password, profile);
 
                     dbRef.setValue(data).addOnCompleteListener(task1 -> {
                         progressBar.setVisibility(View.GONE);
@@ -146,6 +147,22 @@ public class Signup extends AppCompatActivity {
             return false;
         } else if (password.length() < 6) {
             pass_txt.setError("Password should be at least 6 characters long.");
+            pass_txt.requestFocus();
+            return false;
+        } else if (!password.matches(".*[0-9].*")) {
+            pass_txt.setError("Password should contain at least one digit.");
+            pass_txt.requestFocus();
+            return false;
+        } else if (!password.matches(".*[A-Z].*")) {
+            pass_txt.setError("Password should contain at least one uppercase.");
+            pass_txt.requestFocus();
+            return false;
+        } else if (!password.matches(".*[a-z].*")) {
+            pass_txt.setError("Password should contain at least one lowercase.");
+            pass_txt.requestFocus();
+            return false;
+        } else if (!password.matches(".*[#?!@_.$%^&*-].*")) {
+            pass_txt.setError("Password should contain at least one character #?!@$%^&*-.");
             pass_txt.requestFocus();
             return false;
         } else {
