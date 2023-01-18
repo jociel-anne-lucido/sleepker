@@ -16,7 +16,7 @@ import java.util.Date;
 public class Clock extends AppCompatActivity {
     TextView textView, textSubheading, textViewA;
 
-    private ImageView button_profile;
+    private ImageView button_profile, moon_button, notes_button, music_button, record_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,16 @@ public class Clock extends AppCompatActivity {
         textViewA=findViewById(R.id.greetings1);
         textSubheading=findViewById(R.id.greetingsub);
         button_profile = findViewById(R.id.profile);
+        moon_button = findViewById(R.id.moon_button);
+        notes_button = findViewById(R.id.notes_card);
+        music_button = findViewById(R.id.music_card);
+        record_button = findViewById(R.id.record_card);
 
         button_profile.setOnClickListener(v -> startActivity(new Intent(Clock.this, UserSettings.class)));
-
+        moon_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Tracker.class)));
+        notes_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Todo.class)));
+        music_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Music.class)));
+        record_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, WeeklyReport.class)));
         ShowDate();
         ShowGreetings();
 

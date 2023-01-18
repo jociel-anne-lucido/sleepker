@@ -6,8 +6,20 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    android:padding="8dp"
     tools:context=".UserSettings">
+
+    <ImageView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="239dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/solid_rectangle"
+        app:backgroundTint="#DBE9E9" />
 
     <TextView
         android:id="@+id/subheading_profile"
@@ -57,38 +69,30 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/passView"
         app:layout_constraintTop_toBottomOf="@+id/upd_box8"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintVertical_bias="0.531" />
 
-    <Button
+    <ImageView
         android:id="@+id/updateprofile_button"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:background="@drawable/button"
-        android:fontFamily="@font/arial_nova_light"
-        android:text="Change Profile "
-        android:textAllCaps="false"
-        android:textColor="@color/heading"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/subheading_profile"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/subheading_profile"
-        app:layout_constraintTop_toBottomOf="@+id/nametxt"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/camera"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nametxt"
+        app:layout_constraintEnd_toEndOf="@+id/upd_name" />
 
     <TextView
         android:id="@+id/nameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
         android:fontFamily="@font/arial_mt_rounded"
         android:text="Name:"
-        android:layout_marginTop="10dp"
         android:textColor="@color/subtitle"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/settings_txt"
-        app:layout_constraintTop_toBottomOf="@+id/updateprofile_button" />
+        app:layout_constraintTop_toBottomOf="@+id/nametxt" />
 
     <EditText
         android:id="@+id/upd_name"
@@ -217,47 +221,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="120dp"
-        android:id="@+id/imageView1"
-        android:layout_height="120dp"
-        app:cardCornerRadius="250dp"
-        android:layout_marginTop="21dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/user_pics"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/subheading_profile"
+        app:layout_constraintHorizontal_bias="0.530"
+        app:layout_constraintStart_toStartOf="@+id/card3"
         app:layout_constraintTop_toBottomOf="@+id/subheading_profile"
-        app:cardBackgroundColor="@color/white">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            app:cardCornerRadius="250dp"
-            android:layout_gravity="center">
-
-            <ImageView
-                android:layout_width="120dp"
-                android:id="@+id/imageView"
-                android:layout_height="120dp"
-                android:src="@drawable/user_pics"
-                android:scaleType="centerCrop"/>
-
-        </androidx.cardview.widget.CardView>
-
-    </androidx.cardview.widget.CardView>
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton" />
 
     <TextView
         android:id="@+id/nametxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/arial_mt_rounded"
         android:text="Name"
+        android:textAlignment="center"
         android:textColor="@color/heading"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView1"
-        app:layout_constraintStart_toStartOf="@+id/imageView1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+        app:layout_constraintEnd_toEndOf="@+id/subheading_profile"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="@+id/subheading_profile"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ProgressBar
         android:id="@+id/progressBar2"

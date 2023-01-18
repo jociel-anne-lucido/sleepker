@@ -34,7 +34,15 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.example.sleepkerapp.Signup"
             android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Todo"
+            android:screenOrientation="portrait"/>
         <activity android:name="com.example.sleepkerapp.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.WeeklyReport"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.SleepData"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Music"
             android:screenOrientation="portrait"/>
         <activity android:name="com.example.sleepkerapp.MainActivity"
             android:screenOrientation="portrait">
@@ -44,9 +52,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <service android:name="com.example.sleepkerapp.ForegroundService"/>
-
+        <service android:name=".MyService"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

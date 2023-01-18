@@ -28,6 +28,7 @@ public class Mood extends AppCompatActivity {
         radioButton = findViewById(R.id.radioGroup);
         moodView = findViewById(R.id.moodView);
 
+
         // checks user input and displays mood pic
         radioButton.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton rb = findViewById(checkedId);

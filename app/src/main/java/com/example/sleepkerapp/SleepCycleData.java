@@ -2,20 +2,22 @@ package com.example.sleepkerapp;
 
 public class SleepCycleData {
 
-    private String lastRecorded, newRecorded, totalDur, moodQual, sleepTime, wakeTime;
+    private String lastRecorded, newRecorded, totalDur, moodQual, sleepTime, wakeTime, dateRecorded, sleepQual;
     private String pushId;
 
     public SleepCycleData() {
 
     }
 
-    public SleepCycleData(String lastRecorded, String newRecorded, String totalDur, String moodQual, String sleepTime, String wakeTime) {
+    public SleepCycleData(String lastRecorded, String newRecorded, String totalDur, String moodQual, String sleepTime, String wakeTime, String dateRecorded, String sleepQual) {
         this.lastRecorded = lastRecorded;
         this.newRecorded = newRecorded;
         this.totalDur = totalDur;
         this.moodQual = moodQual;
         this.sleepTime = sleepTime;
         this.wakeTime = wakeTime;
+        this.dateRecorded = dateRecorded;
+        this.sleepQual = sleepQual;
     }
 
     public String getLastRecorded() {
@@ -62,6 +64,22 @@ public class SleepCycleData {
 
     public void setWakeTime(String wakeTime) {
         this.wakeTime = wakeTime;
+    }
+
+    public String getDateRecorded() {
+        return dateRecorded;
+    }
+
+    public void setDateRecorded(String dateRecorded) {
+        this.dateRecorded = dateRecorded;
+    }
+
+    public String getSleepQual() {
+        return sleepQual;
+    }
+
+    public void setSleepQual(String sleepQual) {
+        this.sleepQual = sleepQual;
     }
 
     public String getPushId() {

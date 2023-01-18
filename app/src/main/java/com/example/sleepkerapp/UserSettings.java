@@ -38,7 +38,6 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.UUID;
 
 public class UserSettings extends AppCompatActivity {
 
@@ -64,7 +63,7 @@ public class UserSettings extends AppCompatActivity {
         ImageView button_logout = findViewById(R.id.logout_button);
         ImageView button_back = findViewById(R.id.back_button);
         Button button_update = findViewById(R.id.update_button);
-        Button button_profile = findViewById(R.id.updateprofile_button);
+        ImageView button_profile = findViewById(R.id.updateprofile_button);
         progressBar = findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.GONE);
 

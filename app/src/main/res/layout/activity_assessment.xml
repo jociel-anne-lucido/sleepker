@@ -127,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial_nova_light"
                 android:paddingStart="10dp"
+                android:textColor="@color/heading"
                 android:text="@string/first_choice"
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />
@@ -137,6 +138,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial_nova_light"
                 android:paddingStart="10dp"
+                android:textColor="@color/heading"
                 android:text="@string/second_choice"
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />
@@ -147,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial_nova_light"
                 android:paddingStart="10dp"
+                android:textColor="@color/heading"
                 android:text="@string/third_choice"
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />
@@ -157,6 +160,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial_nova_light"
                 android:paddingStart="10dp"
+                android:textColor="@color/heading"
                 android:text="@string/fourth_choice"
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />
@@ -167,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial_nova_light"
                 android:paddingStart="10dp"
+                android:textColor="@color/heading"
                 android:text="@string/fifth_choice"
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />

@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -14,6 +17,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -21,12 +25,18 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
 
-    private EditText name_txt, age_txt, gender_txt, email_txt, pass_txt;
+    private EditText name_txt, age_txt, email_txt, pass_txt;
     private Button button_next, button_login;
     private ImageView button_back;
     private ProgressBar progressBar;
+    Gender genders;
+    TextInputLayout textInputLayout;
+    AutoCompleteTextView autoCompleteTextView;
+    ArrayAdapter<String> adapterItems;
 
-    String name, age, gender, email, password, uid, profile;
+
+    String [] planets = {"Female", "Male", "None"};
+    String name, age, gender, email, password, uid, hello;
 
     FirebaseAuth auth;
     SharedPreferences pref;
@@ -39,21 +49,40 @@ public class Signup extends AppCompatActivity {
 
         name_txt = findViewById(R.id.name_input);
         age_txt = findViewById(R.id.age_input);
-        gender_txt = findViewById(R.id.gender_input);
         email_txt = findViewById(R.id.email_input);
         pass_txt = findViewById(R.id.pass_input);
         button_next = findViewById(R.id.next_button);
         button_login = findViewById(R.id.login_button);
         button_back = findViewById(R.id.back);
+        textInputLayout = findViewById(R.id.textInputLayout2);
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
+        autoCompleteTextView = findViewById(R.id.complete);
+
 
         auth = FirebaseAuth.getInstance();
         pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         editor = pref.edit();
 
+        genders = new Gender();
+        adapterItems = new ArrayAdapter<String>(this,R.layout.list_item, planets);
+        autoCompleteTextView.setAdapter(adapterItems);
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                gender = adapterView.getItemAtPosition(position).toString();
+                Toast.makeText(Signup.this, "gender " + gender, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         button_next.setOnClickListener(v -> {
-            if (!CheckName() | !CheckAge() | !CheckGender() | !CheckEmail() | !CheckPass()) {
+
+            if (gender.isEmpty()) {
+                return;
+            }
+
+            if (!CheckName() | !CheckAge() | !CheckEmail() | !CheckPass()) {
                 return;
             }
 
@@ -66,11 +95,11 @@ public class Signup extends AppCompatActivity {
                     FirebaseUser user = auth.getCurrentUser();
                     uid = user.getUid();
                     DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("UserData").child(uid);
-                    String profile = " ";
-                    dbRef.setValue(profile);
+                    genders.setPlanets(gender);
+                    dbRef.setValue(genders);
                     // stores user attributes to db
 
-                    User data = new User(name, age, gender, email, password, profile);
+                    User data = new User(name, age, gender, email, password);
 
                     dbRef.setValue(data).addOnCompleteListener(task1 -> {
                         progressBar.setVisibility(View.GONE);
@@ -114,15 +143,6 @@ public class Signup extends AppCompatActivity {
         } else { return true; }
     }
 
-    private boolean CheckGender() {
-        gender = gender_txt.getText().toString().trim();
-        if (gender.isEmpty()) {
-            gender_txt.setError("Enter gender.");
-            gender_txt.requestFocus();
-            return false;
-        } else { return true; }
-    }
-
     private boolean CheckEmail() {
         email = email_txt.getText().toString().trim();
         if (email.isEmpty()) {
@@ -142,27 +162,27 @@ public class Signup extends AppCompatActivity {
     private boolean CheckPass() {
         password = pass_txt.getText().toString().trim();
         if (password.isEmpty()) {
-            pass_txt.setError("Enter password.");
+            pass_txt.setError("Enter password.", null);
             pass_txt.requestFocus();
             return false;
         } else if (password.length() < 6) {
-            pass_txt.setError("Password should be at least 6 characters long.");
+            pass_txt.setError("Password should be at least 6 characters long.", null);
             pass_txt.requestFocus();
             return false;
         } else if (!password.matches(".*[0-9].*")) {
-            pass_txt.setError("Password should contain at least one digit.");
+            pass_txt.setError("Password should contain at least one digit.", null);
             pass_txt.requestFocus();
             return false;
         } else if (!password.matches(".*[A-Z].*")) {
-            pass_txt.setError("Password should contain at least one uppercase.");
+            pass_txt.setError("Password should contain at least one uppercase.", null);
             pass_txt.requestFocus();
             return false;
         } else if (!password.matches(".*[a-z].*")) {
-            pass_txt.setError("Password should contain at least one lowercase.");
+            pass_txt.setError("Password should contain at least one lowercase.", null);
             pass_txt.requestFocus();
             return false;
         } else if (!password.matches(".*[#?!@_.$%^&*-].*")) {
-            pass_txt.setError("Password should contain at least one character #?!@$%^&*-.");
+            pass_txt.setError("Password should contain at least one character #?!@$%^&*-.", null);
             pass_txt.requestFocus();
             return false;
         } else {
@@ -182,5 +202,7 @@ public class Signup extends AppCompatActivity {
             startActivity(new Intent(Signup.this, Clock.class));
         }
     }
+
+
 
 }

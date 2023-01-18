@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
     android:background="@color/background"
     tools:context=".LoginActivity">
 
     <FrameLayout
         android:id="@+id/sheet"
         android:layout_width="match_parent"
-        android:layout_height="255dp"
+        android:layout_height="198dp"
         app:layout_behavior = "com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:background="@drawable/box_bg">
 
@@ -29,11 +28,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="27dp"
             android:fontFamily="@font/arial_mt_rounded"
             android:text="Welcome"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="23sp"
             android:textStyle="bold"/>
 
         <TextView
@@ -41,12 +40,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/arial_nova_light"
             android:text="@string/welcome_page"
             android:textColor="@color/heading"
-            android:textSize="16sp" />
+            android:textSize="15sp" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -58,7 +57,7 @@
                 android:layout_width="150dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="26dp"
-                android:layout_marginTop="169dp"
+                android:layout_marginTop="132dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/arial_mt_rounded"
@@ -72,7 +71,7 @@
                 android:id="@+id/sign_button"
                 android:layout_width="150dp"
                 android:layout_height="45dp"
-                android:layout_marginTop="169dp"
+                android:layout_marginTop="132dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="30dp"
                 android:layout_toEndOf="@+id/login_button"
@@ -94,7 +93,7 @@
         <View
             android:id="@+id/bg_top"
             android:layout_width="0dp"
-            android:layout_height="106dp"
+            android:layout_height="126dp"
             android:background="@drawable/ic_top"
             android:elevation="2dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +103,7 @@
         <View
             android:id="@+id/bgtop1"
             android:layout_width="0dp"
-            android:layout_height="160dp"
+            android:layout_height="180dp"
             android:background="@drawable/ic_top1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,8 +114,9 @@
             android:id="@+id/logo"
             android:layout_width="170dp"
             android:layout_height="160dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="75dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bg_top"
             app:srcCompat="@drawable/logo_blue" />
@@ -137,9 +137,9 @@
             android:id="@+id/logosubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/arial_nova_light"
             android:text="your sleeping companion"
-            android:layout_marginTop="3dp"
             android:textColor="@color/subtitle"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

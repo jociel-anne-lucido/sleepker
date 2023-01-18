@@ -1,13 +1,35 @@
 package com.example.sleepkerapp;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.preference.PreferenceManager;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextClock;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.io.IOException;
 
 public class Recording extends AppCompatActivity {
 
@@ -15,6 +37,7 @@ public class Recording extends AppCompatActivity {
     private Chronometer timer;
     private long currentTime, timeInterval;
     private TextClock clock;
+    Switch aSwitch;
 
     String wakeTime, totalDur;
 
@@ -26,6 +49,18 @@ public class Recording extends AppCompatActivity {
         stop_tracker = findViewById(R.id.stop_button);
         timer = findViewById(R.id.chronometer_txt);
         clock = findViewById(R.id.textClock);
+        aSwitch=findViewById(R.id.switch_btn);
+        Intent intentS = new Intent(this, MyService.class);
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (aSwitch.isChecked()){
+                    startService(intentS);
+                }else{
+                    stopService(intentS);
+                }
+            }
+        });
 
         // for notif
         Intent intent1 = new Intent(this, ForegroundService.class);
@@ -35,6 +70,7 @@ public class Recording extends AppCompatActivity {
         stop_tracker.setOnClickListener(v -> {
             timer.stop();
             stopService(intent1);
+            stopService(intentS);
 
             // from tracker class
             Intent intent = getIntent();
