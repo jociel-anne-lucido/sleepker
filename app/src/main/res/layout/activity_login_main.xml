@@ -142,8 +142,9 @@
             android:layout_marginTop="3dp"
             android:fontFamily="@font/arial_nova_light"
             android:text="your sleeping companion"
+            android:textStyle="italic"
             android:textColor="@color/subtitle"
-            android:textSize="18sp"
+            android:textSize="19sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logotitle" />

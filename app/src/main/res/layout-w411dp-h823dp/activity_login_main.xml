@@ -141,6 +141,7 @@
             android:fontFamily="@font/arial_nova_light"
             android:text="your sleeping companion"
             android:layout_marginTop="3dp"
+            android:textStyle="italic"
             android:textColor="@color/subtitle"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

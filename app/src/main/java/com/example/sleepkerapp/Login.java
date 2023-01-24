@@ -31,7 +31,6 @@ public class Login extends AppCompatActivity {
     private ProgressBar progressBar;
     DatabaseReference userRef;
     private int counter = 3;
-    FirebaseAuth auth;
 
     String email, password;
 
