@@ -89,7 +89,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="1707dp">
 
         <View
             android:id="@+id/bg_top"
@@ -113,11 +113,11 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="190dp"
-            android:layout_height="180dp"
-            android:layout_marginTop="121dp"
+            android:layout_width="405dp"
+            android:layout_height="380dp"
+            android:layout_marginTop="256dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintHorizontal_bias="0.517"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bg_top"
             app:srcCompat="@drawable/logo_blue" />
@@ -129,7 +129,7 @@
             android:fontFamily="@font/arial_mt_rounded"
             android:text="SLEEPKER"
             android:textColor="@color/heading"
-            android:textSize="34sp"
+            android:textSize="54sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo" />
@@ -138,12 +138,12 @@
             android:id="@+id/logosubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/arial_nova_light"
             android:text="your sleeping companion"
-            android:textStyle="italic"
-            android:layout_marginTop="3dp"
             android:textColor="@color/subtitle"
-            android:textSize="19sp"
+            android:textSize="29sp"
+            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logotitle" />
