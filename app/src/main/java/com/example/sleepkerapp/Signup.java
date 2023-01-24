@@ -45,7 +45,7 @@ public class Signup extends AppCompatActivity {
     CheckBox checkBox;
 
 
-    String [] planets = {"Female", "Male", "None"};
+    String [] planets = {"Female", "Male", "Prefer not to say"};
     String name, age, gender, email, password, uid, passwords, gend;
 
     FirebaseAuth auth;
@@ -119,7 +119,6 @@ public class Signup extends AppCompatActivity {
 
         button_next.setOnClickListener(v -> {
 
-            CheckBox();
             if (!CheckName() | !CheckAge() | !CheckGender() | !CheckBox() | !CheckEmail() | !CheckPass()) {
                 return;
             }
