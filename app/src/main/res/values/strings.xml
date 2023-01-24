@@ -19,14 +19,11 @@
 
     <!-- Sub-heading Text -->
 
-    <string name="welcome_page">Sleepker app is designed to help you monitor your sleeping patterns.
-        Before we get started, please login or sign up to continue.</string>
+    <string name="welcome_page">Sleepker app is designed to help you monitor your sleeping patterns. Before we get started, please login or sign up to continue.</string>
     <string name="login_page">To keep tracking your sleep, please login using your personal information.</string>
     <string name="signup_page">Let\'s get you all set up so you can start exploring the app.</string>
-    <string name="forgotpass_page">Please enter your registered email address and we\'ll send you a link
-        to reset your password.</string>
-    <string name="assess_page">Now let\'s get to know you and your sleeping habits to validate your sign
-        up request.</string>
+    <string name="forgotpass_page">Please enter your registered email address and we\'ll send you a link to reset your password.</string>
+    <string name="assess_page">Now let\'s get to know you and your sleeping habits to validate your signup request.</string>
     <string name="editprofile_page">Enter your new data in the provided field and press update to save your changes.</string>
     <string name="mood_page">To help us determine your sleep quality, please select your wake up mood below.</string>
 
@@ -46,6 +43,54 @@
 
     <string name="app_name1">Dropdown Menu</string>
     <string name="select">Select Item</string>
+
+    <string name="music">Listen to these 1-minute nature and comfort audios to relax and calm your body.</string>
+    <string name="todo">Before going to sleep, right down a list of things that have been swirling around your head today.</string>
+    <!-- Terms -->
+
+    <string name="intro">These Terms of Use constitute a legal agreement (the “agreement”) between you and Sleepker, a service provided by Letalu.co. (“us”, “we”) for the use of the Sleepker mobile app (hereafter referred to as “the app” or “Sleepker”), the computer systems and files used by the application, and all related services, features and content provided by Sleepker within the app, on the website or social media channels.</string>
+    <string name="terms">Please read this agreement carefully. By using Sleepker’s services, you acknowledge your acceptance of and agreement to the terms in this agreement. If you do not agree to any of the terms in this agreement, please do not use the app.</string>
+    <string name="terms1">We may make modifications to this agreement occasionally. Continued use of the app after the effective date of the updated version will indicate your acceptance of the new agreement.</string>
+
+    <string name="medical">Sleepker is not a medical device or intended to replace professional medical advice and/or diagnosis. Sleepker is not intended to diagnose or treat sleep disorders or medical conditions. Please consult with a licensed physician before making any decisions or taking any actions that may affect your health, safety and wellbeing.</string>
+    <string name="medical1">Do not disregard professional advice because of anything you have seen, heard, or read in the Sleepker app, website or social media channels. Always consult with a healthcare professional if you have any questions or concerns about your sleep or general health.</string>
+
+    <string name="use">Your Use of The App, Website and Other Communication Channels</string>
+    <string name="use1">Any information submitted by you through the app, or sleep data recorded whilst using the app is governed by Sleepker’s Privacy Policy. You are responsible for all your activity within the app. If you submit feedback via the app or directly via the support email channels, you are responsible for these communications.</string>
+    <string name="use2">We collect certain information when you use our application. Your use of these channels is not to be considered private. Information as to what this data includes, why it is collected and how it is handled by us and others can be found in our Privacy Policy.</string>
+
+    <string name="bullet"> \u2022 You agree that if you do any of the following, you are in breach of this agreement:</string>
+    <string name="bullet1"> \u2022 Sell, rent, lease, loan, sublicense, distribute or transfer the rights to the app or associated content;</string>
+    <string name="bullet2"> \u2022 Modify, reverse engineer or disassemble the app;</string>
+    <string name="bullet3"> \u2022 Copy, adapt, modify, translate the app without our consent;</string>
+    <string name="bullet4"> \u2022 Permit others to use the app in a manner that is in breach of the terms of this agreement;</string>
+    <string name="bullet5"> \u2022 Disable any measures in the app that are designed for protection of intellectual property;</string>
+    <string name="bullet6"> \u2022 Attempt to navigate around measures adopted to control access to content protected by copyright;</string>
+    <string name="bullet7"> \u2022 To compile data in a way that is usable by a competitor product/service;</string>
+    <string name="bullet8"> \u2022 Any such use shall immediately terminate your license to use the app.</string>
+
+    <string name="equip"> Full use of Sleepker’s service requires the use of a mobile device and adequate software/hardware specifications. The maintenance and security of your device may impact upon the performance of Sleepker. It is your responsibility to check your equipment’s suitability to deliver the app’s features.</string>
+
+    <string name="ip"> All rights, including any trademarks, service marks, trade names and copyrighted content (collectively “Intellectual Property”) presented within the app are the property of Letalu.co. We allow you a license to access Sleepker for personal and non-commercial use in accordance with the terms of this agreement.</string>
+    <string name="ip1"> Any rights that are not permitted within this agreement are reserved by Letalu.co. If you wish to use any features of Sleepker’s app for non-personal purposes, including but not limited to software, name, logo, domain name, unique terminologies or any feature associated with the Sleepker brand, you must obtain permission from the company. You can request this by contacting sleepkerapp@gmail.com</string>
+
+    <string name="copyright"> If you believe that any content within the app infringes your copyright, you may request it be removed for the app by providing the following information:</string>
+    <string name="cp1"> \u2022 Identification of the copyrighted material you believe to be infringed. This requires a description of the material and its location.</string>
+    <string name="cp2"> \u2022 Identification of the material you believe to be infringing and its location. Provide a description and a URL or any information that can help us locate the material.</string>
+    <string name="cp3"> \u2022 Your details including a name, address, telephone number and email address if available.</string>
+    <string name="cp4"> \u2022 A statement that you have reasonable certainty that the use of such material was not authorized by the copyright owner.</string>
+    <string name="cp5"> \u2022 A statement that the information you have supplied is accurate indicating that you are the copyright owner or authorized to act on behalf of the copyright owner.</string>
+    <string name="cp6"> \u2022 A signature or the copyright owner or an authorized representative.</string>
+
+    <string name="ques"> If you have any questions or comments about anything within this Terms of Use agreement please contact us via sleepkerapp@gmail.com</string>
+
+    <string name="screen1">Stick to a sleep schedule</string>
+    <string name="screen2">Pay attention to what you eat and drink</string>
+    <string name="screen3">Engage in regular physical activity.</string>
+    <string name="screen1desc">Maintain a regular sleep pattern everyday. Stick to your sleep schedule. On going lack of sleep increases risks of health problems. Therefor, despite having busy schedule, you will still have an enough high-quality sleep every week to improve your body, memory, mood, and performance.</string>
+    <string name="screen2desc">Avoid or lower your large meals, alcohol and caffeine intake at night. According to researchers, people who used nicotine and alcohol within  hours of going to bed felt the largest impact on their sleep cycle, affecting their quantity and quality of sleep. So, adjust to a healthier lifestyle.  </string>
+    <string name="screen3desc">Regular physical activity can promote better sleep. It helps to lessen sleep complaints and avoid insomia. Meditation and other relaxing techniques can also improve better sleep quality and regulate the sleep-wake cycle.</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

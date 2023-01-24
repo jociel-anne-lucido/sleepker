@@ -129,7 +129,7 @@
                 android:paddingEnd="8dp"
                 android:text="Good"
                 android:textColor="@color/heading"
-                android:textSize="20dp"
+                android:textSize="19dp"
                 android:textStyle="bold" />
 
             <RadioButton
@@ -142,7 +142,7 @@
                 android:paddingEnd="8dp"
                 android:text="Relaxing"
                 android:textColor="@color/heading"
-                android:textSize="20dp"
+                android:textSize="19dp"
                 android:textStyle="bold" />
 
             <RadioButton
@@ -156,7 +156,7 @@
                 android:paddingEnd="8dp"
                 android:text="So-so"
                 android:textColor="@color/heading"
-                android:textSize="20dp"
+                android:textSize="19dp"
                 android:textStyle="bold" />
 
             <RadioButton
@@ -170,7 +170,7 @@
                 android:paddingEnd="8dp"
                 android:text="Bad"
                 android:textColor="@color/heading"
-                android:textSize="20dp"
+                android:textSize="19dp"
                 android:textStyle="bold" />
 
             <RadioButton
@@ -184,7 +184,7 @@
                 android:paddingEnd="8dp"
                 android:text="Worst"
                 android:textColor="@color/heading"
-                android:textSize="20dp"
+                android:textSize="19dp"
                 android:textStyle="bold" />
 
         </RadioGroup>

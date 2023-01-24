@@ -50,8 +50,9 @@
                 android:layout_width="220dp"
                 android:layout_height="70dp"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="128dp"
+                android:layout_marginTop="118dp"
                 android:background="@drawable/rectangle"
+                app:backgroundTint="#E3EDF1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -76,7 +77,7 @@
                 android:layout_below="@id/time_1"
                 android:text="25min"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/white"
+                android:textColor="@color/subtitle"
                 android:textSize="16sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@+id/time1Text"
@@ -115,7 +116,7 @@
                 android:layout_below="@id/time_2"
                 android:text="1hr"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/white"
+                android:textColor="@color/subtitle"
                 android:textSize="16sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@+id/time2Text"
@@ -131,6 +132,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/rectangle"
+                app:backgroundTint="#E3EDF1"
                 app:layout_constraintStart_toStartOf="@+id/time_2"
                 app:layout_constraintTop_toBottomOf="@+id/time_2" />
 
@@ -153,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:text="1hr30min"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/white"
+                android:textColor="@color/subtitle"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@+id/time3Text"
@@ -192,7 +194,7 @@
                 android:layout_below="@id/time_4"
                 android:text="2hr"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/white"
+                android:textColor="@color/subtitle"
                 android:textSize="16sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@+id/time4Text"
@@ -208,6 +210,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/rectangle"
+                app:backgroundTint="#E3EDF1"
                 app:layout_constraintStart_toStartOf="@+id/time_4"
                 app:layout_constraintTop_toBottomOf="@+id/time_4" />
 
@@ -233,7 +236,7 @@
                 android:layout_alignRight="@id/time_5"
                 android:text="2hr30min"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/white"
+                android:textColor="@color/subtitle"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@+id/time5Text"
@@ -241,37 +244,6 @@
                 app:layout_constraintStart_toEndOf="@+id/time5Text"
                 app:layout_constraintTop_toTopOf="@+id/time5Text" />
 
-            <Button
-                android:id="@+id/play_button1"
-                android:layout_width="150dp"
-                android:layout_height="45dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/rectangle1"
-                android:text="Play1"
-                android:textAllCaps="false"
-                android:textColor="@color/heading"
-                android:textSize="18sp"
-                app:backgroundTint="@color/buttons"
-                app:layout_constraintEnd_toEndOf="@+id/start_button"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/start_button"
-                app:layout_constraintTop_toBottomOf="@+id/time_4" />
-
-            <Button
-                android:id="@+id/play_button"
-                android:layout_width="150dp"
-                android:layout_height="45dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/rectangle1"
-                android:text="Play Sleep Tracking"
-                android:textAllCaps="false"
-                android:textColor="@color/heading"
-                android:textSize="18sp"
-                app:backgroundTint="@color/buttons"
-                app:layout_constraintEnd_toEndOf="@+id/start_button"
-                app:layout_constraintStart_toStartOf="@+id/start_button"
-                app:layout_constraintTop_toBottomOf="@+id/start_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

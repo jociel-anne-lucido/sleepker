@@ -44,6 +44,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.example.sleepkerapp.Music"
             android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.Statistic"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.sleepkerapp.NavigationActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name="com.example.sleepkerapp.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>

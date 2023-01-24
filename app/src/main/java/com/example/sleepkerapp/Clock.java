@@ -1,22 +1,37 @@
 package com.example.sleepkerapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Clock extends AppCompatActivity {
     TextView textView, textSubheading, textViewA;
+    FirebaseAuth auth;
+    FirebaseUser user;
+    StorageReference storageReference;
+    DatabaseReference ref;
 
-    private ImageView button_profile, moon_button, notes_button, music_button, record_button;
+    private ImageView button_profile, moon_button, notes_button, music_button, record_button, sleep_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +46,17 @@ public class Clock extends AppCompatActivity {
         notes_button = findViewById(R.id.notes_card);
         music_button = findViewById(R.id.music_card);
         record_button = findViewById(R.id.record_card);
+        sleep_button = findViewById(R.id.sleep_card);
 
         button_profile.setOnClickListener(v -> startActivity(new Intent(Clock.this, UserSettings.class)));
         moon_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Tracker.class)));
         notes_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Todo.class)));
         music_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Music.class)));
         record_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, WeeklyReport.class)));
+        sleep_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, NavigationActivity.class)));
         ShowDate();
         ShowGreetings();
+
 
         BottomNavigationView bottomNavigationView= (BottomNavigationView)findViewById(R.id.bottom_nav);
         bottomNavigationView.setSelectedItemId(R.id.home);

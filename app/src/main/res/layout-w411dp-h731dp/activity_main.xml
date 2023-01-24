@@ -74,6 +74,7 @@
         android:text="your sleeping companion"
         android:textColor="@color/subtitle"
         android:textSize="19sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"

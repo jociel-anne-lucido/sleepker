@@ -89,7 +89,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.nature));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -114,7 +114,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.piano));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -137,7 +137,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.ocean));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -160,7 +160,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.rain));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -183,7 +183,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.musicbox));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -206,7 +206,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.city_sound));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -229,7 +229,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.fireplace));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -252,7 +252,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.night));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {
@@ -275,7 +275,7 @@ public class Music extends AppCompatActivity {
             } else {
                 try {
                     mediaPlayer.reset();
-                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.example1));
+                    mediaPlayer.setDataSource(getApplicationContext(), raw2Uri(R.raw.soothing));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {

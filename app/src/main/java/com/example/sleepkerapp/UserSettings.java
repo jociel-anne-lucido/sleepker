@@ -1,6 +1,8 @@
 package com.example.sleepkerapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,7 +49,7 @@ public class UserSettings extends AppCompatActivity {
     private ProgressBar progressBar;
     ImageView profileImage;
 
-    String name, email, pass, uid, oldName, oldEmail, oldPass;
+    String name, email, pass, uid, oldName, oldEmail, oldPass, curpass;
 
     FirebaseAuth auth;
     FirebaseUser user;

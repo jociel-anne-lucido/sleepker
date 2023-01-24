@@ -47,6 +47,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 intent.putExtra("totalDur", list.get(position).getTotalDur());
                 intent.putExtra("sleepTime", list.get(position).getSleepTime());
                 intent.putExtra("moodQual", list.get(position).getMoodQual());
+                intent.putExtra("sleepQual", list.get(position).getSleepQual());
                 context.startActivity(intent);
             }
         });

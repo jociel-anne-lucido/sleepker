@@ -4,7 +4,7 @@
     <color name="heading">#364B5B</color>
     <color name="subtitle">#55737D</color>
     <color name="accent">#55737D</color>
-    <color name="nude">#C9ADA7</color>
+    <color name="nude">#55737D</color>
     <color name="boxbg">#9FC3C4</color>
     <color name="boxprev">#9FC3C4</color>
     <color name="button">#55737D</color>
@@ -12,7 +12,7 @@
     <color name="white">#F2F5F4</color>
     <color name="whitesmoke">#A9A9A9</color>
     <color name="buttons">#C8E2E3</color>
-    <color name="navig">#6EA5A6</color>
+    <color name="navig">#629D9E</color>
     <color name="edit">#E3EDF1</color>
-    <color name= "outline" tools:override= "true">#4A4E69</color>
+    <color name= "outline" tools:override= "true">#364B5B</color>
 </resources>

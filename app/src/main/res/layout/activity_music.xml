@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/card3"
         android:layout_width="414dp"
-        android:layout_height="190dp"
+        android:layout_height="200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/arial_mt_rounded"
         android:text="Music"
@@ -40,14 +40,14 @@
     <TextView
         android:id="@+id/subheading_txt"
         android:layout_width="351dp"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/arial_nova_light"
-        android:text="@string/signup_page"
+        android:text="@string/music"
         android:textColor="@color/subtitle"
-        android:textSize="16sp"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:layout_width="24dp"
         android:layout_height="25dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="28dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -94,36 +94,36 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="18dp"
                     android:background="@drawable/flower_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music1"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="18dp"
                     android:background="@drawable/piano_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music2"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/wave_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
@@ -141,7 +141,7 @@
                     android:id="@+id/music_txt4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="39dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/arial_nova_light"
@@ -189,42 +189,42 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="146dp"
+                android:layout_marginTop="156dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginEnd="-3dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music3"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="18dp"
                     android:background="@drawable/rain_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music4"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="18dp"
                     android:background="@drawable/box_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music5"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/city_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
@@ -242,7 +242,7 @@
                     android:id="@+id/music_txt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="29dp"
+                    android:layout_marginStart="25dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/arial_nova_light"
@@ -291,42 +291,42 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="292dp"
+                android:layout_marginTop="302dp"
                 android:layout_marginEnd="-4dp"
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music6"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="18dp"
                     android:background="@drawable/fire_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music7"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="18dp"
                     android:background="@drawable/night_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music8"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/soothing_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
@@ -343,7 +343,7 @@
                     android:id="@+id/music_txt7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginStart="21dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/arial_nova_light"

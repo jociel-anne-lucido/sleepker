@@ -1,27 +1,36 @@
 package com.example.sleepkerapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 
 public class Signup extends AppCompatActivity {
 
@@ -33,10 +42,11 @@ public class Signup extends AppCompatActivity {
     TextInputLayout textInputLayout;
     AutoCompleteTextView autoCompleteTextView;
     ArrayAdapter<String> adapterItems;
+    CheckBox checkBox;
 
 
     String [] planets = {"Female", "Male", "None"};
-    String name, age, gender, email, password, uid, hello;
+    String name, age, gender, email, password, uid, passwords, gend;
 
     FirebaseAuth auth;
     SharedPreferences pref;
@@ -56,10 +66,42 @@ public class Signup extends AppCompatActivity {
         button_back = findViewById(R.id.back);
         textInputLayout = findViewById(R.id.textInputLayout2);
         progressBar = findViewById(R.id.progressBar);
+        checkBox = findViewById(R.id.checkboxTerm);
         progressBar.setVisibility(View.GONE);
         autoCompleteTextView = findViewById(R.id.complete);
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    View view = LayoutInflater.from(Signup.this).inflate(R.layout.terms_conditions,(ConstraintLayout)findViewById(R.id.layoutDialogContainer));
+                    builder.setView(view);
+                    final AlertDialog alertDialog = builder.create();
+                    view.findViewById(R.id.accept_button).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            alertDialog.dismiss();
+                            checkBox.setChecked(true);
+                            Toast.makeText(Signup.this, "Accept", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    view.findViewById(R.id.decline_button).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            alertDialog.dismiss();
+                            Toast.makeText(Signup.this, "Decline", Toast.LENGTH_SHORT).show();
+                            checkBox.setChecked(false);
+                        }
+                    });
+                    if (alertDialog.getWindow() != null){
+                        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+                    }
+                    alertDialog.show();
+                }
+            }
+        });
         auth = FirebaseAuth.getInstance();
         pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         editor = pref.edit();
@@ -72,17 +114,13 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 gender = adapterView.getItemAtPosition(position).toString();
-                Toast.makeText(Signup.this, "gender " + gender, Toast.LENGTH_SHORT).show();
             }
         });
 
         button_next.setOnClickListener(v -> {
 
-            if (gender.isEmpty()) {
-                return;
-            }
-
-            if (!CheckName() | !CheckAge() | !CheckEmail() | !CheckPass()) {
+            CheckBox();
+            if (!CheckName() | !CheckAge() | !CheckGender() | !CheckBox() | !CheckEmail() | !CheckPass()) {
                 return;
             }
 
@@ -118,6 +156,7 @@ public class Signup extends AppCompatActivity {
         button_login.setOnClickListener(v -> startActivity(new Intent(Signup.this, Login.class)));
     }
 
+
     // checks if user input is valid
 
     private boolean CheckName() {
@@ -143,6 +182,14 @@ public class Signup extends AppCompatActivity {
         } else { return true; }
     }
 
+    private boolean CheckGender() {
+        gend = autoCompleteTextView.getText().toString().trim();
+        if (gend.isEmpty()) {
+            textInputLayout.setError("Select Gender.");
+            return false;
+        } else { return true; }
+    }
+
     private boolean CheckEmail() {
         email = email_txt.getText().toString().trim();
         if (email.isEmpty()) {
@@ -161,6 +208,7 @@ public class Signup extends AppCompatActivity {
 
     private boolean CheckPass() {
         password = pass_txt.getText().toString().trim();
+
         if (password.isEmpty()) {
             pass_txt.setError("Enter password.", null);
             pass_txt.requestFocus();
@@ -202,7 +250,13 @@ public class Signup extends AppCompatActivity {
             startActivity(new Intent(Signup.this, Clock.class));
         }
     }
-
-
+    private boolean CheckBox(){
+        if (checkBox.isChecked()) {
+            return true;
+        } else {
+            Toast.makeText(this, "Please check the box to proceed", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
 
 }

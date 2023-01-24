@@ -39,7 +39,10 @@ public class Recording extends AppCompatActivity {
     private TextClock clock;
     Switch aSwitch;
 
-    String wakeTime, totalDur;
+    String wakeTime, totalDur, sleep, sleepQual, hours, minute;
+    int minutes = 60;
+    int hours_to_minutes = 0;
+    int sleepQual_percent = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,14 @@ public class Recording extends AppCompatActivity {
             stopService(intent1);
             stopService(intentS);
 
+            sleep = totalDur.replace(":",".");
+            String[] splits = sleep.split("\\.");
+            String whole = splits[0];
+            String fractional = splits[1];
+            hours_to_minutes += (Integer.parseInt(whole) * minutes);
+            sleepQual_percent += (((Integer.parseInt(fractional) + hours_to_minutes) * 100) / 600);
+            sleepQual = String.valueOf(sleepQual_percent);
+
             // from tracker class
             Intent intent = getIntent();
             String text = intent.getStringExtra("sleepTime");
@@ -82,6 +93,7 @@ public class Recording extends AppCompatActivity {
             newIntent.putExtra("wakeTime", wakeTime);
             newIntent.putExtra("sleepTime", text);
             newIntent.putExtra("totalDur", totalDur);
+            newIntent.putExtra("sleepQual", sleepQual);
 
             startActivity(newIntent);
         });

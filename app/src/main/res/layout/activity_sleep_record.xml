@@ -8,7 +8,7 @@
     app:cardBackgroundColor="#E3EDF1"
     android:layout_marginHorizontal="35dp"
     android:layout_marginVertical="10dp"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
@@ -17,11 +17,11 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sleep_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="13dp"
             android:scaleType="centerCrop"
             android:src="@drawable/weekly_report">
 
@@ -32,19 +32,24 @@
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="13dp"
             android:layout_toEndOf="@id/sleep_image"
             android:fontFamily="@font/arial_nova_light"
             android:text="Date"
-            android:textColor="@color/subtitle"
-            android:textSize="23dp"></TextView>
+            android:textStyle="bold"
+            android:textColor="@color/heading"
+            android:textSize="26dp"></TextView>
 
         <TextView
             android:id="@+id/sleep_time"
             android:layout_width="127dp"
             android:layout_height="30dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="right"
+            android:textAlignment="gravity"
             android:layout_toEndOf="@id/sleep_date"
             android:fontFamily="@font/arial_nova_light"
             android:text="SleepTime"

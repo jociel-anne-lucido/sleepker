@@ -3,34 +3,31 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/buttons"
     android:background="@drawable/box_bg">
-
-    <TextView
-        android:id="@+id/choosetxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Choose"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:textSize="25dp"
-        android:textStyle="bold"/>
 
     <LinearLayout
         android:id="@+id/layoutEdit"
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
         android:layout_height="wrap_content"
         android:padding="8dp">
 
 
         <EditText
             android:id="@+id/newTaskText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:hint="New Task" />
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:paddingLeft="15dp"
+            android:background="@drawable/rectangle"
+            android:backgroundTint="#E3EDF1"
+            android:textStyle="italic"
+            android:hint="share your thoughts"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     </LinearLayout>
 
@@ -44,10 +41,19 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:backgroundTint="@color/boxbg"
             android:text="Save"
-            android:layout_marginLeft="30dp"
-            android:textSize="16sp"/>
+            android:layout_marginBottom="30dp"
+            android:paddingTop="12dp"
+            android:fontFamily="@font/arial_mt_rounded"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
 
     </LinearLayout>

@@ -1,9 +1,13 @@
 package com.example.sleepkerapp;
 
+import static java.util.Calendar.DAY_OF_MONTH;
+import static java.util.Calendar.MONTH;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -26,6 +30,7 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -34,12 +39,11 @@ import java.util.Date;
 
 public class Analysis extends AppCompatActivity {
 
-    private TextView wokeUpText, sleepText, totalDuration, newDuration, oldDuration, moodText, dateText, aveText;
+    private TextView wokeUpText, sleepText, totalDuration, newDuration, oldDuration, moodText, dateText, aveText, aveText1;
     ImageView weekly_button;
-    String wake, sleep, totaldur, newdur, olddur, mood, uid, pushid, dateRecorded,  sleepQual, w;
-    GraphView graph;
-    LineGraphSeries line;
-
+    Button statistic_button;
+    String wake, sleep, totaldur, newdur, olddur, mood, uid, pushid, dateRecorded, sleepqual;
+    CircularProgressBar circularProgressBar;
     SleepCycleData scd;
     FirebaseUser user;
     FirebaseAuth auth;
@@ -50,7 +54,6 @@ public class Analysis extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analysis);
-
         wokeUpText = findViewById(R.id.wokeupTime);
         sleepText = findViewById(R.id.sleepTime);
         totalDuration = findViewById(R.id.sleepdurTime);
@@ -59,12 +62,13 @@ public class Analysis extends AppCompatActivity {
         moodText = findViewById(R.id.moodText);
         dateText = findViewById(R.id.date_text);
         aveText = findViewById(R.id.average);
+        circularProgressBar = findViewById(R.id.circularProgressBar);
         weekly_button = findViewById(R.id.weekly_report);
+        statistic_button = findViewById(R.id.statistic_button);
+        statistic_button.setOnClickListener(v -> startActivity(new Intent(Analysis.this, Statistic.class)));
         weekly_button.setOnClickListener(v -> startActivity(new Intent(Analysis.this, WeeklyReport.class)));
 
-        graph = findViewById(R.id.graph);
-        line = new LineGraphSeries();
-        graph.addSeries(line);
+
 
         auth = FirebaseAuth.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -91,6 +95,7 @@ public class Analysis extends AppCompatActivity {
                     break;
             } return false;
         });
+
     }
 
     private void ShowDate() {
@@ -107,6 +112,7 @@ public class Analysis extends AppCompatActivity {
         wake = intent.getStringExtra("wakeTime");
         sleep = intent.getStringExtra("sleepTime");
         totaldur = intent.getStringExtra("totalDur");
+        sleepqual = intent.getStringExtra("sleepQual");
         mood = intent.getStringExtra("moodQual");
 
         // handles null value from intent
@@ -114,6 +120,7 @@ public class Analysis extends AppCompatActivity {
             wake = "---";
             sleep = "---";
             totaldur = "---";
+            sleepqual = "---";
             mood = "---";
             newdur = "---";
             olddur = "---";
@@ -128,6 +135,7 @@ public class Analysis extends AppCompatActivity {
             GetLastRecorded();
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
             olddur = pref.getString("lastRecorded", "");
+
         }
 
         // stores sleep data attributes to sleepcycledata class
@@ -137,6 +145,7 @@ public class Analysis extends AppCompatActivity {
         scd.setMoodQual(mood);
         scd.setSleepTime(sleep);
         scd.setWakeTime(wake);
+        scd.setSleepQual(sleepqual);
 
         DisplayText();
         StoreData();
@@ -145,9 +154,8 @@ public class Analysis extends AppCompatActivity {
     private void StoreData() {
         dateRecorded = dateText.getText().toString();
         pushid = userRef.push().getKey();
-        sleepQual = aveText.getText().toString();
 
-        SleepCycleData data = new SleepCycleData(olddur, newdur, totaldur, mood, sleep, wake, dateRecorded, sleepQual);
+        SleepCycleData data = new SleepCycleData(olddur, newdur, totaldur, mood, sleep, wake, dateRecorded, sleepqual);
 
         if (!wake.equals("---")) {
             userRef.child(pushid).setValue(data);
@@ -157,7 +165,6 @@ public class Analysis extends AppCompatActivity {
 
     private void DisplayText() {
         GetAllData();
-        DisplayGraphSQ();
     }
 
     // retrieves data from fb
@@ -173,6 +180,7 @@ public class Analysis extends AppCompatActivity {
                 mood = snapshot.child("moodQual").getValue(String.class);
                 newdur = snapshot.child("newRecorded").getValue(String.class);
                 olddur = snapshot.child("lastRecorded").getValue(String.class);
+                sleepqual = snapshot.child("sleepQual").getValue(String.class);
 
                 sleepText.setText(sleep);
                 wokeUpText.setText(wake);
@@ -180,6 +188,8 @@ public class Analysis extends AppCompatActivity {
                 moodText.setText(mood);
                 newDuration.setText(newdur);
                 oldDuration.setText(olddur);
+                aveText.setText(sleepqual + "%");
+                circularProgressBar.setProgress(Float.parseFloat(sleepqual));
             }
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) { }
@@ -222,59 +232,7 @@ public class Analysis extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) { }
         });
     }
-    private void DisplayGraphSQ() {
-        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-        gridLabel.setPadding(60);
-        gridLabel.setVerticalAxisTitle("Duration");
-        gridLabel.setHorizontalAxisTitle("Input");
-        gridLabel.setHumanRounding(false);
 
-        graph.getViewport().setXAxisBoundsManual(true);
-        graph.getViewport().setMinX(1);
-        graph.getViewport().setMaxX(2);
-
-        graph.getViewport().setYAxisBoundsManual(true);
-        graph.getViewport().setMinY(0);
-        graph.getViewport().setMaxY(1);
-
-        graph.getViewport().setScalable(true);
-        graph.getViewport().setScrollable(true);
-        graph.getViewport().setScrollableY(true);
-
-
-
-        userRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                DataPoint[] data = new DataPoint[(int) snapshot.getChildrenCount()];
-                int index = 0, x = 0;
-
-                // for sleep quality
-                double total = 0.0, average;
-
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    SleepCycleData scd = dataSnapshot.getValue(SleepCycleData.class);
-
-                    float duration = Float.parseFloat(scd.getTotalDur().replace(":","."));
-                    long count = snapshot.getChildrenCount();
-                    total += duration;
-                    average = (total / count);
-
-                    DecimalFormat df = new DecimalFormat("#.##");
-                    aveText.setText(df.format(average));
-
-                    x += 1;
-                    data[index] = new DataPoint(x, duration);
-                    index++;
-                }
-                line.resetData(data);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
-        });
-
-    }
 
 
 }

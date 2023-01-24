@@ -19,9 +19,8 @@ import java.util.Date;
 
 public class Tracker extends AppCompatActivity {
     TextView time1, time2, time3,time4,time5;
-    Button button, play_button, play_button1;
+    Button button;
     String sleepTime;
-    int button_status=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,19 +52,6 @@ public class Tracker extends AppCompatActivity {
                     break;
             } return false;
         });
-
-        play_button1 = findViewById(R.id.play_button1);
-        play_button = findViewById(R.id.play_button);
-        Intent intent1 = new Intent(this, MyService.class);
-        Intent intent = new Intent(this, MyService1.class);
-
-        play_button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startorStop();
-            }
-        });
-
 
         button = findViewById(R.id.start_button);
         button.setOnClickListener(v -> {
@@ -117,17 +103,6 @@ public class Tracker extends AppCompatActivity {
         intent.putExtra("sleepTime", sleepTime);
         startActivity(intent);
 
-    }
-    boolean isStop = false;
-
-    public void startorStop() {
-        Intent intents = new Intent (Tracker.this, MyService.class);
-        if(isStop) {
-            startService(intents);
-        } else {
-            stopService(intents);
-        }
-        isStop = !isStop;
     }
 
 }

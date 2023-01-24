@@ -17,7 +17,7 @@ public class Mood extends AppCompatActivity {
 
     private Integer[] mood = {R.drawable.good, R.drawable.relaxing, R.drawable.soso, R.drawable.bad, R.drawable.worst};
 
-    private String answer = "", wake, sleep, totaldur;
+    private String answer = "", wake, sleep, totaldur, sleepqual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,13 @@ public class Mood extends AppCompatActivity {
             wake = intent.getStringExtra("wakeTime");
             sleep = intent.getStringExtra("sleepTime");
             totaldur = intent.getStringExtra("totalDur");
+            sleepqual = intent.getStringExtra("sleepQual");
 
             Intent newIntent = new Intent(Mood.this, Analysis.class);
             newIntent.putExtra("wakeTime", wake);
             newIntent.putExtra("sleepTime", sleep);
             newIntent.putExtra("totalDur", totaldur);
+            newIntent.putExtra("sleepQual", sleepqual);
             newIntent.putExtra("moodQual", answer);
             startActivity(newIntent);
         });

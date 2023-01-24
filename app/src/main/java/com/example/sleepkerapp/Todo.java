@@ -55,7 +55,7 @@ public class Todo extends AppCompatActivity {
     SwipeMenuListView listView;
     DatabaseReference mRef;
     ImageView btn_back;
-    EditText todo_txt, edit_txt;
+    EditText todo_txt;
     String todo;
     Integer index;
     String uid, id;
@@ -123,13 +123,8 @@ public class Todo extends AppCompatActivity {
         SwipeMenuCreator creator = new SwipeMenuCreator() {
             @Override
             public void create(SwipeMenu menu) {
-                SwipeMenuItem openItem = new SwipeMenuItem(getApplicationContext());
-                openItem.setBackground(new ColorDrawable(Color.rgb(0x6E, 0xA5, 0xA6)));
-                openItem.setIcon(R.drawable.todo_edit);
-                openItem.setWidth(180);
-                menu.addMenuItem(openItem);
                 SwipeMenuItem deleteItem = new SwipeMenuItem(getApplicationContext());
-                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF6, 0x6C, 0x79)));
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0x6E, 0xA5, 0xA6)));
                 deleteItem.setIcon(R.drawable.todo_delete);
                 deleteItem.setWidth(180);
                 menu.addMenuItem(deleteItem);
@@ -149,11 +144,6 @@ public class Todo extends AppCompatActivity {
                         arrayAdapter.notifyDataSetChanged();
                         String key = keysList.get(position);
                         mRef.child(key).removeValue();
-                        break;
-                    case 1:
-                        showDialog1();
-                        edit_txt.setText((String) listView.getAdapter().getItem(position));
-                        arrayAdapter.notifyDataSetChanged();
                         break;
                 }
                 return false;
@@ -202,21 +192,5 @@ public class Todo extends AppCompatActivity {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
 
     }
-    private void showDialog1() {
 
-        final Dialog dialog = new Dialog(this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.activity_edit);
-
-        edit_txt = dialog.findViewById(R.id.editText);
-        LinearLayout editLayout = findViewById(R.id.layoutEdit);
-
-
-        dialog.show();
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-        dialog.getWindow().setGravity(Gravity.BOTTOM);
-
-    }
 }
