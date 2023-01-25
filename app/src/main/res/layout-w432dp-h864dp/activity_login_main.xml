@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
     android:background="@color/background"
     tools:context=".LoginActivity">
 
     <FrameLayout
         android:id="@+id/sheet"
         android:layout_width="match_parent"
-        android:layout_height="249dp"
+        android:layout_height="255dp"
+        android:layout_margin="8dp"
         app:layout_behavior = "com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:background="@drawable/box_bg">
 
         <ImageView
             android:layout_width="70dp"
+            android:layout_marginTop="7dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_remove_24"
             android:scaleType="centerCrop"
@@ -29,11 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="35dp"
             android:fontFamily="@font/arial_mt_rounded"
             android:text="Welcome"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="25sp"
             android:textStyle="bold"/>
 
         <TextView
@@ -41,12 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="77dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/arial_nova_light"
             android:text="@string/welcome_page"
             android:textColor="@color/heading"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -55,10 +56,10 @@
 
             <Button
                 android:id="@+id/login_button"
-                android:layout_width="150dp"
-                android:layout_height="45dp"
+                android:layout_width="160dp"
+                android:layout_height="44dp"
                 android:layout_marginStart="26dp"
-                android:layout_marginTop="162dp"
+                android:layout_marginTop="169dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/arial_mt_rounded"
@@ -70,9 +71,9 @@
 
             <Button
                 android:id="@+id/sign_button"
-                android:layout_width="150dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="162dp"
+                android:layout_width="160dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="169dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="30dp"
                 android:layout_toEndOf="@+id/login_button"
