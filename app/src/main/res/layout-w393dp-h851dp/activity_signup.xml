@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".Signup">
+
+    <View
+        android:id="@+id/box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/box_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheading_txt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/welcome_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:text="Create a "
+        android:textColor="@color/heading"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/back_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:text="new account"
+        android:textColor="@color/heading"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_txt" />
+
+    <TextView
+        android:id="@+id/subheading_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/arial_nova_light"
+        android:text="@string/signup_page"
+        android:textColor="@color/subtitle"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_txt" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box"
+        app:layout_constraintEnd_toEndOf="@+id/box"
+        app:layout_constraintTop_toTopOf="@+id/box">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <EditText
+                android:id="@+id/name_input"
+                android:layout_width="match_parent"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXY.,-Z "
+                android:layout_height="52dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edittext_bg"
+                android:ems="10"
+                android:textColor="@color/heading"
+                android:fontFamily="sans-serif"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:paddingLeft="26dp"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/age_input"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/name_input"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_bg"
+                android:ems="10"
+                android:maxLength="2"
+                android:textColor="@color/heading"
+                android:fontFamily="sans-serif"
+                android:hint="Age"
+                android:inputType="number"
+                android:paddingLeft="26dp"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="315dp"
+                android:layout_height="52dp"
+                android:layout_below="@id/age_input"
+                android:layout_alignStart="@+id/age_input"
+                android:layout_alignEnd="@+id/age_input"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_bg"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxStrokeWidth="0dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconTint="@color/boxbg"
+                app:layout_constraintEnd_toEndOf="@+id/age_input"
+                app:layout_constraintStart_toStartOf="@+id/age_input"
+                app:layout_constraintTop_toBottomOf="@+id/age_input">
+
+                <AutoCompleteTextView
+                    android:id="@+id/complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:paddingTop="11dp"
+                    android:background="@color/boxbg"
+                    android:dropDownSelector="@drawable/edittext_bg"
+                    android:ellipsize="end"
+                    android:hint="Gender"
+                    android:paddingLeft="19dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16sp"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/textInputLayout2"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_bg"
+                android:ems="10"
+                android:textColor="@color/heading"
+                android:fontFamily="sans-serif"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pass_box"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@id/email_input"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_bg"
+                android:ems="10"
+                app:boxStrokeWidth="0dp"
+                android:elevation="2dp"
+                android:fontFamily="sans-serif"
+                android:hint="Password"
+                app:endIconTint="@color/boxbg"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingTop="9dp"
+                android:textSize="16sp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/email_input"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pass_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignStart="@+id/pass_box"
+                    android:layout_alignTop="@+id/pass_box"
+                    android:layout_marginTop="31dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/edittext_bg"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="0dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxTerm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pass_box"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="13dp"
+                android:text="Terms and Condition"
+                android:textAllCaps="false"
+                android:textColor="@color/heading"
+                android:textSize="16sp"
+                android:buttonTint="@color/heading"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/pass_box"
+                app:layout_constraintTop_toBottomOf="@+id/pass_box"
+                app:layout_constraintVertical_bias="0.0"></CheckBox>
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_below="@id/checkboxTerm"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/arial_mt_rounded"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/heading"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/buttons"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="NotSibling" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="57dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:text="LOGIN"
+        android:minHeight="0dp"
+        android:padding="0dp"
+        android:gravity="right|center_vertical"
+        android:textAllCaps="false"
+        android:textColor="@color/subtitle"
+        android:textSize="14sp"
+        app:backgroundTint="@color/background"
+        app:layout_constraintEnd_toEndOf="@+id/subheading_txt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="24dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="33dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/subheading_txt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

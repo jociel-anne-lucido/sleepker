@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recording">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/giphy" />
+
+    <Switch
+        android:id="@+id/switch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/moon_button"
+        android:layout_alignTop="@+id/moon_button"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="181dp"
+        android:thumbTint="@color/white"
+        android:trackTint="@color/buttons"
+        android:layout_marginBottom="1dp"></Switch>
+
+    <Chronometer
+        android:id="@+id/chronometer_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textClock"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/arial_nova_light"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/moon_button"
+        android:layout_width="215dp"
+        android:layout_height="211dp"
+        android:layout_below="@+id/chronometer_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/moonlighticon"
+        android:elevation="12dp"
+        android:padding="2dp"></ImageView>
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="300dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/moon_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="98dp"
+        android:background="@drawable/rectangle1"
+        android:padding="4dp"
+        android:text="Stop Tracking"
+        android:textAllCaps="false"
+        android:textColor="@color/heading"
+        android:textSize="20sp"></Button>
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="66dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:format12Hour="hh:mm a"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="55sp" />
+
+</RelativeLayout>
