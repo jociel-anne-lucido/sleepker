@@ -67,7 +67,7 @@ import java.util.Map;
 
 public class Statistic extends AppCompatActivity {
     private TextView aveTotalDur, aveSleepQual, lowestSleepQual, highestSleepQual, highestSleepDur, lowestSleepDur, lowestDurDate, highestDurDate;
-    String sleepqual_graph, sleep, totaldur, newdur, olddur, mood, uid, pushid, dateRecorded,  sleepQual;
+    String totaldur, uid;
     GraphView qual_graph, dur_graph;
     LineGraphSeries qual_line, dur_line;
     CircularProgressBar lowestProgBar, highestProgBar, averageProgBar;
@@ -99,7 +99,7 @@ public class Statistic extends AppCompatActivity {
         qual_line.setDrawBackground(true);
         qual_line.setBackgroundColor(Color.argb(60, 98, 157,158));
         qual_line.setDrawDataPoints(true);
-        qual_line.setTitle("Duration");
+        qual_line.setTitle("Quality");
         qual_graph.getLegendRenderer().setVisible(true);
         qual_graph.getLegendRenderer().setTextColor(Color.rgb(85,115,125));
         qual_graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.MIDDLE);
