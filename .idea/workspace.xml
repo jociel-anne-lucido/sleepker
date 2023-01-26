@@ -3,16 +3,16 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <device id="pixel_xl" />
-        <device id="Nexus 10" />
-        <device id="pixel_3" />
-        <device id="pixel_4a" />
-        <device id="pixel_4" />
-        <device id="pixel_2_xl" />
-        <device id="pixel_5" />
         <device id="Nexus 6P" />
+        <device id="pixel_4a" />
+        <device id="pixel_xl" />
         <device id="Nexus 6" />
         <device id="pixel_4_xl" />
+        <device id="pixel_2" />
+        <device id="Nexus 10" />
+        <device id="pixel_3" />
+        <device id="pixel_4" />
+        <device id="pixel_2_xl" />
         <option name="nonWearDeviceLastStateName" value="Portrait" />
         <target>android-26</target>
       </config>
@@ -26,15 +26,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95ef4150-0c60-408c-a01c-51309d7b2dbe" name="Changes" comment="Latest">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_analysis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_assessment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_music.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_todo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_weekly_report.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w393dp-h851dp/activity_forgot_pass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w393dp-h851dp/activity_forgot_pass.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w393dp-h851dp/activity_todo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w393dp-h851dp/activity_todo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h914dp/activity_login2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h914dp/activity_login2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h914dp/activity_login_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h914dp/activity_login_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h914dp/activity_sleep_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h914dp/activity_sleep_data.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w427dp-h927dp/activity_login2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w427dp-h927dp/activity_login2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_weekly_report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_weekly_report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_pass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_pass.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
