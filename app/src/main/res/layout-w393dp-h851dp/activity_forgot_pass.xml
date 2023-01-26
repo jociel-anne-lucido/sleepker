@@ -17,7 +17,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/arial_mt_rounded"
-        android:text="Forgots"
+        android:text="Forgot"
         android:textColor="@color/heading"
         android:textSize="38sp"
         android:textStyle="bold"
