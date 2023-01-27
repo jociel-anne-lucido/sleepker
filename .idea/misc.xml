@@ -12,21 +12,24 @@
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_forgot_pass.xml" value="0.144017094017094" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_login2.xml" value="0.144017094017094" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_login_main.xml" value="0.1311965811965812" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_main.xml" value="0.1311965811965812" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_signup.xml" value="0.12409420289855072" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_sleep_data.xml" value="0.144017094017094" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_todo.xml" value="0.144017094017094" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w393dp-h851dp/activity_weekly_report.xml" value="0.144017094017094" />
-        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_analysis.xml" value="0.10587431693989072" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_analysis.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_assessment.xml" value="0.119921875" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_clock.xml" value="0.131640625" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_forgot_pass.xml" value="0.131640625" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_login2.xml" value="0.131640625" />
-        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_login_main.xml" value="0.119921875" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_login_main.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_main.xml" value="0.119921875" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_mood.xml" value="0.119921875" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_music.xml" value="0.119921875" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_recording.xml" value="0.10587431693989072" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_signup.xml" value="0.119921875" />
-        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_sleep_data.xml" value="0.11333333333333334" />
-        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_statistics.xml" value="0.119921875" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_sleep_data.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_statistics.xml" value="0.5" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_todo.xml" value="0.119921875" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_tracker.xml" value="0.119921875" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h731dp/activity_user_settings.xml" value="0.119921875" />
@@ -40,15 +43,19 @@
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h914dp/activity_login2.xml" value="0.1387973640856672" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h914dp/activity_login_main.xml" value="0.22" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w411dp-h914dp/activity_sleep_data.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w427dp-h925dp/activity_main.xml" value="0.119921875" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w427dp-h927dp/activity_login2.xml" value="0.22" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w432dp-h864dp/activity_main.xml" value="0.119921875" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout-w432dp-h864dp/activity_sleep_data.xml" value="0.26328125" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_analysis.xml" value="0.10587431693989072" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_assessment.xml" value="0.12" />
-        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_clock.xml" value="0.10274431057563588" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_clock.xml" value="0.10587431693989072" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_forgot_pass.xml" value="0.10703125" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_login2.xml" value="0.10703125" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_login_main.xml" value="0.10274431057563588" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_music.xml" value="0.10274431057563588" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_navigation.xml" value="0.119921875" />
+        <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_save.xml" value="0.119921875" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_sleep_data.xml" value="0.1" />
         <entry key="..\:/Users/Rojielyn/Documents/GitHub/sleepker/app/src/main/res/layout/activity_sleep_record.xml" value="0.131640625" />
