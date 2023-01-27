@@ -241,7 +241,7 @@
                 android:layout_height="48dp"
                 android:layout_below="@id/checkboxTerm"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="75dp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/arial_mt_rounded"
                 android:text="Next"

@@ -59,18 +59,18 @@
     <Button
         android:id="@+id/stop_button"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/moon_button"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="85dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/rectangle1"
         android:padding="4dp"
         android:text="Stop Tracking"
         android:textAllCaps="false"
         android:textColor="@color/heading"
-        android:textSize="20sp"></Button>
+        android:textSize="18sp"></Button>
 
     <TextClock
         android:id="@+id/textClock"
