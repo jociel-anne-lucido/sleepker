@@ -3,16 +3,16 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <device id="pixel_6" />
-        <device id="pixel_2_xl" />
         <device id="Nexus 6P" />
-        <device id="_device_class_phone" />
         <device id="pixel_5" />
-        <device id="pixel_4" />
-        <device id="pixel_3a_xl" />
         <device id="Nexus 6" />
-        <device id="Nexus 5X" />
-        <device id="pixel_6_pro" />
+        <device id="pixel_4a" />
+        <device id="pixel_xl" />
+        <device id="pixel_4_xl" />
+        <device id="pixel_2" />
+        <device id="Nexus 10" />
+        <device id="pixel_3" />
+        <device id="pixel_4" />
         <option name="nonWearDeviceLastStateName" value="Portrait" />
         <target>android-26</target>
       </config>
@@ -25,13 +25,26 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95ef4150-0c60-408c-a01c-51309d7b2dbe" name="Changes" comment="Latest" />
+    <list default="true" id="95ef4150-0c60-408c-a01c-51309d7b2dbe" name="Changes" comment="Latest">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_clock.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w360dp-h740dp/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w360dp-h740dp/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w393dp-h851dp/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w393dp-h851dp/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_login2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_login2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_login_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_login_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_mood.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_mood.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_recording.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_recording.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_signup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-w411dp-h731dp/activity_signup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-w427dp-h925dp/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_clock.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_clock.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jociel Anne A. Lucid\.android\avd\Pixel_3_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Rojielyn\.android\avd\Nexus_6P_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -118,7 +131,6 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
-      <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -158,7 +170,6 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
         <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-        <option name="PROFILING_MODE" value="NOT_SET" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -234,28 +245,7 @@
       <option name="project" value="LOCAL" />
       <updated>1674560484127</updated>
     </task>
-    <task id="LOCAL-00009" summary="Latest">
-      <created>1674686757159</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1674686757159</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Latest">
-      <created>1674690507920</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1674690507920</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Latest">
-      <created>1675008485648</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1675008485649</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,6 +258,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sleepker App" />
