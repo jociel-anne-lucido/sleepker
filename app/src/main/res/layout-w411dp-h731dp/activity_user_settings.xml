@@ -6,8 +6,20 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    android:padding="8dp"
     tools:context=".UserSettings">
+
+    <ImageView
+        android:id="@+id/card3"
+        android:layout_width="406dp"
+        android:layout_height="233dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/solid_rectangle"
+        app:backgroundTint="#DBE9E9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-4dp" />
 
     <TextView
         android:id="@+id/subheading_profile"

@@ -49,7 +49,7 @@ public class UserSettings extends AppCompatActivity {
     private ProgressBar progressBar;
     ImageView profileImage;
 
-    String name, email, pass, uid, oldName, oldEmail, oldPass, curpass;
+    String name, email, pass, uid, oldName, oldEmail, oldPass;
 
     FirebaseAuth auth;
     FirebaseUser user;

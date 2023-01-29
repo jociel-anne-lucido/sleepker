@@ -43,7 +43,7 @@
         android:layout_marginTop="65dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/arial_mt_rounded"
-        android:text="Edit Profile"
+        android:text="Edit Profiles"
         android:textColor="@color/heading"
         android:textSize="36sp"
         android:textStyle="bold"

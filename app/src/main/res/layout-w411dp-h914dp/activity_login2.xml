@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="111dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/box_bg"
@@ -138,8 +138,7 @@
         android:id="@+id/login_button"
         android:layout_width="342dp"
         android:layout_height="56dp"
-        android:layout_marginTop="146dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="7dp"
         android:layout_marginBottom="37dp"
         android:background="@drawable/button"
         android:fontFamily="@font/arial_mt_rounded"
@@ -151,10 +150,10 @@
         app:backgroundTint="@color/buttons"
         app:layout_constraintBottom_toBottomOf="@+id/box"
         app:layout_constraintEnd_toEndOf="@+id/pass_box"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="@+id/pass_box"
-        app:layout_constraintTop_toTopOf="@+id/pass_box"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_box"
+        app:layout_constraintVertical_bias="0.89" />
 
     <Button
         android:id="@+id/signup_button"
