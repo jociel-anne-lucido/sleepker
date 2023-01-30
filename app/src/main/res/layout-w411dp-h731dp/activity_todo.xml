@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/card3"
-        android:layout_width="414dp"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/arial_mt_rounded"
         android:text="Thoughts?"
@@ -56,16 +56,17 @@
 
     <com.baoyz.swipemenulistview.SwipeMenuListView
         android:id="@+id/todotxt"
-        android:layout_width="312dp"
-        android:layout_height="481dp"
+        android:layout_width="match_parent"
+        android:layout_height="461dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="25dp"
+        android:layout_marginRight="38dp"
+        android:choiceMode="multipleChoice"
         android:textColor="@color/subtitle"
         android:textSize="59dp"
-        android:choiceMode="multipleChoice"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
-        app:layout_constraintStart_toStartOf="@+id/subheading_txt"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card3"
         app:layout_constraintVertical_bias="0.0" />
 

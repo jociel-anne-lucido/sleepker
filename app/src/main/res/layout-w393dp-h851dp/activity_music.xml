@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/card3"
         android:layout_width="wrap_content"
-        android:layout_height="226dp"
+        android:layout_height="220dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -31,7 +31,7 @@
         android:fontFamily="@font/arial_mt_rounded"
         android:text="Music"
         android:textColor="@color/heading"
-        android:textSize="38sp"
+        android:textSize="37sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,7 +43,7 @@
         android:layout_width="351dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/arial_nova_light"
         android:text="@string/music"
@@ -69,29 +69,29 @@
         tools:ignore="VectorDrawableCompat" />
 
     <ScrollView
-        android:layout_width="348dp"
-        android:layout_height="490dp"
-        android:layout_marginTop="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        android:layout_marginTop="20dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/subheading_txt"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/subheading_txt"
-        app:layout_constraintTop_toBottomOf="@+id/card3"
-        app:layout_constraintVertical_bias="0.051">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card3">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp">
+            android:layout_height="500dp"
+            android:layout_marginTop="30dp">
 
 
             <LinearLayout
                 android:id="@+id/linear_music"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="-3dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -113,7 +113,7 @@
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="18dp"
                     android:background="@drawable/piano_music"
@@ -121,11 +121,11 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music2"
-                    android:layout_width="90dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/wave_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
@@ -137,7 +137,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_music1"
-                android:layout_marginStart="-2dp">
+                android:layout_alignStart="@+id/linear_music1"
+                android:layout_alignEnd="@+id/linear_music1">
 
                 <TextView
                     android:id="@+id/music_txt4"
@@ -189,10 +190,11 @@
                 android:id="@+id/linear_music1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/wwe"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="-3dp"
+                android:layout_marginTop="156dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -214,7 +216,7 @@
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="18dp"
                     android:background="@drawable/box_music"
@@ -222,11 +224,11 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music5"
-                    android:layout_width="90dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/city_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
@@ -238,7 +240,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_music"
-                android:layout_marginStart="-2dp">
+                android:layout_alignStart="@+id/linear_music"
+                android:layout_alignEnd="@+id/linear_music">
 
                 <TextView
                     android:id="@+id/music_txt1"
@@ -274,7 +277,7 @@
                     android:id="@+id/music_txt3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="56dp"
+                    android:layout_marginStart="59dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="22dp"
                     android:fontFamily="@font/arial_nova_light"
@@ -291,10 +294,11 @@
                 android:id="@+id/linear_music3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/we"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="-4dp"
+                android:layout_marginTop="312dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -316,7 +320,7 @@
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="18dp"
                     android:background="@drawable/night_music"
@@ -324,22 +328,24 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/music8"
-                    android:layout_width="90dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="92dp"
                     android:layout_below="@+id/card1"
                     android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/soothing_music"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/wwe1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_music3"
-                android:layout_marginStart="-2dp">
+                android:layout_alignStart="@+id/linear_music3"
+                android:layout_alignEnd="@+id/linear_music3">
 
                 <TextView
                     android:id="@+id/music_txt7"
@@ -377,7 +383,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="43dp"
                     android:layout_marginTop="2dp"
-                    android:layout_marginEnd="22dp"
+                    android:layout_marginEnd="12dp"
                     android:fontFamily="@font/arial_nova_light"
                     android:text="Soothing"
                     android:textColor="@color/subtitle"
@@ -387,7 +393,6 @@
                     app:layout_constraintTop_toBottomOf="@id/back_txt" />
             </LinearLayout>
         </RelativeLayout>
-
 
 
     </ScrollView>

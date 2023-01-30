@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +8,7 @@
 
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
@@ -20,11 +22,11 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/moon_button"
         android:layout_alignTop="@+id/moon_button"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="181dp"
+        android:layout_marginTop="184dp"
         android:thumbTint="@color/white"
         android:trackTint="@color/buttons"
-        android:layout_marginBottom="1dp"></Switch>
+        app:layout_constraintTop_toTopOf="@+id/moon_button"
+        tools:layout_editor_absoluteX="292dp"></Switch>
 
     <Chronometer
         android:id="@+id/chronometer_txt"
@@ -33,13 +35,16 @@
         android:layout_below="@+id/textClock"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="13dp"
         android:fontFamily="@font/arial_nova_light"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="23sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/moon_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintVertical_bias="0.162" />
 
     <ImageView
         android:id="@+id/moon_button"
@@ -47,46 +52,48 @@
         android:layout_height="211dp"
         android:layout_below="@+id/chronometer_txt"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="21dp"
         android:background="@drawable/moonlighticon"
         android:elevation="12dp"
-        android:padding="2dp"></ImageView>
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintVertical_bias="0.297"></ImageView>
 
     <Button
         android:id="@+id/stop_button"
         android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_height="47dp"
         android:layout_below="@+id/moon_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/rectangle1"
         android:padding="4dp"
         android:text="Stop Tracking"
         android:textAllCaps="false"
         android:textColor="@color/heading"
-        android:textSize="18sp"></Button>
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moon_button"
+        app:layout_constraintVertical_bias="0.741"></Button>
 
     <TextClock
         android:id="@+id/textClock"
-        android:layout_width="257dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="66dp"
         android:fontFamily="@font/arial_mt_rounded"
         android:format12Hour="hh:mm a"
-        android:gravity="center"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="55sp" />
+        android:textSize="55sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recording">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/giphy" />
+
+    <Switch
+        android:id="@+id/switch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/moon_button"
+        android:layout_alignTop="@+id/moon_button"
+        android:layout_marginTop="200dp"
+        android:thumbTint="@color/white"
+        android:trackTint="@color/buttons"
+        app:layout_constraintTop_toTopOf="@+id/moon_button"
+        tools:layout_editor_absoluteX="300dp"></Switch>
+
+    <Chronometer
+        android:id="@+id/chronometer_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textClock"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/arial_nova_light"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/moon_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <ImageView
+        android:id="@+id/moon_button"
+        android:layout_width="235dp"
+        android:layout_height="221dp"
+        android:layout_below="@+id/chronometer_txt"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/moonlighticon"
+        android:elevation="12dp"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintVertical_bias="0.333"></ImageView>
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="300dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/moon_button"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle1"
+        android:padding="4dp"
+        android:text="Stop Tracking"
+        android:textAllCaps="false"
+        android:textColor="@color/heading"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moon_button"
+        app:layout_constraintVertical_bias="0.774"></Button>
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/arial_mt_rounded"
+        android:format12Hour="hh:mm a"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

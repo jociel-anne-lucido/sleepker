@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:fillViewport="true"
         android:scrollbars="none"
-        android:layout_height="800dp">
+        android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
             <View
                 android:id="@+id/cardee"
                 android:layout_width="wrap_content"
-                android:layout_height="146dp"
+                android:layout_height="136dp"
                 android:background="@drawable/ic_top"
                 android:elevation="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
             <View
                 android:id="@+id/bgtop1"
                 android:layout_width="wrap_content"
-                android:layout_height="210dp"
+                android:layout_height="200dp"
                 android:background="@drawable/ic_top1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
                 android:layout_alignTop="@+id/card"
                 android:layout_alignBottom="@+id/card"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="26dp"
+                android:layout_marginStart="29dp"
                 android:layout_marginTop="-1dp"
                 android:layout_marginEnd="6dp"
                 android:layout_marginBottom="1dp"
@@ -413,7 +413,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="163dp"
+                android:layout_marginTop="153dp"
                 android:layout_marginEnd="0dp"
                 android:fontFamily="@font/arial_mt_rounded"
                 android:text="Date"
