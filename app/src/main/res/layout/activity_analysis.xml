@@ -56,7 +56,7 @@
                 android:layout_above="@+id/card2"
                 android:layout_alignEnd="@+id/card2"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="122dp"
+                android:layout_marginStart="112dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="6dp"
                 android:layout_marginBottom="45dp"
@@ -80,9 +80,7 @@
                 android:layout_height="145dp"
                 android:layout_alignTop="@+id/card1"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="40dp"
                 android:layout_marginTop="0dp"
-                android:layout_toEndOf="@+id/card1"
                 android:background="@drawable/rectangle"
                 app:layout_constraintStart_toEndOf="@+id/card1"
                 app:layout_constraintTop_toTopOf="@+id/card1" />

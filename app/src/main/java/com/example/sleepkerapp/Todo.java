@@ -171,11 +171,13 @@ public class Todo extends AppCompatActivity {
 
             public void onClick(View v) {
 
+                if (!CheckTodo()) {
+                    return;
+                }
                 FirebaseUser user = auth.getCurrentUser();
                 uid = user.getUid();
                 DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("UserData").child(uid).child("-TodoData");
 
-                todo = todo_txt.getText().toString();
                 dbRef.push().setValue(todo);
 
                 // stores user attributes to db
@@ -191,6 +193,16 @@ public class Todo extends AppCompatActivity {
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.getWindow().setGravity(Gravity.BOTTOM);
 
+    }
+    private boolean CheckTodo() {
+        todo = todo_txt.getText().toString();
+        if (todo.isEmpty()) {
+            todo_txt.setError("Enter todo.");
+            todo_txt.requestFocus();
+            return false;
+        } else {
+            return true;
+        }
     }
 
 }

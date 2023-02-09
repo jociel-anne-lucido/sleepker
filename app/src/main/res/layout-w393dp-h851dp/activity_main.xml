@@ -81,7 +81,7 @@
     <ImageView
         android:id="@+id/ss_logo"
         android:layout_width="140dp"
-        android:layout_height="190dp"
+        android:layout_height="175dp"
         android:paddingRight="-37dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

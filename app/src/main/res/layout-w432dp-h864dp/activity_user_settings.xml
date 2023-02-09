@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,264 +8,278 @@
     android:orientation="vertical"
     tools:context=".UserSettings">
 
-    <ImageView
-        android:id="@+id/card3"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="263dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/solid_rectangle"
-        app:backgroundTint="#DBE9E9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/subheading_profile"
-        android:layout_width="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/arial_nova_light"
-        android:text="@string/editprofile_page"
-        android:textColor="@color/subtitle"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/logout_button"
-        app:layout_constraintStart_toStartOf="@+id/settings_txt"
-        app:layout_constraintTop_toBottomOf="@+id/settings_txt" />
-
-    <TextView
-        android:id="@+id/settings_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Edit Profile"
-        android:textColor="@color/heading"
-        android:textSize="37sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/update_button"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:background="@drawable/button"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Update"
-        android:textAllCaps="false"
-        android:textColor="@color/heading"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/buttons"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/logout_button"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/passView"
-        app:layout_constraintTop_toBottomOf="@+id/upd_box8"
-        app:layout_constraintVertical_bias="0.608" />
-
-    <ImageView
-        android:id="@+id/updateprofile_button"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/updateprofile_button"
-        android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/nametxt"
-        app:layout_constraintEnd_toEndOf="@+id/upd_name" />
-
-    <TextView
-        android:id="@+id/nameView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Name:"
-        android:textColor="@color/subtitle"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/settings_txt"
-        app:layout_constraintTop_toBottomOf="@+id/nametxt" />
-
-    <EditText
-        android:id="@+id/upd_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/ic_person"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Name"
-        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXY.,-Z "
-        android:inputType="textCapWords"
-        android:textColorHint="@color/whitesmoke"
-        app:layout_constraintEnd_toEndOf="@+id/logout_button"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nameView"
-        app:layout_constraintTop_toBottomOf="@+id/nameView" />
-
-    <TextView
-        android:id="@+id/emailView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Email:"
-        android:textColor="@color/subtitle"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/settings_txt"
-        app:layout_constraintTop_toBottomOf="@+id/upd_name" />
-
-    <EditText
-        android:id="@+id/upd_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/ic_email"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:textColorHint="@color/whitesmoke"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/logout_button"
-        app:layout_constraintStart_toStartOf="@+id/nameView"
-        app:layout_constraintTop_toBottomOf="@+id/emailView" />
-
-    <TextView
-        android:id="@+id/passView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Password:"
-        android:textColor="@color/subtitle"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/settings_txt"
-        app:layout_constraintTop_toBottomOf="@+id/upd_email" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/upd_box8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="2dp"
-        android:ems="10"
-        app:passwordToggleEnabled="true"
-        android:textColorHint="@color/whitesmoke"
-        app:hintAnimationEnabled="false"
-        app:hintEnabled="false"
-        android:inputType="textVisiblePassword|textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/logout_button"
-        app:layout_constraintStart_toStartOf="@+id/nameView"
-        app:layout_constraintTop_toBottomOf="@+id/passView">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/upd_pass"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-15dp"
-            android:layout_marginTop="-12dp"
-            android:background="@color/background"
-            android:drawableStart="@drawable/ic_pass"
-            android:drawablePadding="10dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textSize="18sp">
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="252dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/solid_rectangle"
+                app:backgroundTint="#DBE9E9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp">
 
-    <ImageView
-        android:id="@+id/back_button"
-        android:layout_width="24dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="30dp"
-        android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back"
-        tools:ignore="VectorDrawableCompat" />
+                <TextView
+                    android:id="@+id/subheading_profile"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/arial_nova_light"
+                    android:text="@string/editprofile_page"
+                    android:textColor="@color/subtitle"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@+id/logout_button"
+                    app:layout_constraintStart_toStartOf="@+id/settings_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/settings_txt" />
 
-    <ImageView
-        android:id="@+id/logout_button"
-        android:layout_width="24dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_logout" />
+                <TextView
+                    android:id="@+id/settings_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="76dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Edit Profile"
+                    android:textColor="@color/heading"
+                    android:textSize="37sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/logout_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="LOGOUT"
-        android:textColor="@color/subtitle"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/logout_button"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/back_button"
-        app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:id="@+id/update_button"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/heading"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="68dp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/buttons"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/logout_button"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/passView"
+                    app:layout_constraintTop_toBottomOf="@+id/upd_box8"
+                    app:layout_constraintVertical_bias="0.531" />
+
+                <ImageView
+                    android:id="@+id/updateprofile_button"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="118dp"
+                    android:layout_marginBottom="56dp"
+                    android:background="@drawable/updateprofile_button"
+                    android:elevation="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/nametxt"
+                    app:layout_constraintEnd_toEndOf="@+id/upd_name" />
+
+                <TextView
+                    android:id="@+id/nameView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Name:"
+                    android:textColor="@color/subtitle"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="@+id/settings_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/nametxt" />
+
+                <EditText
+                    android:id="@+id/upd_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Name"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXY.,-Z "
+                    android:inputType="textCapWords"
+                    android:textColorHint="@color/whitesmoke"
+                    app:layout_constraintEnd_toEndOf="@+id/logout_button"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/nameView"
+                    app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+                <TextView
+                    android:id="@+id/emailView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Email:"
+                    android:textColor="@color/subtitle"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="@+id/settings_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/upd_name" />
+
+                <EditText
+                    android:id="@+id/upd_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textColorHint="@color/whitesmoke"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="@+id/logout_button"
+                    app:layout_constraintStart_toStartOf="@+id/nameView"
+                    app:layout_constraintTop_toBottomOf="@+id/emailView" />
+
+                <TextView
+                    android:id="@+id/passView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Password:"
+                    android:textColor="@color/subtitle"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="@+id/settings_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/upd_email" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/upd_box8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:ems="10"
+                    app:passwordToggleEnabled="true"
+                    android:textColorHint="@color/whitesmoke"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false"
+                    android:inputType="textVisiblePassword|textPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/logout_button"
+                    app:layout_constraintStart_toStartOf="@+id/nameView"
+                    app:layout_constraintTop_toBottomOf="@+id/passView">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/upd_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-15dp"
+                        android:layout_marginTop="-10dp"
+                        android:background="@color/background"
+                        android:drawableStart="@drawable/ic_pass"
+                        android:drawablePadding="10dp"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textSize="18sp">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="24dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="28dp"
+                    android:contentDescription="TODO"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/logout_button"
+                    android:layout_width="24dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_logout" />
+
+                <TextView
+                    android:id="@+id/logout_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="LOGOUT"
+                    android:textColor="@color/subtitle"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/logout_button"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/back_button"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/user_pics"
-        android:elevation="2dp"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        app:layout_constraintEnd_toEndOf="@+id/subheading_profile"
-        app:layout_constraintHorizontal_bias="0.530"
-        app:layout_constraintStart_toStartOf="@+id/card3"
-        app:layout_constraintTop_toBottomOf="@+id/subheading_profile"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="132dp"
+                    android:layout_height="132dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="44dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/user_pics"
+                    android:elevation="2dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subheading_profile"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton" />
 
-    <TextView
-        android:id="@+id/nametxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Name"
-        android:textAlignment="center"
-        android:textColor="@color/heading"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/subheading_profile"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toStartOf="@+id/subheading_profile"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                <TextView
+                    android:id="@+id/nametxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/heading"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toEndOf="@+id/subheading_profile"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/subheading_profile"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

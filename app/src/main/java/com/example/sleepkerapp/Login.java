@@ -29,7 +29,6 @@ public class Login extends AppCompatActivity {
     private TextView button_frgtpass;
     private ImageView button_back;
     private ProgressBar progressBar;
-    DatabaseReference userRef;
     private int counter = 3;
 
     String email, password;
@@ -47,8 +46,6 @@ public class Login extends AppCompatActivity {
         progressBar = findViewById(R.id.loadingBar);
         signup_txt = findViewById(R.id.signup_button);
         progressBar.setVisibility(View.GONE);
-        userRef = FirebaseDatabase.getInstance().getReference("UserData");
-
 
         button_login.setOnClickListener(v -> {
 

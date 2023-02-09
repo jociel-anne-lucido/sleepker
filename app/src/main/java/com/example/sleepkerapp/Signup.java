@@ -46,7 +46,7 @@ public class Signup extends AppCompatActivity {
 
 
     String [] planets = {"Female", "Male", "Prefer not to say"};
-    String name, age, gender, email, password, uid, passwords, gend;
+    String name, age, gender, email, password, uid, gend;
 
     FirebaseAuth auth;
     SharedPreferences pref;

@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/arial_mt_rounded"
-        android:text="LEEPKER4"
+        android:text="LEEPKER"
         android:textColor="@color/heading"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/bgbottom"

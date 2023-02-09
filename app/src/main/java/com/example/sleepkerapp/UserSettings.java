@@ -28,10 +28,12 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -54,7 +56,7 @@ public class UserSettings extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser user;
     StorageReference storageReference;
-    DatabaseReference ref;
+    DatabaseReference ref, userRef;
 
     SharedPreferences pref;
 
@@ -78,6 +80,7 @@ public class UserSettings extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         ref = FirebaseDatabase.getInstance().getReference().child("UserData");
+
         storageReference = FirebaseStorage.getInstance().getReference();
         StorageReference profileRef = storageReference.child("users/"+auth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -110,6 +113,7 @@ public class UserSettings extends AppCompatActivity {
                 startActivityForResult(openGalleryIntent, 1000);
             }
         });
+
     }
 
     @Override
@@ -150,20 +154,18 @@ public class UserSettings extends AppCompatActivity {
         oldEmail = pref.getString("email", "");
         oldPass = pref.getString("pass", "");
 
-        if (oldName.equals("")) {
-            DatabaseReference nameRef = ref.child(uid).child("Fullname");
+        DatabaseReference nameRef = ref.child(uid).child("Fullname");
 
-            nameRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    oldName = snapshot.getValue(String.class);
-                    nameviewer.setText(oldName);
-                }
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) { }
-            });
-        }
-        nameviewer.setText(oldName);
+        nameRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String oldNames = snapshot.getValue(String.class);
+                nameviewer.setText(oldNames);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+
     }
 
     private void UpdateData() {
