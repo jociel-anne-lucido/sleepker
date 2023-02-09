@@ -22,11 +22,13 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/moon_button"
         android:layout_alignTop="@+id/moon_button"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="188dp"
         android:thumbTint="@color/white"
         android:trackTint="@color/buttons"
-        app:layout_constraintTop_toTopOf="@+id/moon_button"
-        tools:layout_editor_absoluteX="282dp"></Switch>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/moon_button"></Switch>
 
     <Chronometer
         android:id="@+id/chronometer_txt"
