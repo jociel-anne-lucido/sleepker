@@ -58,7 +58,7 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/bgbottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.00"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toEndOf="@+id/ss_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.481" />
@@ -80,12 +80,12 @@
 
     <ImageView
         android:id="@+id/ss_logo"
-        android:layout_width="140dp"
+        android:layout_width="120dp"
         android:layout_height="190dp"
-        android:paddingRight="-25dp"
+        android:paddingRight="-15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"

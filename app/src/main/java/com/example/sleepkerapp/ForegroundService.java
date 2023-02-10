@@ -27,7 +27,7 @@ public class ForegroundService extends Service {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent1, 0);
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("Sleepker")
+                .setContentTitle("Sleepgraphy")
                 .setContentText("Sleep tracking in progress...")
                 .setSmallIcon(R.drawable.sleep_symbol)
                 .setContentIntent(pendingIntent)

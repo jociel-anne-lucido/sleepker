@@ -83,15 +83,15 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="7dp"
             app:layout_constraintEnd_toEndOf="@+id/box"
             app:layout_constraintStart_toStartOf="@+id/box"
             app:layout_constraintTop_toTopOf="@+id/box">
 
             <ImageView
                 android:id="@+id/moodView"
-                android:layout_width="260dp"
-                android:layout_height="230dp"
+                android:layout_width="230dp"
+                android:layout_height="210dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -101,9 +101,9 @@
                 android:id="@+id/submit_button"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
-                android:layout_below="@id/radioGroup"
+                android:layout_below="@id/rela_card"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="46dp"
                 android:layout_marginEnd="22dp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/arial_mt_rounded"
@@ -113,89 +113,95 @@
                 android:textSize="18sp"
                 app:backgroundTint="@color/buttons" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
+            <HorizontalScrollView
+                android:id="@+id/rela_card"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/moodView"
                 android:layout_alignStart="@+id/submit_button"
                 android:layout_alignEnd="@id/submit_button"
-                android:layout_marginTop="14dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/moodView"
-                app:layout_constraintStart_toStartOf="@+id/moodView"
-                app:layout_constraintTop_toBottomOf="@+id/moodView">
+                android:padding="0dp"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
 
-                <RadioButton
-                    android:id="@+id/goodButton"
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="37dp"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:paddingStart="1dp"
-                    android:paddingEnd="8dp"
-                    android:text="Good"
-                    android:textColor="@color/heading"
-                    android:textSize="19dp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/relaxButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Relaxing"
-                    android:textColor="@color/heading"
-                    android:textSize="19dp"
-                    android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/goodButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="51dp"
+                        android:fontFamily="@font/arial_nova_light"
+                        android:paddingStart="1dp"
+                        android:paddingEnd="8dp"
+                        android:text="Good"
+                        android:textColor="@color/heading"
+                        android:textSize="19dp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/sosoButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="-295dp"
-                    android:layout_marginTop="60dp"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="So-so"
-                    android:textColor="@color/heading"
-                    android:textSize="19dp"
-                    android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/relaxButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:fontFamily="@font/arial_nova_light"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="Relaxing"
+                        android:textColor="@color/heading"
+                        android:textSize="19dp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/badButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginTop="60dp"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Bad"
-                    android:textColor="@color/heading"
-                    android:textSize="19dp"
-                    android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/sosoButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-285dp"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/arial_nova_light"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="So-so"
+                        android:textColor="@color/heading"
+                        android:textSize="19dp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/worstButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="60dp"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Worst"
-                    android:textColor="@color/heading"
-                    android:textSize="19dp"
-                    android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/badButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/arial_nova_light"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="Bad"
+                        android:textColor="@color/heading"
+                        android:textSize="19dp"
+                        android:textStyle="bold" />
 
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/worstButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/arial_nova_light"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="Worst"
+                        android:textColor="@color/heading"
+                        android:textSize="19dp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+            </HorizontalScrollView>
 
         </RelativeLayout>
     </ScrollView>

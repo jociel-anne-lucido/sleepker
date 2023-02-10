@@ -10,7 +10,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -118,9 +119,10 @@
                     android:drawablePadding="10dp"
                     android:ems="10"
                     android:hint="Name"
+                    android:textColorHint="#A9A9A9"
+                    android:textColor="@color/heading"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXY.,-Z "
                     android:inputType="textCapWords"
-                    android:textColorHint="@color/whitesmoke"
                     app:layout_constraintEnd_toEndOf="@+id/logout_button"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/nameView"
@@ -147,7 +149,8 @@
                     android:drawableLeft="@drawable/ic_email"
                     android:drawablePadding="10dp"
                     android:ems="10"
-                    android:textColorHint="@color/whitesmoke"
+                    android:textColorHint="#A9A9A9"
+                    android:textColor="@color/heading"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     app:layout_constraintEnd_toEndOf="@+id/logout_button"
@@ -174,7 +177,8 @@
                     android:layout_marginTop="2dp"
                     android:ems="10"
                     app:passwordToggleEnabled="true"
-                    android:textColorHint="@color/whitesmoke"
+                    android:textColorHint="#A9A9A9"
+                    android:textColor="@color/heading"
                     app:hintAnimationEnabled="false"
                     app:hintEnabled="false"
                     android:inputType="textVisiblePassword|textPassword"
@@ -192,6 +196,7 @@
                         android:drawableStart="@drawable/ic_pass"
                         android:drawablePadding="10dp"
                         android:hint="Password"
+                        android:textColor="@color/heading"
                         android:inputType="textPassword"
                         android:textSize="18sp">
                     </com.google.android.material.textfield.TextInputEditText>

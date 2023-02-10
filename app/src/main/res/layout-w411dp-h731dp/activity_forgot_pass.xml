@@ -67,6 +67,8 @@
         android:fontFamily="sans-serif"
         android:hint="Email"
         app:backgroundTint="#E3EDF1"
+        android:textColorHint="#A9A9A9"
+        android:textColor="@color/heading"
         android:inputType="textEmailAddress"
         android:paddingLeft="26dp"
         android:textSize="17dp"

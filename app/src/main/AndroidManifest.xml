@@ -58,7 +58,7 @@
             </intent-filter>
         </activity>
         <service android:name="com.example.sleepkerapp.ForegroundService"/>
-        <service android:name=".MyService"/>
+        <service android:name="com.example.sleepkerapp.MyService"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

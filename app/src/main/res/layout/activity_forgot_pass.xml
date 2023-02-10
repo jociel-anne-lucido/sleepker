@@ -65,6 +65,8 @@
         android:background="@drawable/edittext_bg"
         android:ems="10"
         android:fontFamily="sans-serif"
+        android:textColorHint="#A9A9A9"
+        android:textColor="@color/heading"
         android:hint="Email"
         app:backgroundTint="#E3EDF1"
         android:inputType="textEmailAddress"

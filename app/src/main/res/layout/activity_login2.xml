@@ -96,6 +96,8 @@
             android:layout_marginRight="8dp"
             android:background="@drawable/edittext_bg"
             android:hint="Email"
+            android:textColorHint="#A9A9A9"
+            android:textColor="@color/heading"
             android:inputType="textEmailAddress"
             android:textSize="16sp">
         </com.google.android.material.textfield.TextInputEditText>
@@ -126,6 +128,8 @@
             android:layout_marginRight="8dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:textColorHint="#A9A9A9"
+            android:textColor="@color/heading"
             android:hint="Password"
             android:inputType="textPassword"
             android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>

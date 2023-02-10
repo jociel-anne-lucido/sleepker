@@ -101,133 +101,141 @@
                     android:id="@+id/title2"
                     android:layout_width="204dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/linear_card"
+                    android:layout_below="@id/rela_card"
                     android:layout_alignStart="@+id/title"
                     android:layout_alignEnd="@+id/title"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="65dp"
                     android:layout_marginEnd="11dp"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:text="Sleep better"
                     android:textColor="@color/subtitle"
                     android:textSize="18dp"></TextView>
 
-                <LinearLayout
-                    android:layout_width="327dp"
-                    android:layout_height="115dp"
-                    android:layout_below="@+id/title"
-                    android:id="@+id/linear_card"
-                    android:layout_alignStart="@+id/card1"
-                    android:layout_alignEnd="@+id/card1"
-                    android:layout_marginStart="-2dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="-2dp"
-                    android:layout_marginBottom="2dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/notes_card"
-                        android:layout_width="100dp"
-                        android:layout_height="92dp"
-                        android:layout_below="@+id/card1"
-                        android:layout_alignStart="@+id/card1"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/notes"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/music_card"
-                        android:layout_width="100dp"
-                        android:layout_height="92dp"
-                        android:layout_below="@+id/card1"
-                        android:layout_alignStart="@+id/card1"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/music"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/record_card"
-                        android:layout_width="100dp"
-                        android:layout_height="92dp"
-                        android:layout_below="@+id/card1"
-                        android:layout_alignStart="@+id/card1"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/date_"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/linear_card"
-                    android:layout_alignStart="@+id/card1"
-                    android:id="@+id/we"
-                    android:layout_alignEnd="@+id/card1"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="-2dp">
+                    android:id="@+id/rela_card"
+                    android:scrollbars="none"
+                    android:layout_below="@id/title">
 
-                    <TextView
-                        android:id="@+id/thoughts_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="23dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginEnd="24dp"
-                        android:fontFamily="@font/arial_nova_light"
-                        android:text="Thoughts"
-                        android:textColor="@color/subtitle"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/back_txt" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="0dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/linear_card"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="2dp">
 
-                    <TextView
-                        android:id="@+id/music_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginEnd="24dp"
-                        android:fontFamily="@font/arial_nova_light"
-                        android:text="Music"
-                        android:textColor="@color/subtitle"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/back_txt" />
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/notes_card"
+                                    android:layout_width="100dp"
+                                    android:layout_height="92dp"
+                                    android:layout_below="@+id/card1"
+                                    android:layout_alignStart="@+id/card1"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:background="@drawable/notes"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
-                    <TextView
-                        android:id="@+id/record_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="43dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginEnd="22dp"
-                        android:fontFamily="@font/arial_nova_light"
-                        android:text="Record"
-                        android:textColor="@color/subtitle"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/back_txt" />
-                </LinearLayout>
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/music_card"
+                                    android:layout_width="100dp"
+                                    android:layout_height="92dp"
+                                    android:layout_below="@+id/card1"
+                                    android:layout_alignStart="@+id/card1"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@drawable/music"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
 
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/record_card"
+                                    android:layout_width="100dp"
+                                    android:layout_height="92dp"
+                                    android:layout_below="@+id/card1"
+                                    android:layout_alignStart="@+id/card1"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:background="@drawable/date_"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/we"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/linear_card"
+                                android:layout_alignParentStart="true">
+
+                                <TextView
+                                    android:id="@+id/thoughts_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="24dp"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:text="Thoughts"
+                                    android:textColor="@color/subtitle"
+                                    android:textSize="16sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/back_txt" />
+
+                                <TextView
+                                    android:id="@+id/music_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="45dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="24dp"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:text="Music"
+                                    android:textColor="@color/subtitle"
+                                    android:textSize="16sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/back_txt" />
+
+                                <TextView
+                                    android:id="@+id/record_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="47dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="22dp"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:text="Record"
+                                    android:textColor="@color/subtitle"
+                                    android:textSize="16sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/back_txt" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                </HorizontalScrollView>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/sleep_card"
-                    android:layout_width="323dp"
+                    android:layout_width="match_parent"
                     android:layout_height="97dp"
                     android:layout_marginBottom="35dp"
                     android:layout_below="@+id/title2"
-                    android:layout_alignStart="@+id/linear_card"
-                    android:layout_alignEnd="@+id/linear_card"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginStart="4dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="7dp"
                     android:background="@drawable/insomia"
                     android:elevation="2dp"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
@@ -239,7 +247,6 @@
                     android:layout_below="@+id/greetings"
                     android:layout_alignStart="@+id/greetings"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginStart="5dp"
                     android:layout_marginTop="-2dp"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:textColor="@color/heading"
@@ -292,14 +299,13 @@
 
                 <ImageView
                     android:id="@+id/moon_button"
-                    android:layout_width="30dp"
+                    android:layout_width="50dp"
                     android:layout_height="45dp"
-                    android:layout_alignStart="@+id/card1"
                     android:layout_alignEnd="@+id/card1"
                     android:layout_alignBottom="@+id/card1"
-                    android:layout_marginStart="264dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="36dp"
-                    android:layout_marginEnd="33dp"
+                    android:layout_marginEnd="35dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginBottom="21dp"
                     android:background="@drawable/moon"
@@ -308,7 +314,7 @@
 
                 <TextView
                     android:id="@+id/date"
-                    android:layout_width="243dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_below="@+id/day"
                     android:layout_alignStart="@+id/card1"

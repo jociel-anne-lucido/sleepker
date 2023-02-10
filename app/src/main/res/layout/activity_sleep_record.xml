@@ -29,30 +29,31 @@
 
         <TextView
             android:id="@+id/sleep_date"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="13dp"
             android:layout_toEndOf="@id/sleep_image"
             android:fontFamily="@font/arial_nova_light"
             android:text="Date"
+            android:layout_marginEnd="20dp"
             android:textStyle="bold"
             android:textColor="@color/heading"
-            android:textSize="26dp"></TextView>
+            android:textSize="23dp"></TextView>
 
         <TextView
             android:id="@+id/sleep_time"
-            android:layout_width="127dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="19dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="15dp"
-            android:gravity="right"
-            android:textAlignment="gravity"
+            android:layout_marginEnd="13dp"
             android:layout_toEndOf="@id/sleep_date"
             android:fontFamily="@font/arial_nova_light"
             android:text="SleepTime"
+            android:textAlignment="center"
             android:textColor="@color/subtitle"
             android:textSize="15dp"
             android:textStyle="bold"></TextView>

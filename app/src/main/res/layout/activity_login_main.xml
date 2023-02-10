@@ -11,7 +11,7 @@
     <FrameLayout
         android:id="@+id/sheet"
         android:layout_width="match_parent"
-        android:layout_height="225dp"
+        android:layout_height="221dp"
         android:layout_margin="8dp"
         app:layout_behavior = "com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:background="@drawable/box_bg">
@@ -25,67 +25,82 @@
             android:layout_gravity="center|top">
         </ImageView>
 
-        <TextView
-            android:id="@+id/heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="28dp"
-            android:fontFamily="@font/arial_mt_rounded"
-            android:text="Welcome"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
+        <ScrollView
+            android:layout_above="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Welcome"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/subheading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="@font/arial_nova_light"
-            android:text="@string/welcome_page"
-            android:textColor="@color/heading"
-            android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/subheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/heading"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/arial_nova_light"
+                    android:text="@string/welcome_page"
+                    android:textColor="@color/heading"
+                    android:textSize="16sp" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subheading"
+                    android:layout_gravity="center_horizontal">
 
-            <Button
-                android:id="@+id/login_button"
-                android:layout_width="150dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="144dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/button"
-                android:fontFamily="@font/arial_mt_rounded"
-                android:text="Login"
-                android:textAllCaps="false"
-                android:textColor="@color/heading"
-                android:textSize="18sp"
-                app:backgroundTint="@color/buttons" />
+                    <Button
+                        android:id="@+id/login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginEnd="29dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/arial_mt_rounded"
+                        android:text="Login"
+                        android:textAllCaps="false"
+                        android:textColor="@color/heading"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/buttons" />
 
-            <Button
-                android:id="@+id/sign_button"
-                android:layout_width="150dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="144dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="30dp"
-                android:layout_toEndOf="@+id/login_button"
-                android:background="@drawable/button"
-                android:fontFamily="@font/arial_mt_rounded"
-                android:text="Signup"
-                android:textAllCaps="false"
-                android:textColor="@color/heading"
-                android:textSize="18sp"
-                app:backgroundTint="@color/white" />
-        </RelativeLayout>
-
+                    <Button
+                        android:id="@+id/sign_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/login_button"
+                        android:layout_alignStart="@+id/login_button"
+                        android:layout_alignEnd="@+id/login_button"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/arial_mt_rounded"
+                        android:text="Signup"
+                        android:textAllCaps="false"
+                        android:textColor="@color/heading"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/white" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
     </FrameLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
