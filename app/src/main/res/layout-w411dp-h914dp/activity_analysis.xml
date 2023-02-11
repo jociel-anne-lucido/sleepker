@@ -76,7 +76,7 @@
                         android:id="@+id/card1"
                         android:layout_width="160dp"
                         android:layout_height="145dp"
-                        android:layout_marginTop="45dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginStart="6dp"
                         android:background="@drawable/rectangle"
                         app:layout_constraintStart_toStartOf="parent"
@@ -191,7 +191,7 @@
                         android:layout_marginBottom="10dp"
                         app:cpb_background_progressbar_color="@color/navig"
                         app:cpb_background_progressbar_width="9dp"
-                        app:cpb_progress="0"
+                        app:cpb_progress="69"
                         app:cpb_progress_direction="to_right"
                         app:cpb_progress_max="100"
                         app:cpb_progressbar_color="@color/white"
@@ -209,7 +209,7 @@
                         android:layout_alignTop="@+id/circularProgressBar"
                         android:layout_alignEnd="@+id/card2"
                         android:layout_alignBottom="@+id/card2"
-                        android:layout_marginTop="27dp"
+                        android:layout_marginTop="29dp"
                         android:layout_marginBottom="27dp"
                         android:fontFamily="@font/arial_mt_rounded"
                         android:text="@string/no_text"
@@ -230,7 +230,7 @@
                 android:layout_below="@+id/rela_card"
                 android:layout_alignTop="@+id/card3"
                 android:layout_marginStart="3dp"
-                android:layout_marginTop="49dp"
+                android:layout_marginTop="55dp"
                 android:fontFamily="@font/arial_mt_rounded"
                 android:text="Sleep Information"
                 android:textColor="@color/heading"
@@ -286,14 +286,14 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="23dp"
                     android:layout_marginEnd="17dp"
                     android:layout_toEndOf="@+id/wokeup_title"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:text="@string/no_text"
                     android:textAlignment="center"
                     android:textColor="@color/heading"
-                    android:textSize="18sp"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
 
 
@@ -348,14 +348,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="38dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="23dp"
                     android:layout_marginEnd="17dp"
                     android:layout_toEndOf="@+id/sleep_title"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:text="@string/no_text"
                     android:textAlignment="center"
                     android:textColor="@color/heading"
-                    android:textSize="18sp"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -408,14 +408,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="38dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="23dp"
                     android:layout_marginEnd="17dp"
                     android:layout_toEndOf="@+id/sleepdur_title"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:text="@string/no_text"
                     android:textAlignment="center"
                     android:textColor="@color/heading"
-                    android:textSize="18sp"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -464,14 +464,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="99dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="23dp"
                     android:layout_marginEnd="17dp"
                     android:layout_toEndOf="@+id/mood_title"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:text="@string/no_text"
                     android:textAlignment="center"
                     android:textColor="@color/heading"
-                    android:textSize="18sp"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 

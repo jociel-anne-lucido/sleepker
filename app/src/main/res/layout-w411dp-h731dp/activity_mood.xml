@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,9 +12,10 @@
 
     <View
         android:id="@+id/box"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:layout_below="@id/subheading_txt"
         android:background="@drawable/box_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +49,7 @@
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/arial_mt_rounded"
         android:text="sleep?"
+        android:layout_below="@id/title_howsyour"
         android:textColor="@color/heading"
         android:textSize="36dp"
         android:textStyle="bold"
@@ -58,11 +60,12 @@
 
     <TextView
         android:id="@+id/subheading_txt"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="24dp"
+        android:layout_below="@id/subsleep_txt"
         android:fontFamily="@font/arial_nova_light"
         android:text="@string/mood_page"
         android:textColor="@color/subtitle"
@@ -73,7 +76,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subheading_txt"
+        android:layout_alignTop="@+id/box"
+        android:paddingTop="25dp"
+        android:layout_marginBottom="17dp"
         android:fillViewport="true"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="@+id/box"
@@ -83,7 +90,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp"
             app:layout_constraintEnd_toEndOf="@+id/box"
             app:layout_constraintStart_toStartOf="@+id/box"
@@ -91,10 +97,9 @@
 
             <ImageView
                 android:id="@+id/moodView"
-                android:layout_width="220dp"
-                android:layout_height="200dp"
+                android:layout_width="230dp"
+                android:layout_height="190dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/good" />
 
@@ -105,8 +110,8 @@
                 android:layout_below="@id/rela_card"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="53dp"
-                android:layout_marginBottom="50dp"
                 android:layout_marginEnd="22dp"
+                android:layout_marginBottom="50dp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/arial_mt_rounded"
                 android:text="Submit"
@@ -122,8 +127,8 @@
                 android:layout_below="@id/moodView"
                 android:layout_alignStart="@+id/submit_button"
                 android:layout_alignEnd="@id/submit_button"
-                android:padding="0dp"
                 android:layout_marginTop="6dp"
+                android:padding="0dp"
                 android:scrollbars="none">
 
                 <RadioGroup
@@ -209,4 +214,4 @@
     </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

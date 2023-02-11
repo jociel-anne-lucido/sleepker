@@ -11,7 +11,7 @@
     <FrameLayout
         android:id="@+id/sheet"
         android:layout_width="match_parent"
-        android:layout_height="221dp"
+        android:layout_height="225dp"
         android:layout_margin="8dp"
         app:layout_behavior = "com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:background="@drawable/box_bg">
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:fillViewport="true"
             android:scrollbars="none"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="29dp"
             android:layout_marginBottom="10dp"
             android:layout_height="wrap_content">
             <RelativeLayout
@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/heading"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/arial_nova_light"
                     android:text="@string/welcome_page"
@@ -70,7 +70,7 @@
                     <Button
                         android:id="@+id/login_button"
                         android:layout_width="match_parent"
-                        android:layout_height="49dp"
+                        android:layout_height="46dp"
                         android:layout_marginStart="26dp"
                         android:layout_marginTop="22dp"
                         android:layout_marginEnd="29dp"
@@ -85,11 +85,11 @@
                     <Button
                         android:id="@+id/sign_button"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="46dp"
                         android:layout_below="@+id/login_button"
                         android:layout_alignStart="@+id/login_button"
                         android:layout_alignEnd="@+id/login_button"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="18dp"
                         android:layout_marginBottom="15dp"
                         android:background="@drawable/button"
                         android:fontFamily="@font/arial_mt_rounded"

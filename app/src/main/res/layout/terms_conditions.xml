@@ -24,7 +24,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="18dp"
             android:textColor="@color/heading"
-            android:text="Sleepkers"
+            android:text="Sleepker App"
             android:textStyle="bold"
             android:textSize="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text"
-                android:text="Last updated: 01/21/2022"
+                android:text="Last updated: 02/11/2023"
                 android:textColor="@color/subtitle"
                 android:textSize="16dp"></TextView>
             <TextView

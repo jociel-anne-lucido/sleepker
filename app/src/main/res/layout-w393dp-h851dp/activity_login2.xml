@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    android:padding="8dp"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
     tools:context=".Login">
 
     <View
         android:id="@+id/box"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="65dp"
         android:background="@drawable/box_bg"
         android:padding="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
