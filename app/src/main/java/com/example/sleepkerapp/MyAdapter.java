@@ -73,7 +73,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             super(itemView);
 
             sleepDateTxt = itemView.findViewById(R.id.sleep_date);
-            sleepTimeTxt = itemView.findViewById(R.id.sleep_time);
             sleepCardView = itemView.findViewById(R.id.sleep_card);
         }
     }

@@ -23,6 +23,8 @@
             android:layout_marginLeft="10dp"
             android:textSize="18dp"
             android:paddingLeft="15dp"
+            android:textColorHint="#A9A9A9"
+            android:textColor="@color/heading"
             android:background="@drawable/rectangle"
             android:backgroundTint="#E3EDF1"
             android:textStyle="italic"

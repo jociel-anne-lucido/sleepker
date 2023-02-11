@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp">
+            android:layout_marginRight="22dp"
+            android:layout_marginLeft="22dp">
 
             <TextView
                 android:id="@+id/title_text1"
@@ -51,7 +51,7 @@
                         android:layout_width="158dp"
                         android:layout_height="152dp"
                         android:layout_marginTop="27dp"
-                        android:layout_marginStart="4dp"
+                        android:layout_marginStart="9dp"
                         android:background="@drawable/rectangle"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:layout_editor_absoluteY="0dp" />
@@ -61,7 +61,7 @@
                         android:layout_width="158dp"
                         android:layout_height="152dp"
                         android:layout_alignTop="@+id/card1"
-                        android:layout_marginStart="26dp"
+                        android:layout_marginStart="28dp"
                         android:layout_alignParentEnd="true"
                         android:layout_toEndOf="@+id/card1"
                         android:background="@drawable/rectangle"
@@ -94,13 +94,13 @@
                         android:layout_alignTop="@+id/card1"
                         android:layout_alignEnd="@+id/card1"
                         android:layout_alignBottom="@+id/card1"
-                        android:layout_marginTop="59dp"
+                        android:layout_marginTop="62dp"
                         android:layout_marginBottom="38dp"
                         android:fontFamily="@font/arial_mt_rounded"
                         android:text="@string/no_text"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="41sp"
+                        android:textSize="36sp"
                         app:layout_constraintEnd_toEndOf="@+id/card1"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/card1" />
@@ -445,6 +445,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/rela"
+                    android:paddingLeft="8dp"
                     android:gravity="center">
 
                     <ImageView
