@@ -212,8 +212,8 @@ public class Signup extends AppCompatActivity {
             pass_txt.setError("Enter password.", null);
             pass_txt.requestFocus();
             return false;
-        } else if (password.length() < 6) {
-            pass_txt.setError("Password should be at least 6 characters long.", null);
+        } else if (password.length() < 8) {
+            pass_txt.setError("Password should be at least 8 characters long.", null);
             pass_txt.requestFocus();
             return false;
         } else if (!password.matches(".*[0-9].*")) {

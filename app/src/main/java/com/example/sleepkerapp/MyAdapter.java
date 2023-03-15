@@ -34,11 +34,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.sleepDateTxt.setText(list.get(position).getDateRecorded());
-        holder.sleepTimeTxt.setText(list.get(position).getSleepTime());
         holder.sleepCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Date " + position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, SleepData.class);
                 intent.putExtra("dateRecorded", list.get(position).getDateRecorded());
                 intent.putExtra("lastRecorded", list.get(position).getLastRecorded());
@@ -66,7 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView sleepTimeTxt, sleepDateTxt;
+        TextView sleepDateTxt;
         CardView sleepCardView;
 
         public MyViewHolder(@NonNull View itemView) {

@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -225,6 +226,9 @@ public class UserSettings extends AppCompatActivity {
         oldPass = newpref.getString("currentPass", "");
 
         if (email.isEmpty()) {
+            return false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            new_email.setError("Please enter a valid email address.");
             return false;
         } else if (email.equals(oldEmail)) {
             new_email.setError("No changes detected.");

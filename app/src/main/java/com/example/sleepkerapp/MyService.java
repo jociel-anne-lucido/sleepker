@@ -22,7 +22,7 @@ public class MyService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Toast.makeText(this, "Service started successfully", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Music started successfully", Toast.LENGTH_SHORT).show();
         mediaPlayer = MediaPlayer.create(this,R.raw.relaxing);
         mediaPlayer.start();
         mediaPlayer.setLooping(false);
@@ -32,14 +32,14 @@ public class MyService extends Service {
     @Override
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
-        Toast.makeText(this, "Service started playing song...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Music started playing...", Toast.LENGTH_SHORT).show();
         mediaPlayer.start();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "Service stopped playing", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Music stopped playing", Toast.LENGTH_SHORT).show();
         mediaPlayer.stop();
     }
 }
