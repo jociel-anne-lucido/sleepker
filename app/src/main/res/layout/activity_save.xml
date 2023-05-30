@@ -11,25 +11,34 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_height="wrap_content"
         android:padding="8dp">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
 
-        <EditText
-            android:id="@+id/newTaskText"
-            android:layout_width="wrap_content"
-            android:layout_height="51dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="18dp"
-            android:paddingLeft="15dp"
-            android:textColorHint="#A9A9A9"
-            android:textColor="@color/heading"
-            android:background="@drawable/rectangle"
-            android:backgroundTint="#E3EDF1"
-            android:textStyle="italic"
-            android:hint="share your thoughts"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            <EditText
+                android:id="@+id/newTaskText"
+                android:layout_width="wrap_content"
+                android:layout_height="51dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:paddingLeft="15dp"
+                android:textColorHint="#A9A9A9"
+                android:textColor="@color/heading"
+                android:background="@drawable/rectangle"
+                android:backgroundTint="#E3EDF1"
+                android:textStyle="italic"
+                android:hint="share your thoughts"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -38,24 +47,32 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:padding="8dp">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="52dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rectangle"
-            android:backgroundTint="@color/boxbg"
-            android:text="Save"
-            android:layout_marginBottom="30dp"
-            android:paddingTop="12dp"
-            android:fontFamily="@font/arial_mt_rounded"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rectangle"
+                android:backgroundTint="@color/boxbg"
+                android:text="Save"
+                android:layout_marginBottom="30dp"
+                android:paddingTop="12dp"
+                android:fontFamily="@font/arial_mt_rounded"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </RelativeLayout>
 
 
     </LinearLayout>

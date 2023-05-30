@@ -4,21 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
     <FrameLayout
         android:id="@+id/sheet"
         android:layout_width="match_parent"
-        android:layout_height="225dp"
+        android:layout_height="213dp"
         android:layout_margin="8dp"
+        android:elevation="2dp"
+        android:layout_below="@id/logosubtitle"
         app:layout_behavior = "com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:background="@drawable/box_bg">
 
         <ImageView
             android:layout_width="70dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="4dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_remove_24"
             android:scaleType="centerCrop"
@@ -33,6 +40,7 @@
             android:layout_marginTop="29dp"
             android:layout_marginBottom="10dp"
             android:layout_height="wrap_content">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -65,40 +73,72 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/subheading"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="5dp"
                     android:layout_gravity="center_horizontal">
 
-                    <Button
-                        android:id="@+id/login_button"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="46dp"
-                        android:layout_marginStart="26dp"
-                        android:layout_marginTop="22dp"
-                        android:layout_marginEnd="29dp"
-                        android:background="@drawable/button"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="Login"
-                        android:textAllCaps="false"
-                        android:textColor="@color/heading"
-                        android:textSize="18sp"
-                        app:backgroundTint="@color/buttons" />
-
-                    <Button
-                        android:id="@+id/sign_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="46dp"
-                        android:layout_below="@+id/login_button"
-                        android:layout_alignStart="@+id/login_button"
-                        android:layout_alignEnd="@+id/login_button"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginTop="18dp"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/button"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="Signup"
-                        android:textAllCaps="false"
-                        android:textColor="@color/heading"
-                        android:textSize="18sp"
-                        app:backgroundTint="@color/white" />
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/imageLeft"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.47"
+                            android:adjustViewBounds="true"
+                             >
+
+                            <Button
+                                android:id="@+id/login_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/button"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="Login"
+                                android:textAllCaps="false"
+                                android:textColor="@color/heading"
+                                android:textSize="18sp"
+                                app:backgroundTint="@color/buttons" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/margin"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:src="@color/boxbg" />
+
+                        <RelativeLayout
+                            android:id="@+id/imageRight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:adjustViewBounds="true"
+                             >
+
+                            <Button
+                                android:id="@+id/sign_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/button"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="Signup"
+                                android:textAllCaps="false"
+                                android:textColor="@color/heading"
+                                android:textSize="18sp"
+                                app:backgroundTint="@color/white" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
                 </RelativeLayout>
+
             </RelativeLayout>
         </ScrollView>
     </FrameLayout>
@@ -126,44 +166,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="185dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="83dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bg_top"
-            app:srcCompat="@drawable/logo_blue" />
-
-        <TextView
-            android:id="@+id/logotitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/arial_mt_rounded"
-            android:text="SLEEPKER"
-            android:textColor="@color/heading"
-            android:textSize="32sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-        <TextView
-            android:id="@+id/logosubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:fontFamily="@font/arial_nova_light"
-            android:text="your sleeping companion"
-            android:textStyle="italic"
-            android:textColor="@color/subtitle"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logotitle" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="185dp"
+                android:layout_height="175dp"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/logo_blue" />
+
+            <TextView
+                android:id="@+id/logotitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial_mt_rounded"
+                android:text="SLEEPKER"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/heading"
+                android:textSize="32sp"
+                android:layout_below="@id/logo"/>
+
+            <TextView
+                android:id="@+id/logosubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/arial_nova_light"
+                android:text="your sleeping companion"
+                android:layout_centerHorizontal="true"
+                android:textStyle="italic"
+                android:textColor="@color/subtitle"
+                android:textSize="19sp"
+                android:layout_below="@id/logotitle"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

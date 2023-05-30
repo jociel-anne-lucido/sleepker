@@ -49,47 +49,90 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/ss_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="LEEPKER"
-        android:textColor="@color/heading"
-        android:textSize="38sp"
-        app:layout_constraintBottom_toBottomOf="@+id/bgbottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toEndOf="@+id/ss_logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="22dp"
+        android:layout_centerVertical="true">
 
-    <TextView
-        android:id="@+id/ss_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/arial_nova_light"
-        android:text="your sleeping companion"
-        android:textColor="@color/subtitle"
-        android:textSize="19sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="@+id/ss_title"
-        app:layout_constraintTop_toBottomOf="@+id/ss_title" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
 
-    <ImageView
-        android:id="@+id/ss_logo"
-        android:layout_width="110dp"
-        android:layout_height="160dp"
-        android:paddingRight="-26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@drawable/logo_blue" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/imageLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:adjustViewBounds="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@color/black" >
+
+                    <ImageView
+                        android:id="@+id/ss_logo"
+                        android:layout_width="105dp"
+                        android:layout_height="170dp"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/logo_blue" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/textLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.60"
+                    android:adjustViewBounds="true"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/ss_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="LEEPKER"
+                            android:autoSizeTextType="uniform"
+                            android:textColor="@color/heading"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/ss_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="your sleeping companion"
+                            android:textColor="@color/subtitle"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            android:layout_below="@id/ss_title"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

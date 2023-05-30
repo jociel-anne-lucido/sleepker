@@ -20,7 +20,6 @@ public class SleepData extends AppCompatActivity {
         sleep_date = findViewById(R.id.sleepDate);
         sleep_qual = findViewById(R.id.sleepqual);
         btn_back = findViewById(R.id.back_button);
-        last_time = findViewById(R.id.lastTimeRecord);
         wake_time = findViewById(R.id.wakeTimeRecord);
         new_time = findViewById(R.id.newTimeRecord);
         sleep_time = findViewById(R.id.sleepTimeRecord);
@@ -31,7 +30,6 @@ public class SleepData extends AppCompatActivity {
 
         Intent intent = getIntent();
         String date = intent.getExtras().getString("dateRecorded");
-        String lastTime = intent.getExtras().getString("lastRecorded");
         String wakeTimeRec = intent.getExtras().getString("wakeTime");
         String newTimeRec = intent.getExtras().getString("newRecorded");
         String totalDuration = intent.getExtras().getString("totalDur");
@@ -39,7 +37,6 @@ public class SleepData extends AppCompatActivity {
         String moodQualRec = intent.getExtras().getString("moodQual");
         String sleepQualRec = intent.getExtras().getString("sleepQual");
         sleep_date.setText(date);
-        last_time.setText(lastTime);
         wake_time.setText(wakeTimeRec);
         new_time.setText(newTimeRec);
         total_dur.setText(totalDuration);

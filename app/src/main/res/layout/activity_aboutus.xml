@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".AboutUs">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/infocon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="#E2EEEE">
+
+                    <ImageView
+                        android:id="@+id/back_button"
+                        android:layout_width="24dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="24dp"
+                        android:contentDescription="TODO"
+                        android:layout_marginTop="28dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_back"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <View
+                        android:id="@+id/bgtop"
+                        android:layout_width="match_parent"
+                        android:layout_height="136dp"
+                        android:background="@drawable/ic_top"
+                        android:elevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/bgtop1"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/ic_top1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="100dp"
+                        android:layout_below="@id/bgtop1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:id="@+id/namelogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/name_logo"/>
+
+                        <ImageView
+                            android:id="@+id/logo"
+                            android:layout_width="195dp"
+                            android:layout_height="185dp"
+                            android:layout_marginTop="17dp"
+                            android:layout_below="@+id/namelogo"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/logo_blue" />
+
+                        <TextView
+                            android:id="@+id/logotitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="SLEEPKER"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/heading"
+                            android:textSize="34sp"
+                            android:layout_below="@id/logo"/>
+
+                        <TextView
+                            android:id="@+id/logosubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="your sleeping companion"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="italic"
+                            android:textColor="@color/subtitle"
+                            android:textSize="19sp"
+                            android:layout_below="@id/logotitle"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/infocon1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infocon"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/infocon11"
+                    android:layout_height="match_parent">
+
+                            <TextView
+                            android:id="@+id/title_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="37dp"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="Our Journey:"
+                            android:textColor="@color/heading"
+                            android:textSize="27sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/subtitle_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_txt"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="@string/aboutus"
+                            android:textColor="@color/heading"
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/infocon12"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@id/infocon11">
+
+                        <TextView
+                            android:id="@+id/parag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginEnd="26dp"
+                            android:text="@string/name1"
+                            android:layout_marginBottom="22dp"
+                            android:textAlignment="viewStart"
+                            android:justificationMode="inter_word"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:textColor="@color/subtitle"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/parag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_below="@id/parag"
+                            android:layout_marginEnd="26dp"
+                            android:textAlignment="viewStart"
+                            android:justificationMode="inter_word"
+                            android:layout_marginBottom="22dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="@string/name2"
+                            android:textColor="@color/subtitle"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/parag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_below="@id/parag1"
+                            android:layout_marginEnd="26dp"
+                            android:textAlignment="viewStart"
+                            android:justificationMode="inter_word"
+                            android:layout_marginBottom="22dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="@string/name3"
+                            android:textColor="@color/subtitle"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/parag3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_below="@id/parag2"
+                            android:layout_marginEnd="26dp"
+                            android:textAlignment="viewStart"
+                            android:justificationMode="inter_word"
+                            android:layout_marginBottom="22dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="@string/name4"
+                            android:textColor="@color/subtitle"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/paragtitle_txtcon"
+                            android:layout_below="@id/parag3"
+                            android:background="#55737D"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/paragtitle_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="26dp"
+                                android:layout_marginBottom="11dp"
+                                android:layout_marginEnd="26dp"
+                                android:layout_marginTop="11dp"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="But we didn't stop there..."
+                                android:textColor="@color/background"
+                                android:textSize="20sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/parag4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_below="@id/paragtitle_txtcon"
+                            android:layout_marginEnd="26dp"
+                            android:textAlignment="viewStart"
+                            android:layout_marginTop="23dp"
+                            android:justificationMode="inter_word"
+                            android:layout_marginBottom="22dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="@string/name5"
+                            android:textColor="@color/subtitle"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/parag5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_below="@id/parag4"
+                            android:layout_marginEnd="26dp"
+                            android:textAlignment="viewStart"
+                            android:justificationMode="inter_word"
+                            android:layout_marginBottom="22dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="@string/name6"
+                            android:textColor="@color/subtitle"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/parag6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:layout_below="@id/parag5"
+                            android:layout_marginEnd="26dp"
+                            android:textAlignment="viewStart"
+                            android:justificationMode="inter_word"
+                            android:layout_marginBottom="22dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="@string/name7"
+                            android:textColor="@color/subtitle"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/infocon13"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/infocon12"
+                    android:background="#629D9E"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/imageLeft"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentRight="true"
+                             >
+
+                            <ImageView
+                                android:id="@+id/jociel"
+                                android:layout_width="95dp"
+                                android:layout_height="115dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/bulb" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/textLeft"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.70"
+                            android:adjustViewBounds="true"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                >
+                                <TextView
+                                    android:id="@+id/meet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="32dp"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginEnd="32dp"
+                                    android:fontFamily="@font/arial_mt_rounded"
+                                    android:text="Vision"
+                                    android:textColor="@color/background"
+                                    android:textSize="24sp"
+                                    android:textStyle="italic"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/ss_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/meet"
+                                    android:text="@string/vision"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_marginRight="15dp"
+                                    android:textAlignment="viewStart"
+                                    android:justificationMode="inter_word"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:textColor="@color/background"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/infocon14"
+                    android:layout_below="@id/infocon13"
+                    android:background="#E2EEEE"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/imageLeft1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@color/black" >
+
+                            <TextView
+                                android:id="@+id/missiontxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="32dp"
+                                android:textAlignment="center"
+                                android:layout_marginBottom="11dp"
+                                android:layout_marginEnd="32dp"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="Mission"
+                                android:textColor="@color/heading"
+                                android:textSize="24sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/mission_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/missiontxt"
+                                android:text="@string/mission"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="9dp"
+                                android:textAlignment="viewStart"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/arial_nova_light"
+                                android:textColor="@color/heading"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/textLeft1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:adjustViewBounds="true"
+                            >
+
+                            <ImageView
+                                android:id="@+id/mission"
+                                android:layout_width="95dp"
+                                android:layout_height="85dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/mission" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/infocon15"
+                    android:layout_below="@id/infocon14"
+                    android:background="#629D9E"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/imageLeft2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentRight="true"
+                            >
+
+                            <ImageView
+                                android:id="@+id/values"
+                                android:layout_width="95dp"
+                                android:layout_height="90dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/values" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/textLeft2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.70"
+                            android:adjustViewBounds="true"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                >
+                                <TextView
+                                    android:id="@+id/valuestxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="32dp"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginEnd="32dp"
+                                    android:fontFamily="@font/arial_mt_rounded"
+                                    android:text="Core Values"
+                                    android:textColor="@color/background"
+                                    android:textSize="24sp"
+                                    android:textStyle="italic"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/values_title1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/valuestxt"
+                                    android:text="Empathy and Support"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_marginRight="15dp"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:textColor="@color/background"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:id="@+id/values_title2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/values_title1"
+                                    android:text="Education and Awareness"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_marginRight="15dp"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:textColor="@color/background"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:id="@+id/values_title3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/values_title2"
+                                    android:text="Collaboration and Community"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_marginRight="15dp"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:textColor="@color/background"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/infocon16"
+                    android:layout_below="@id/infocon15"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/meettxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/arial_mt_rounded"
+                        android:text="Meet the team"
+                        android:layout_marginTop="35dp"
+                        android:textColor="@color/heading"
+                        android:textSize="25sp"
+                        android:textStyle="italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pics11"
+                        android:layout_marginTop="6dp"
+                        android:layout_below="@id/meettxt">
+
+                        <LinearLayout
+                            android:id="@+id/pics10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <RelativeLayout
+                                android:id="@+id/imageLeft11"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:adjustViewBounds="true"
+                                android:layout_alignParentRight="true"
+                                android:src="@color/black" >
+
+
+                                <ImageView
+                                    android:id="@+id/leybanpic"
+                                    android:layout_width="125dp"
+                                    android:layout_height="115dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    app:srcCompat="@drawable/leyban" />
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/textLeft11"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:adjustViewBounds="true"
+                                >
+
+
+                                <ImageView
+                                    android:id="@+id/jocielpic"
+                                    android:layout_width="125dp"
+                                    android:layout_height="115dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    app:srcCompat="@drawable/jocielanne" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pics2"
+                            android:layout_below="@id/pics10"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            >
+
+                            <RelativeLayout
+                                android:id="@+id/imageLeft111"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:adjustViewBounds="true"
+                                android:layout_alignParentRight="true"
+                                android:src="@color/black" >
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/nametxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rojielyn M. Leyban"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/arial_mt_rounded"
+                                        android:textColor="@color/heading"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/nametxt123"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Developer"
+                                        android:textAlignment="center"
+                                        android:layout_below="@id/nametxt"
+                                        android:fontFamily="@font/arial_mt_rounded"
+                                        android:textColor="@color/subtitle"
+                                        android:textSize="15sp" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/textLeft112"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:adjustViewBounds="true"
+                                >
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/nametxt1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Jociel Anne A. Lucido"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/arial_mt_rounded"
+                                        android:textColor="@color/heading"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/nametxt12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Developer"
+                                        android:textAlignment="center"
+                                        android:layout_below="@id/nametxt1"
+                                        android:fontFamily="@font/arial_mt_rounded"
+                                        android:textColor="@color/subtitle"
+                                        android:textSize="15sp" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/con2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/pics11">
+                        <ImageView
+                            android:id="@+id/hazelpic"
+                            android:layout_width="125dp"
+                            android:layout_height="115dp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/tabirao" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/con2"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/hazeltxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hazel Cherry P. Tabirao"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:textColor="@color/heading"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/namecon1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Developer"
+                            android:textAlignment="center"
+                            android:layout_below="@id/hazeltxt"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:textColor="@color/subtitle"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/infocon17"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/infocon16"
+                    android:layout_marginTop="50dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/title3_txt"
+                        android:background="#55737D"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/title2_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="We're Computer"
+                            android:textColor="@color/background"
+                            android:textSize="21sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/title34_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@id/title2_txt"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="Engineering students ..."
+                            android:textColor="@color/background"
+                            android:textSize="21sp"
+                            android:textStyle="italic"
+                            android:layout_marginBottom="13dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/parag7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_below="@id/title3_txt"
+                        android:layout_marginEnd="23dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginBottom="28dp"
+                        android:fontFamily="@font/arial_nova_light"
+                        android:text="@string/aboutustxt"
+                        android:textColor="@color/subtitle"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/parag8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_below="@id/parag7"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="28dp"
+                        android:gravity="right"
+                        android:fontFamily="@font/arial_nova_light"
+                        android:text="@string/aboutustxy1"
+                        android:textColor="@color/subtitle"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/infocon18"
+                    android:background="#E2EEEE"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/infocon17"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/imageLeft5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentRight="true"
+                            >
+
+                            <ImageView
+                                android:id="@+id/contact"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/company_logo" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/textLeft5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.70"
+                            android:adjustViewBounds="true"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                >
+
+                                <TextView
+                                    android:id="@+id/contacttxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:fontFamily="@font/arial_mt_rounded"
+                                    android:text="Contact Us"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/heading"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/emailtxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="rjhstudio@gmail.com"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:lineSpacingExtra="1dp"
+                                    android:textAlignment="center"
+                                    android:layout_below="@id/contacttxt"
+                                    android:textColor="@color/subtitle"
+                                    android:textSize="15sp"></TextView>
+                                <TextView
+                                    android:id="@+id/phonetxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="+639613179919"
+                                    android:layout_marginBottom="10dp"
+                                    android:textAlignment="center"
+                                    android:lineSpacingExtra="1dp"
+                                    android:layout_below="@id/emailtxt"
+                                    android:textColor="@color/subtitle"
+                                    android:textSize="15sp"></TextView>
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

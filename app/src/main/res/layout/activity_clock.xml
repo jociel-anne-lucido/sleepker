@@ -23,7 +23,7 @@
             <ImageView
                 android:id="@+id/card3"
                 android:layout_width="match_parent"
-                android:layout_height="264dp"
+                android:layout_height="254dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
@@ -72,24 +72,23 @@
                     android:id="@+id/card1"
                     android:layout_width="323dp"
                     android:layout_height="87dp"
+                    android:layout_marginTop="35dp"
                     android:layout_below="@+id/greetingsub"
                     android:layout_alignStart="@+id/greetings1"
                     android:layout_alignEnd="@+id/profile"
-                    android:layout_marginTop="43dp"
                     android:background="@drawable/rectangle"
                     android:elevation="2dp"
                     app:backgroundTint="#9FC3C4" />
 
                 <TextView
                     android:id="@+id/title"
-                    android:layout_width="204dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/card1"
                     android:layout_alignStart="@+id/card1"
                     android:layout_alignTop="@+id/card1"
                     android:layout_alignEnd="@+id/card1"
                     android:layout_marginTop="122dp"
-                    android:layout_marginEnd="107dp"
                     android:text="Features"
                     android:layout_marginStart="7dp"
                     android:fontFamily="@font/arial_mt_rounded"
@@ -97,137 +96,209 @@
                     android:textSize="18dp"></TextView>
 
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/rela_card"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="7dp"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            >
+
+                            <RelativeLayout
+                                android:id="@+id/musiccon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:adjustViewBounds="true" >
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/notes_card"
+                                    android:layout_width="94dp"
+                                    android:layout_height="92dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/notes"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/marginpic"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.05"
+                                android:adjustViewBounds="true"
+                                android:src="@color/background" />
+
+                            <RelativeLayout
+                                android:id="@+id/musiccon1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:adjustViewBounds="true" >
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/music_card"
+                                    android:layout_width="94dp"
+                                    android:layout_height="92dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/music"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
+                            </RelativeLayout>
+
+
+                            <ImageView
+                                android:id="@+id/marginpic1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.05"
+                                android:adjustViewBounds="true"
+                                android:src="@color/background"
+                                />
+
+                            <RelativeLayout
+                                android:id="@+id/musiccon2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:adjustViewBounds="true" >
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/record_card"
+                                    android:layout_width="94dp"
+                                    android:layout_height="92dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/date_"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/nametext"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rela_card"
+                    android:layout_marginTop="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="8dp"
+                            >
+
+                            <RelativeLayout
+                                android:id="@+id/musicnamecon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:adjustViewBounds="true" >
+
+                                <TextView
+                                    android:id="@+id/thoughts_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:text="Thoughts"
+                                    android:textColor="@color/subtitle"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/marginname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.05"
+                                android:adjustViewBounds="true"
+                                android:src="@color/background" />
+
+                            <RelativeLayout
+                                android:id="@+id/musicnamecon1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:adjustViewBounds="true" >
+
+                                <TextView
+                                    android:id="@+id/music_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:text="Music"
+                                    android:textColor="@color/subtitle"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+
+                            <ImageView
+                                android:id="@+id/marginname1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.05"
+                                android:adjustViewBounds="true"
+                                android:src="@color/background"
+                                />
+
+                            <RelativeLayout
+                                android:id="@+id/musicnamecon2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:adjustViewBounds="true" >
+
+                                <TextView
+                                    android:id="@+id/record_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/arial_nova_light"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Record"
+                                    android:textColor="@color/subtitle"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
                 <TextView
                     android:id="@+id/title2"
-                    android:layout_width="204dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/title"
                     android:layout_alignEnd="@+id/title"
                     android:layout_marginTop="38dp"
-                    android:layout_marginEnd="11dp"
-                    android:layout_below="@id/rela_card"
+                    android:layout_below="@id/nametext"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:text="Sleep better"
                     android:textColor="@color/subtitle"
                     android:textSize="18dp"></TextView>
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/rela_card"
-                    android:scrollbars="none"
-                    android:layout_below="@id/title">
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/title"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginStart="2dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="0dp">
-
-                        <LinearLayout
-                            android:id="@+id/linear_card"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="2dp">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:id="@+id/notes_card"
-                                android:layout_width="96dp"
-                                android:layout_height="92dp"
-                                android:layout_below="@+id/card1"
-                                android:layout_alignStart="@+id/card1"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/notes"
-                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:id="@+id/music_card"
-                                android:layout_width="96dp"
-                                android:layout_height="92dp"
-                                android:layout_below="@+id/card1"
-                                android:layout_alignStart="@+id/card1"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginStart="11dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/music"
-                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:id="@+id/record_card"
-                                android:layout_width="96dp"
-                                android:layout_height="92dp"
-                                android:layout_marginStart="9dp"
-                                android:layout_below="@+id/card1"
-                                android:layout_alignStart="@+id/card1"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/date_"
-                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Avatar" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/we"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/linear_card"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginEnd="7dp">
-
-                            <TextView
-                                android:id="@+id/thoughts_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="22dp"
-                                android:layout_marginTop="2dp"
-                                android:layout_marginEnd="24dp"
-                                android:fontFamily="@font/arial_nova_light"
-                                android:text="Thoughts"
-                                android:textColor="@color/subtitle"
-                                android:textSize="16sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/back_txt" />
-
-                            <TextView
-                                android:id="@+id/music_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="45dp"
-                                android:layout_marginTop="2dp"
-                                android:layout_marginEnd="24dp"
-                                android:fontFamily="@font/arial_nova_light"
-                                android:text="Music"
-                                android:textColor="@color/subtitle"
-                                android:textSize="16sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/back_txt" />
-
-                            <TextView
-                                android:id="@+id/record_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="44dp"
-                                android:layout_marginTop="2dp"
-                                android:layout_marginEnd="22dp"
-                                android:fontFamily="@font/arial_nova_light"
-                                android:text="Record"
-                                android:textColor="@color/subtitle"
-                                android:textSize="16sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/back_txt" />
-                        </LinearLayout>
-                    </RelativeLayout>
-                </HorizontalScrollView>
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/sleep_card"
                     android:layout_width="match_parent"
@@ -243,7 +314,7 @@
 
                 <TextView
                     android:id="@+id/greetings1"
-                    android:layout_width="334dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_below="@+id/greetings"
                     android:layout_alignStart="@+id/greetings"
@@ -256,7 +327,7 @@
 
                 <TextView
                     android:id="@+id/greetingsub"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/greetings1"
                     android:layout_alignStart="@+id/greetings1"
@@ -264,7 +335,6 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
-                    android:layout_marginEnd="25dp"
                     android:fontFamily="@font/arial_nova_light"
                     android:textColor="@color/subtitle"
                     android:textSize="18dp"
@@ -282,46 +352,75 @@
                     android:textSize="36sp"
                     android:textStyle="normal"></TextView>
 
-                <TextView
-                    android:id="@+id/day"
-                    android:layout_width="180dp"
-                    android:layout_height="22dp"
-                    android:layout_alignStart="@+id/card1"
-                    android:layout_alignTop="@+id/card1"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="13dp"
-                    android:elevation="2dp"
-                    android:fontFamily="@font/arial_mt_rounded"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"></TextView>
-
-                <ImageView
-                    android:id="@+id/moon_button"
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
-                    android:layout_alignEnd="@+id/card1"
-                    android:layout_alignBottom="@+id/card1"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="35dp"
-                    android:layout_marginBottom="21dp"
-                    android:background="@drawable/moon"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
                     android:elevation="12dp"
-                    android:padding="2dp"></ImageView>
+                    android:layout_below="@+id/greetingsub">
 
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_below="@+id/day"
-                    android:layout_alignStart="@+id/card1"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="6dp"
-                    android:elevation="10dp"
-                    android:fontFamily="@font/arial_mt_rounded"
-                    android:textColor="@color/white"
-                    android:textSize="28sp"
-                    android:textStyle="normal"></TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/right1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="0.7"
+                            android:adjustViewBounds="true"
+
+                            >
+                            <TextView
+                                android:id="@+id/day"
+                                android:layout_width="180dp"
+                                android:layout_height="22dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="13dp"
+                                android:elevation="2dp"
+                                android:text="Hidfdfdfd"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:textColor="@color/white"
+                                android:textSize="17sp"></TextView>
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/day"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="5dp"
+                                android:elevation="10dp"
+                                android:text="Hidfdfdfd"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:textColor="@color/white"
+                                android:textSize="28sp"
+                                android:textStyle="normal"></TextView>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/left1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="0.3"
+                            android:adjustViewBounds="true">
+
+                            <ImageView
+                                android:id="@+id/moon_button"
+                                android:layout_width="50dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/moon"
+                                android:elevation="12dp"></ImageView>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/profile"
@@ -341,10 +440,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
-        app:itemBackground="@color/navig"
-        app:itemTextColor="@color/white"
-        app:backgroundTint="@color/white"
-        app:itemIconTint="@color/white"
+        android:background="@color/navig"
+        app:labelVisibilityMode="selected"
+        app:itemBackground="@drawable/navbackground"
+        app:itemTextColor="@drawable/navcorlor"
+        app:itemIconTint="@drawable/navcorlor"
+        app:backgroundTint="@color/navig"
         app:menu="@menu/menu_button"
         android:layout_alignParentBottom="true" />
 

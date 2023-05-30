@@ -5,7 +5,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -65,6 +67,7 @@ public class Todo extends AppCompatActivity {
     ArrayList<String> arrayList= new ArrayList<>();
     ArrayList<String> keysList= new ArrayList<>();
     ArrayAdapter<String> arrayAdapter;
+    TextView deleteTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,12 +75,33 @@ public class Todo extends AppCompatActivity {
         setContentView(R.layout.activity_todo);
         listView=findViewById(R.id.todotxt);
         bottomsheet = findViewById(R.id.botttom_sheet);
+        deleteTextView = findViewById(R.id.delete_button);
+
         btn_back = findViewById(R.id.back_button);
         auths = FirebaseAuth.getInstance();
         FirebaseUser todos = auths.getCurrentUser();
         id = todos.getUid();
         mRef = FirebaseDatabase.getInstance().getReference("UserData").child(id).child("-TodoData");
-        arrayAdapter = new ArrayAdapter<String>(Todo.this, R.layout.list_item, arrayList);
+        arrayAdapter = new ArrayAdapter<String>(Todo.this, R.layout.list_item, R.id.item_text, arrayList) {
+            @NonNull
+            @Override
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                int colorRes = position % 2 == 0 ? R.color.background : R.color.line;
+                int bgColor = ContextCompat.getColor(getContext(), colorRes);
+                view.setBackgroundColor(bgColor);
+                ImageView imageView = view.findViewById(R.id.item_image);
+                imageView.setImageResource(R.drawable.thoughts);
+                deleteTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        showDeleteAllConfirmationDialog();
+                    }
+                });
+                return view;
+            }
+        };
+
         listView.setAdapter(arrayAdapter);
         Query query = mRef.orderByKey();
 
@@ -88,6 +112,7 @@ public class Todo extends AppCompatActivity {
                 arrayList.add(todos);
                 keysList.add(snapshot.getKey());
                 arrayAdapter.notifyDataSetChanged();
+
             }
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
@@ -128,6 +153,12 @@ public class Todo extends AppCompatActivity {
                 deleteItem.setIcon(R.drawable.todo_delete);
                 deleteItem.setWidth(180);
                 menu.addMenuItem(deleteItem);
+
+                SwipeMenuItem editItem = new SwipeMenuItem(getApplicationContext());
+                editItem.setBackground(new ColorDrawable(Color.rgb(0xD5, 0xA6, 0xBD)));
+                editItem.setIcon(R.drawable.todo_edit);
+                editItem.setWidth(180);
+                menu.addMenuItem(editItem);
             }
         };
 
@@ -145,13 +176,93 @@ public class Todo extends AppCompatActivity {
                         String key = keysList.get(position);
                         mRef.child(key).removeValue();
                         break;
+                    case 1:
+                        showEditDialog(position);
+                        break;
+
                 }
                 return false;
             }
         });
 
     }
+    private void showEditDialog(final int position) {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.activity_save);
 
+        todo_txt = dialog.findViewById(R.id.newTaskText);
+        LinearLayout shareLayout = dialog.findViewById(R.id.layoutShare);
+
+        todo_txt.setText(arrayAdapter.getItem(position));
+
+        auth = FirebaseAuth.getInstance();
+        pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        editor = pref.edit();
+
+        shareLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!CheckTodo()) {
+                    return;
+                }
+
+                String newTodo = todo_txt.getText().toString();
+                String key = keysList.get(position);
+
+                Map<String, Object> update = new HashMap<>();
+                update.put(key, newTodo);
+
+                mRef.updateChildren(update)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    arrayList.set(position, newTodo);
+                                    arrayAdapter.notifyDataSetChanged();
+                                    dialog.dismiss();
+                                } else {
+                                    Toast.makeText(Todo.this, "Error updating todo", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+            }
+        });
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
+
+        dialog.show();
+    }
+    private void showDeleteAllConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Todo.this, R.style.CustomDialogTheme);
+        builder.setTitle("Confirmation");
+        builder.setMessage("Are you sure you want to delete all your thoughts?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                deleteAllItems();
+            }
+        });
+        builder.setNegativeButton("No", null);
+        builder.show();
+    }
+    private void deleteAllItems() {
+        mRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    arrayList.clear();
+                    keysList.clear();
+                    arrayAdapter.notifyDataSetChanged();
+                    Toast.makeText(Todo.this, "All items deleted", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Todo.this, "Error deleting items", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 
     private void showDialog() {
 
@@ -181,7 +292,6 @@ public class Todo extends AppCompatActivity {
                 dbRef.push().setValue(todo);
 
                 // stores user attributes to db
-                dialog.dismiss();
                 Toast.makeText(Todo.this,"Todo Saved",Toast.LENGTH_SHORT).show();
             }
         });

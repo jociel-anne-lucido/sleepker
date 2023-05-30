@@ -19,7 +19,7 @@
             <ImageView
                 android:id="@+id/card3"
                 android:layout_width="match_parent"
-                android:layout_height="252dp"
+                android:layout_height="277dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
@@ -40,21 +40,57 @@
                     android:layout_width="0dp"
                     android:layout_marginStart="4dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:fontFamily="@font/arial_nova_light"
                     android:text="@string/editprofile_page"
                     android:textColor="@color/subtitle"
-                    android:textSize="16sp"
+                    android:textSize="17sp"
                     app:layout_constraintEnd_toEndOf="@+id/logout_button"
                     app:layout_constraintStart_toStartOf="@+id/settings_txt"
                     app:layout_constraintTop_toBottomOf="@+id/settings_txt" />
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="24dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="27dp"
+                    android:contentDescription="TODO"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back"
+                    tools:ignore="VectorDrawableCompat" />
+                <ImageView
+                    android:id="@+id/logout_button"
+                    android:layout_width="24dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="27dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_logout" />
+
+                <TextView
+                    android:id="@+id/logout_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="LOGOUT"
+                    android:textColor="@color/subtitle"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/logout_button"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/back_button"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/settings_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="65dp"
                     android:layout_marginEnd="24dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="@font/arial_mt_rounded"
                     android:text="Edit Profile"
                     android:textColor="@color/heading"
@@ -63,7 +99,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/back_button" />
 
                 <Button
                     android:id="@+id/update_button"
@@ -90,12 +126,13 @@
                     android:id="@+id/updateprofile_button"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:layout_marginEnd="100dp"
+                    android:layout_marginEnd="256dp"
                     android:layout_marginBottom="44dp"
                     android:background="@drawable/updateprofile_button"
                     android:elevation="5dp"
                     app:layout_constraintBottom_toBottomOf="@+id/nametxt"
-                    app:layout_constraintEnd_toEndOf="@+id/upd_name" />
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@+id/imageView" />
 
                 <TextView
                     android:id="@+id/nameView"
@@ -202,50 +239,12 @@
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <ImageView
-                    android:id="@+id/back_button"
-                    android:layout_width="24dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="27dp"
-                    android:contentDescription="TODO"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_back"
-                    tools:ignore="VectorDrawableCompat" />
-
-                <ImageView
-                    android:id="@+id/logout_button"
-                    android:layout_width="24dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="27dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_logout" />
-
-                <TextView
-                    android:id="@+id/logout_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginEnd="8dp"
-                    android:fontFamily="@font/arial_mt_rounded"
-                    android:text="LOGOUT"
-                    android:textColor="@color/subtitle"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toStartOf="@+id/logout_button"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/back_button"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imageView"
                     android:layout_width="115dp"
                     android:layout_height="115dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="40dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/user_pics"
                     android:elevation="2dp"

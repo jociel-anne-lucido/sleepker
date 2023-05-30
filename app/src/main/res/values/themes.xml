@@ -40,6 +40,15 @@
         <!-- Hint text color -->
         <item name="android:textColorHint">@color/heading</item>
     </style>
+    <style name="timePickerOrange">
+        <item name="android:textColorPrimary">@color/heading</item> <!-- color for digits -->
+        <item name="android:textColor">@color/heading</item> <!-- color for colon -->
+        <item name="android:colorControlNormal">@color/heading</item> <!-- color for (horizontal) delimeters -->
+    </style>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize the text color -->
+        <item name="android:textColorPrimary">@color/heading</item>
+    </style>
 
 
 </resources>

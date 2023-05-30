@@ -30,7 +30,6 @@
         android:id="@+id/bgbottom"
         android:layout_width="match_parent"
         android:layout_height="98dp"
-        android:layout_below="@id/loadingBar"
         android:layout_alignParentBottom="true"
         android:background="@drawable/ic_bottom"
         android:elevation="2dp"
@@ -39,88 +38,104 @@
     <View
         android:id="@+id/bgbottom1"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_below="@id/loadingBar"
+        android:layout_height="140dp"
         android:background="@drawable/ic_bottom1"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-
-    <TextView
-        android:id="@+id/subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ss_logo"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Welcome to"
-        android:textColor="@color/subtitle"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/ss_logo"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/ss_logo"
-        app:layout_constraintTop_toBottomOf="@+id/ss_logo"></TextView>
+        android:elevation="2dp"
+        android:layout_centerVertical="true"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:elevation="2dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scrollbars="none">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/subtitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="SLEEPKER"
-        android:textColor="@color/heading"
-        android:textSize="33sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/subtitle"></TextView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="1dp"
+                android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/ss_logo"
-        android:layout_width="200dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo_blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bgtop1"></ImageView>
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ss_logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Welcome to"
+                    android:textAlignment="center"
+                    android:textColor="@color/subtitle"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ss_logo"
+                    app:layout_constraintStart_toStartOf="@+id/ss_logo"
+                    app:layout_constraintTop_toBottomOf="@+id/ss_logo"></TextView>
 
-    <TextView
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="9dp"
-        android:fontFamily="@font/arial_mt_rounded"
-        android:text="Please wait while loading..."
-        android:textColor="@color/subtitle"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/bgbottom1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.028"></TextView>
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/subtitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="SLEEPKER"
+                    android:textColor="@color/heading"
+                    android:textSize="37sp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/subtitle"></TextView>
 
-    <ProgressBar
-        android:id="@+id/loadingBar"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="197dp"
-        android:layout_height="145dp"
-        android:layout_below="@id/progressBar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bgbottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ss_logo"
-        app:layout_constraintVertical_bias="0.462"></ProgressBar>
+                <ImageView
+                    android:id="@+id/ss_logo"
+                    android:layout_width="220dp"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/logo_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.489"
+                    app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+                <TextView
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/arial_mt_rounded"
+                    android:text="Please wait while loading..."
+                    android:textColor="@color/subtitle"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title"
+                    app:layout_constraintVertical_bias="0.028"></TextView>
+
+                <ProgressBar
+                    android:id="@+id/loadingBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="65dp"
+                    android:layout_below="@id/progressBar"                   ></ProgressBar>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

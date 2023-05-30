@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,8 +35,10 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class Analysis extends AppCompatActivity {
 
@@ -65,7 +68,26 @@ public class Analysis extends AppCompatActivity {
         circularProgressBar = findViewById(R.id.circularProgressBar);
         weekly_button = findViewById(R.id.weekly_report);
         statistic_button = findViewById(R.id.statistic_button);
-        statistic_button.setOnClickListener(v -> startActivity(new Intent(Analysis.this, Statistic.class)));
+        statistic_button.setOnClickListener(v -> {
+            // Check if there is data in SleepData node
+            userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        // Data exists, start the Statistic activity
+                        startActivity(new Intent(Analysis.this, Statistic.class));
+                    } else {
+                        // No data, show toast message
+                        Toast.makeText(Analysis.this, "No data available", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    // Handle database error if necessary
+                }
+            });
+        });
         weekly_button.setOnClickListener(v -> startActivity(new Intent(Analysis.this, WeeklyReport.class)));
 
 
@@ -206,12 +228,23 @@ public class Analysis extends AppCompatActivity {
     }
 
     private void GetLastRecorded() {
-        Query query = userRef.orderByChild("lastRecorded").limitToLast(1);
+        Query query = userRef.orderByKey().limitToLast(2);
 
-        query.addChildEventListener(new ChildEventListener() {
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                olddur = snapshot.child("newRecorded").getValue(String.class);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.getChildrenCount() >= 2) {
+                    List<DataSnapshot> snapshotList = new ArrayList<>();
+                    for (DataSnapshot childSnapshot : snapshot.getChildren()) {
+                        snapshotList.add(childSnapshot);
+                    }
+
+                    DataSnapshot secondLatestSnapshot = snapshotList.get(snapshotList.size() - 1); // Get the second-to-latest snapshot
+                    olddur = secondLatestSnapshot.child("newRecorded").getValue(String.class);
+                } else {
+                    // Handle case when there are less than two records
+                    olddur = "---";
+                }
 
                 SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(Analysis.this);
                 SharedPreferences.Editor editor = pref.edit();
@@ -220,18 +253,13 @@ public class Analysis extends AppCompatActivity {
             }
 
             @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) { }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) { }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) { }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Handle any potential errors
+            }
         });
     }
+
+
 
 
 

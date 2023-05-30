@@ -11,45 +11,34 @@
         android:roundIcon="@mipmap/ic_apk_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SleepkerApp">
-        <activity android:name="com.example.sleepkerapp.Mood"
-            android:screenOrientation="portrait">
+        <activity android:name="com.example.sleepkerapp.Mood">
         </activity>
         <activity android:name="com.example.sleepkerapp.Analysis"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Tracker"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.UserSettings"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Recording"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Clock"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Welcome"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.ForgotPass"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Login"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Assessment"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Signup"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Todo"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.LoginActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.WeeklyReport"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.SleepData"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Music"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.Statistic"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.example.sleepkerapp.NavigationActivity"
-            android:screenOrientation="portrait"/>
+            />
+        <activity android:name="com.example.sleepkerapp.Tracker"/>
+        <activity android:name="com.example.sleepkerapp.UserSettings"/>
+        <activity android:name="com.example.sleepkerapp.Recording"/>
+        <activity android:name="com.example.sleepkerapp.Clock"/>
+        <activity android:name="com.example.sleepkerapp.Welcome"/>
+        <activity android:name="com.example.sleepkerapp.ForgotPass"/>
+        <activity android:name="com.example.sleepkerapp.Login"/>
+        <activity android:name="com.example.sleepkerapp.Assessment"/>
+        <activity android:name="com.example.sleepkerapp.Signup"/>
+        <activity android:name="com.example.sleepkerapp.Todo"/>
+        <activity android:name="com.example.sleepkerapp.LoginActivity"/>
+        <activity android:name="com.example.sleepkerapp.WeeklyReport"/>
+        <activity android:name="com.example.sleepkerapp.SleepData"/>
+        <activity android:name="com.example.sleepkerapp.Music"/>
+        <activity android:name="com.example.sleepkerapp.Statistic"/>
+        <activity android:name="com.example.sleepkerapp.NavigationActivity"/>
+        <activity android:name="com.example.sleepkerapp.Settings"/>
+        <activity android:name="com.example.sleepkerapp.Password"/>
+        <activity android:name="com.example.sleepkerapp.AboutUs"/>
+        <activity android:name="com.example.sleepkerapp.Terms"/>
+        <activity android:name="com.example.sleepkerapp.Manual"/>
+
+
         <activity android:name="com.example.sleepkerapp.MainActivity"
-            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,6 +46,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service android:name="com.example.sleepkerapp.ForegroundService"/>
         <service android:name="com.example.sleepkerapp.MyService"/>
         <meta-data

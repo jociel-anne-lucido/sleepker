@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,19 +39,24 @@ public class Mood extends AppCompatActivity {
         });
 
         submit_btn.setOnClickListener(v -> {
-            Intent intent = getIntent();
-            wake = intent.getStringExtra("wakeTime");
-            sleep = intent.getStringExtra("sleepTime");
-            totaldur = intent.getStringExtra("totalDur");
-            sleepqual = intent.getStringExtra("sleepQual");
+            if (radioButton.getCheckedRadioButtonId() != -1) {
+                Intent intent = getIntent();
+                wake = intent.getStringExtra("wakeTime");
+                sleep = intent.getStringExtra("sleepTime");
+                totaldur = intent.getStringExtra("totalDur");
+                sleepqual = intent.getStringExtra("sleepQual");
 
-            Intent newIntent = new Intent(Mood.this, Analysis.class);
-            newIntent.putExtra("wakeTime", wake);
-            newIntent.putExtra("sleepTime", sleep);
-            newIntent.putExtra("totalDur", totaldur);
-            newIntent.putExtra("sleepQual", sleepqual);
-            newIntent.putExtra("moodQual", answer);
-            startActivity(newIntent);
+                Intent newIntent = new Intent(Mood.this, Analysis.class);
+                newIntent.putExtra("wakeTime", wake);
+                newIntent.putExtra("sleepTime", sleep);
+                newIntent.putExtra("totalDur", totaldur);
+                newIntent.putExtra("sleepQual", sleepqual);
+                newIntent.putExtra("moodQual", answer);
+                startActivity(newIntent);
+            } else {
+                // No radio button is selected, display an error message or take appropriate action
+                Toast.makeText(Mood.this, "Please select a mood", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

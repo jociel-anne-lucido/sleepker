@@ -26,7 +26,7 @@
                 android:id="@+id/title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="42dp"
+                android:layout_marginTop="38dp"
                 android:fontFamily="@font/arial_mt_rounded"
                 android:text="Your Sleep Cycle"
                 android:textColor="@color/heading"
@@ -55,430 +55,596 @@
                 android:layout_height="45dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginBottom="45dp"
                 android:background="@drawable/weekly_report"
                 app:layout_constraintStart_toEndOf="@+id/title_text" />
 
-            <HorizontalScrollView
+            <RelativeLayout
                 android:id="@+id/rela_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/date_text"
-                android:padding="0dp"
-                android:scrollbars="none">
+                android:layout_marginTop="10dp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal"
+                    >
 
-                    <ImageView
+                    <RelativeLayout
                         android:id="@+id/card1"
-                        android:layout_width="153dp"
-                        android:layout_height="145dp"
-                        android:layout_marginTop="37dp"
-                        android:layout_marginStart="6dp"
-                        android:background="@drawable/rectangle"
-                        app:layout_constraintStart_toStartOf="parent"
-                        tools:layout_editor_absoluteY="0dp" />
-
-                    <TextView
-                        android:id="@+id/sleepdur"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/card1"
-                        android:layout_alignEnd="@+id/card1"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="Sleep Duration"
-                        android:textAlignment="center"
-                        android:textColor="@color/heading"
-                        app:layout_constraintEnd_toEndOf="@+id/card1"
-                        app:layout_constraintStart_toStartOf="@+id/card1"
-                        app:layout_constraintTop_toTopOf="@+id/card1" />
+                        android:layout_weight="0.45"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/rectangle">
 
-                    <TextView
-                        android:id="@+id/new_duration"
-                        android:layout_width="128dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/sleepdur"
-                        android:layout_alignEnd="@+id/card1"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginTop="7dp"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="@string/no_text"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="@+id/card1"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toStartOf="@+id/card1"
-                        app:layout_constraintTop_toBottomOf="@+id/sleepdur" />
+                        <TextView
+                            android:id="@+id/sleepdur"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="Sleep Duration"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/heading" />
+
+                        <TextView
+                            android:id="@+id/new_duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sleepdur"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="@string/no_text"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintTop_toBottomOf="@+id/sleepdur" />
 
 
-                    <TextView
-                        android:id="@+id/lastdur"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/new_duration"
-                        android:layout_alignEnd="@+id/card1"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="Last Recorded"
-                        android:textAlignment="center"
-                        android:textColor="@color/heading"
-                        app:layout_constraintEnd_toEndOf="@+id/card1"
-                        app:layout_constraintStart_toStartOf="@+id/card1"
-                        app:layout_constraintTop_toBottomOf="@+id/new_duration" />
+                        <TextView
+                            android:id="@+id/lastdur"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/new_duration"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="Last Recorded"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/heading"
+                            app:layout_constraintTop_toBottomOf="@+id/new_duration" />
 
-                    <TextView
-                        android:id="@+id/old_duration"
-                        android:layout_width="128dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/lastdur"
-                        android:layout_alignEnd="@+id/card1"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginTop="6dp"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="@string/no_text"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="24sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/card1"
-                        app:layout_constraintEnd_toEndOf="@+id/card1"
-                        app:layout_constraintStart_toStartOf="@+id/card1"
-                        app:layout_constraintTop_toBottomOf="@+id/lastdur" />
+                        <TextView
+                            android:id="@+id/old_duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lastdur"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="@string/no_text"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            app:layout_constraintTop_toBottomOf="@+id/lastdur" />
 
+
+                    </RelativeLayout>
                     <ImageView
-                        android:id="@+id/card2"
-                        android:layout_width="153dp"
-                        android:layout_height="145dp"
-                        android:layout_alignTop="@+id/card1"
-                        android:layout_alignParentEnd="true"
-                        android:layout_toEndOf="@+id/card1"
-                        android:layout_marginStart="27dp"
-                        android:background="@drawable/rectangle" />
-
-                    <TextView
-                        android:id="@+id/sleepqual"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/margin"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignStart="@+id/card2"
-                        android:layout_alignTop="@+id/card2"
-                        android:layout_alignEnd="@+id/card2"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="Sleep Quality"
-                        android:textAlignment="center"
-                        android:textColor="@color/heading"
-                        app:layout_constraintEnd_toEndOf="@+id/card2"
-                        app:layout_constraintStart_toStartOf="@+id/card2"
-                        app:layout_constraintTop_toTopOf="@+id/card1" />
+                        android:layout_weight="0.1"/>
 
-                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-                        android:id="@+id/circularProgressBar"
-                        android:layout_width="70dp"
-                        android:layout_height="88dp"
-                        android:layout_below="@+id/sleepqual"
-                        android:layout_alignStart="@+id/sleepqual"
-                        android:layout_alignEnd="@+id/sleepqual"
-                        android:layout_alignBottom="@+id/card2"
-                        android:layout_marginStart="33dp"
-                        android:layout_marginTop="14dp"
-                        android:layout_marginEnd="29dp"
-                        android:layout_marginBottom="10dp"
-                        app:cpb_background_progressbar_color="@color/navig"
-                        app:cpb_background_progressbar_width="9dp"
-                        app:cpb_progress="0"
-                        app:cpb_progress_direction="to_right"
-                        app:cpb_progress_max="100"
-                        app:cpb_progressbar_color="@color/white"
-                        app:cpb_progressbar_width="9dp"
-                        app:cpb_round_border="false"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent" />
+                    <RelativeLayout
+                        android:id="@+id/qualcon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.45"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/rectangle">
 
-                    <TextView
-                        android:id="@+id/average"
-                        android:layout_width="74dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignStart="@+id/card2"
-                        android:layout_alignTop="@+id/circularProgressBar"
-                        android:layout_alignEnd="@+id/card2"
-                        android:layout_alignBottom="@+id/card2"
-                        android:layout_marginTop="28dp"
-                        android:layout_marginBottom="27dp"
-                        android:fontFamily="@font/arial_mt_rounded"
-                        android:text="@string/no_text"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="25sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/card2"
-                        app:layout_constraintEnd_toEndOf="@+id/sleepqual"
-                        app:layout_constraintStart_toStartOf="@+id/sleepqual"
-                        app:layout_constraintTop_toTopOf="@+id/sleepqual"
-                        app:layout_constraintVertical_bias="0.48" />
-                </RelativeLayout>
-            </HorizontalScrollView>
+                        <TextView
+                            android:id="@+id/sleepqual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/arial_mt_rounded"
+                            android:text="Sleep Quality"
+                            android:textAlignment="center"
+                            android:textColor="@color/heading"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/qualtextcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/sleepqual"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/average"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="@string/no_text"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="26sp" />
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/circularProgressBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="2dp"
+                                app:cpb_background_progressbar_color="@color/navig"
+                                app:cpb_background_progressbar_width="9dp"
+                                app:cpb_progress="0"
+                                app:cpb_progress_direction="to_right"
+                                app:cpb_progress_max="100"
+                                app:cpb_progressbar_color="@color/white"
+                                app:cpb_progressbar_width="9dp"
+                                app:cpb_round_border="false"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
             <TextView
                 android:id="@+id/sleepinfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rela_card"
-                android:layout_alignTop="@+id/card3"
                 android:layout_marginStart="3dp"
-                android:layout_marginTop="37dp"
+                android:layout_marginTop="39dp"
                 android:fontFamily="@font/arial_mt_rounded"
                 android:text="Sleep Information"
                 android:textColor="@color/heading"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@+id/card3"
-                app:layout_constraintTop_toBottomOf="@+id/card3" />
-
+             />
             <RelativeLayout
-                android:id="@+id/wc"
-                android:layout_width="wrap_content"
+                android:id="@+id/wokeuptime"
+                android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:layout_below="@+id/sleepinfo"
-                android:layout_marginTop="17dp"
-                android:background="@drawable/solid_rectangle"
-                app:backgroundTint="#E3EDF1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/card3"
-                app:layout_constraintHorizontal_bias="0.228"
-                app:layout_constraintVertical_bias="0.128">
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/track1"
+                app:backgroundTint="#E3EDF1">
 
-                <ImageView
-                    android:id="@+id/wokeup"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/sunrise" />
-
-                <TextView
-                    android:id="@+id/wokeup_title"
-                    android:layout_width="120dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/wokeup"
-                    android:layout_alignBottom="@+id/wokeup"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginBottom="7dp"
-                    android:layout_toEndOf="@+id/wokeup"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:text="Woke Up Time"
-                    android:textColor="@color/heading"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp">
 
-                <TextView
-                    android:id="@+id/wokeupTime"
-                    android:layout_width="129dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_toEndOf="@+id/wokeup_title"
-                    android:fontFamily="@font/arial_mt_rounded"
-                    android:text="@string/no_text"
-                    android:textAlignment="center"
-                    android:textColor="@color/heading"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    <RelativeLayout
+                        android:id="@+id/wokecon1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="0.18"
+                        android:adjustViewBounds="true"
+                        >
 
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/wokeup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/sunrise" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/margin2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:adjustViewBounds="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/wokeup_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="Woke Up Time"
+                            android:textColor="@color/heading"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/wokecon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.32"
+                        android:adjustViewBounds="true"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/wokeupTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="@string/no_text"
+                                android:textAlignment="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/heading"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/wc1"
-                android:layout_width="wrap_content"
+                android:id="@+id/sleeptime"
+                android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:layout_below="@+id/wc"
-                android:layout_alignStart="@+id/wc"
-                android:layout_alignEnd="@+id/wc"
-                android:layout_marginTop="27dp"
-                android:background="@drawable/solid_rectangle"
-                app:backgroundTint="#E3EDF1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.228"
-                app:layout_constraintVertical_bias="0.128">
+                android:layout_below="@+id/wokeuptime"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/track1"
+                app:backgroundTint="#E3EDF1">
 
-                <ImageView
-                    android:id="@+id/sleep"
-                    android:layout_width="55dp"
-                    android:layout_height="52dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginEnd="-12dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/sleep_symbol" />
-
-                <TextView
-                    android:id="@+id/sleep_title"
-                    android:layout_width="100dp"
-                    android:layout_height="20dp"
-                    android:layout_alignTop="@+id/sleep"
-                    android:layout_alignBottom="@+id/sleep"
-                    android:layout_marginStart="27dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginBottom="11dp"
-                    android:layout_toEndOf="@+id/sleep"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:text="Sleep Time"
-                    android:textColor="@color/heading"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/sleepTime"
-                    android:layout_width="105dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_toEndOf="@+id/sleep_title"
-                    android:fontFamily="@font/arial_mt_rounded"
-                    android:text="@string/no_text"
-                    android:textAlignment="center"
-                    android:textColor="@color/heading"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/clockcon1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="0.18"
+                        android:adjustViewBounds="true"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/sleep"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/sleep_symbol" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/margin3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:adjustViewBounds="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/sleep_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="Sleep Time"
+                            android:textColor="@color/heading"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/clockcon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.32"
+                        android:adjustViewBounds="true"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/sleepTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="@string/no_text"
+                                android:textAlignment="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/heading"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/wc2"
-                android:layout_width="wrap_content"
+                android:id="@+id/totaldur"
+                android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:layout_below="@+id/wc1"
-                android:layout_alignStart="@+id/wc1"
-                android:layout_alignEnd="@+id/wc1"
-                android:layout_marginTop="27dp"
-                android:background="@drawable/solid_rectangle"
-                app:backgroundTint="#E3EDF1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.228"
-                app:layout_constraintVertical_bias="0.128">
+                android:layout_below="@+id/sleeptime"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/track1"
+                app:backgroundTint="#E3EDF1">
 
-                <ImageView
-                    android:id="@+id/sleepdrtn"
-                    android:layout_width="55dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/wallclock" />
-
-                <TextView
-                    android:id="@+id/sleepdur_title"
-                    android:layout_width="100dp"
-                    android:layout_height="20dp"
-                    android:layout_alignTop="@+id/sleepdrtn"
-                    android:layout_alignBottom="@+id/sleepdrtn"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginBottom="18dp"
-                    android:layout_toEndOf="@+id/sleepdrtn"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:text="Total Duration"
-                    android:textColor="@color/heading"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/sleepdurTime"
-                    android:layout_width="100dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_toEndOf="@+id/sleepdur_title"
-                    android:fontFamily="@font/arial_mt_rounded"
-                    android:text="@string/no_text"
-                    android:textAlignment="center"
-                    android:textColor="@color/heading"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/durcon1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="0.18"
+                        android:adjustViewBounds="true"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/sleepdrtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/wallclock" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/margin4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:adjustViewBounds="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/sleepdur_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="Total Duration"
+                            android:textColor="@color/heading"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/durcon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.32"
+                        android:adjustViewBounds="true"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/sleepdurTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="@string/no_text"
+                                android:textAlignment="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/heading"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/wc3"
-                android:layout_width="wrap_content"
+                android:id="@+id/moodz"
+                android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:layout_below="@+id/wc2"
-                android:layout_alignStart="@+id/wc2"
-                android:layout_alignEnd="@+id/wc2"
-                android:layout_marginTop="27dp"
-                android:layout_marginBottom="1dp"
-                android:background="@drawable/solid_rectangle"
-                app:backgroundTint="#E3EDF1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.228"
-                app:layout_constraintVertical_bias="0.128">
+                android:layout_below="@+id/totaldur"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/track1"
+                app:backgroundTint="#E3EDF1">
 
-                <ImageView
-                    android:id="@+id/mood"
-                    android:layout_width="51dp"
-                    android:layout_height="53dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="9dp"
-                    android:background="@drawable/happy" />
-
-                <TextView
-                    android:id="@+id/mood_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="23dp"
-                    android:layout_toEndOf="@+id/mood"
-                    android:fontFamily="@font/arial_nova_light"
-                    android:text="Mood"
-                    android:textColor="@color/heading"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/moodText"
-                    android:layout_width="100dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="95dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_toEndOf="@+id/mood_title"
-                    android:fontFamily="@font/arial_mt_rounded"
-                    android:text="@string/no_text"
-                    android:textAlignment="center"
-                    android:textColor="@color/heading"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/moodcon1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="0.18"
+                        android:adjustViewBounds="true"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/mood"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/happy" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/margin5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:adjustViewBounds="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/mood_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/arial_nova_light"
+                            android:text="Mood"
+                            android:textColor="@color/heading"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/moodcon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.32"
+                        android:adjustViewBounds="true"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/moodText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/arial_mt_rounded"
+                                android:text="@string/no_text"
+                                android:textAlignment="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/heading"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
             </RelativeLayout>
-
-
             <Button
                 android:id="@+id/statistic_button"
                 android:layout_width="136dp"
-                android:layout_height="38dp"
-                android:layout_below="@+id/wc3"
-                android:layout_alignEnd="@+id/wc3"
+                android:layout_height="39dp"
+                android:layout_below="@+id/moodz"
+                android:layout_alignEnd="@+id/moodz"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="40dp"
@@ -492,6 +658,11 @@
                 app:backgroundTint="@color/buttons"
                 app:layout_constraintHorizontal_bias="0.0" />
 
+
+
+
+
+
         </RelativeLayout>
 
 
@@ -501,10 +672,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
-        app:itemBackground="@color/navig"
-        app:itemTextColor="@color/white"
-        app:itemIconTint="@color/white"
-        app:backgroundTint="@color/white"
+        android:background="@color/navig"
+        app:labelVisibilityMode="selected"
+        app:itemBackground="@drawable/navbackground"
+        app:itemTextColor="@drawable/navcorlor"
+        app:itemIconTint="@drawable/navcorlor"
+        app:backgroundTint="@color/navig"
         app:menu="@menu/menu_button"
         android:layout_alignParentBottom="true" />
 

@@ -107,7 +107,7 @@ public class Signup extends AppCompatActivity {
         editor = pref.edit();
 
         genders = new Gender();
-        adapterItems = new ArrayAdapter<String>(this,R.layout.list_item, planets);
+        adapterItems = new ArrayAdapter<String>(this,R.layout.list_itema, planets);
         autoCompleteTextView.setAdapter(adapterItems);
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

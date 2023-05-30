@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="20dp"
     android:padding="20dp"
-
     android:id="@+id/layoutDialogContainer">
+
+
     
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -39,11 +40,12 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="match_parent"
         android:scrollbars="none"
+        android:layout_above="@id/buttons"
         android:paddingTop="10dp"
         android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/layoutDialog"
+        android:layout_below="@id/layoutDialog"
         tools:layout_editor_absoluteX="20dp">
 
         <RelativeLayout
@@ -67,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text"
-                android:text="Last updated: 02/11/2023"
+                android:text="Last updated: 05/29/2023"
                 android:textColor="@color/subtitle"
                 android:textSize="16dp"></TextView>
             <TextView
@@ -75,6 +77,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text1"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:text="Sleepker is a sleep tracker and relaxation mobile application."
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -84,6 +88,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text2"
                 android:layout_marginTop="5dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:text="@string/intro"
                 android:lineSpacingExtra="1dp"
                 android:textColor="@color/subtitle"
@@ -106,7 +112,8 @@
                 android:layout_below="@id/text4"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="4dp"
-                android:layout_marginEnd="13dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:lineSpacingExtra="1dp"
                 android:text="@string/terms"
                 android:textColor="@color/subtitle"
@@ -119,6 +126,8 @@
                 android:text="@string/terms1"
                 android:layout_marginTop="6dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text5"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -139,6 +148,8 @@
                 android:text="@string/medical"
                 android:layout_marginTop="4dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text7"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -149,6 +160,8 @@
                 android:text="@string/medical1"
                 android:layout_marginTop="6dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text8"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -159,6 +172,8 @@
                 android:text="@string/use"
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text9"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -169,6 +184,8 @@
                 android:text="@string/use1"
                 android:layout_marginTop="6dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text10"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -179,6 +196,8 @@
                 android:text="@string/use2"
                 android:layout_marginTop="6dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text11"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -199,6 +218,8 @@
                 android:text="@string/bullet"
                 android:layout_marginStart="10dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_marginTop="5dp"
                 android:layout_below="@id/text13"
                 android:textColor="@color/subtitle"
@@ -210,6 +231,8 @@
                 android:text="@string/bullet1"
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_marginStart="10dp"
                 android:layout_below="@id/text14"
                 android:textColor="@color/subtitle"
@@ -222,6 +245,8 @@
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginStart="10dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text15"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -232,6 +257,8 @@
                 android:text="@string/bullet3"
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_marginStart="10dp"
                 android:layout_below="@id/text16"
                 android:textColor="@color/subtitle"
@@ -244,6 +271,8 @@
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginStart="10dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text17"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -255,6 +284,8 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginStart="10dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text18"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -266,6 +297,8 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginStart="10dp"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text19"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -277,6 +310,8 @@
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginStart="10dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text20"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -287,6 +322,8 @@
                 android:text="@string/bullet8"
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_marginStart="10dp"
                 android:layout_below="@id/text21"
                 android:textColor="@color/subtitle"
@@ -309,6 +346,8 @@
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="4dp"
                 android:layout_below="@id/text23"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
             <TextView
@@ -328,6 +367,8 @@
                 android:text="@string/ip"
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="4dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text25"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -338,6 +379,8 @@
                 android:text="@string/ip1"
                 android:lineSpacingExtra="1dp"
                 android:layout_marginTop="6dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_below="@id/text26"
                 android:textColor="@color/subtitle"
                 android:textSize="15dp"></TextView>
@@ -357,6 +400,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/copyright"
                 android:lineSpacingExtra="1dp"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word"
                 android:layout_marginTop="5dp"
                 android:layout_below="@id/text28"
                 android:textColor="@color/subtitle"
@@ -373,6 +418,8 @@
                     android:text="@string/cp1"
                     android:layout_marginTop="5dp"
                     android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
                     android:lineSpacingExtra="1dp"
                     android:textColor="@color/subtitle"
                     android:textSize="15dp"></TextView>
@@ -383,6 +430,8 @@
                     android:text="@string/cp2"
                     android:layout_marginTop="6dp"
                     android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
                     android:lineSpacingExtra="1dp"
                     android:layout_below="@id/text30"
                     android:textColor="@color/subtitle"
@@ -395,6 +444,8 @@
                     android:layout_marginTop="6dp"
                     android:layout_marginStart="10dp"
                     android:lineSpacingExtra="1dp"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
                     android:layout_below="@id/text31"
                     android:textColor="@color/subtitle"
                     android:textSize="15dp"></TextView>
@@ -406,6 +457,8 @@
                     android:layout_marginTop="6dp"
                     android:layout_marginStart="10dp"
                     android:lineSpacingExtra="1dp"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
                     android:layout_below="@id/text32"
                     android:textColor="@color/subtitle"
                     android:textSize="15dp"></TextView>
@@ -416,6 +469,8 @@
                     android:text="@string/cp5"
                     android:layout_marginTop="6dp"
                     android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
                     android:lineSpacingExtra="1dp"
                     android:layout_below="@id/text33"
                     android:textColor="@color/subtitle"
@@ -427,6 +482,8 @@
                     android:text="@string/cp6"
                     android:layout_marginTop="6dp"
                     android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
                     android:lineSpacingExtra="1dp"
                     android:layout_below="@id/text34"
                     android:textColor="@color/subtitle"
@@ -448,6 +505,8 @@
                     android:text="@string/ques"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="20dp"
+                    android:textAlignment="viewStart"
+                    android:justificationMode="inter_word"
                     android:lineSpacingExtra="1dp"
                     android:layout_below="@id/text36"
                     android:textColor="@color/subtitle"
@@ -458,12 +517,12 @@
 
 
     </ScrollView>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/buttons"
         android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView">
+        android:layout_alignParentBottom="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -512,4 +571,5 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

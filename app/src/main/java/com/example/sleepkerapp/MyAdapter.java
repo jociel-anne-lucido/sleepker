@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -49,6 +50,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 context.startActivity(intent);
             }
         });
+        int colorRes = position % 2 == 0 ? R.color.background : R.color.line;
+        int backgroundColor = ContextCompat.getColor(context, colorRes);
+        holder.itemView.setBackgroundColor(backgroundColor);
 
     }
 

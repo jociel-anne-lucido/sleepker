@@ -33,7 +33,7 @@ import java.io.IOException;
 
 public class Recording extends AppCompatActivity {
 
-    private Button stop_tracker;
+    private Button stop_tracker, alarm_buttons;
     private Chronometer timer;
     private long currentTime, timeInterval;
     private TextClock clock;

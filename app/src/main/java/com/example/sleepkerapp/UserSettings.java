@@ -114,6 +114,16 @@ public class UserSettings extends AppCompatActivity {
                 startActivityForResult(openGalleryIntent, 1000);
             }
         });
+        new_pass.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    // Start the next activity here
+                    Intent intent = new Intent(UserSettings.this, Password.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
     }
 
@@ -170,33 +180,25 @@ public class UserSettings extends AppCompatActivity {
     }
 
     private void UpdateData() {
-        if (!ValidateName() && !ValidateEmail() && !ValidatePass()) {
-            Toast.makeText(UserSettings.this, "No changes made.",Toast.LENGTH_SHORT).show();
-        }
-
-        else if (ValidateEmail() || ValidatePass()) {
-            if (ValidateEmail() && ValidatePass()) {
-                ValidatePass();
-            }
-
+        if (!ValidateName() && !ValidateEmail()) {
+            Toast.makeText(UserSettings.this, "No changes made.", Toast.LENGTH_SHORT).show();
+        } else if (ValidateEmail()) {
             Toast.makeText(UserSettings.this, "Data has been updated. Please login again to continue.",
                     Toast.LENGTH_LONG).show();
             progressBar.setVisibility(View.VISIBLE);
 
-            new Timer().schedule(
-                    new TimerTask(){
-                        @Override
-                        public void run() {
-                            auth.signOut();
-                            startActivity(new Intent(UserSettings.this, LoginActivity.class));
-                        }
-                    }, 8000);
-        }
-
-        else {
-            Toast.makeText(UserSettings.this, "Data has been updated.",Toast.LENGTH_SHORT).show();
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    auth.signOut();
+                    startActivity(new Intent(UserSettings.this, LoginActivity.class));
+                }
+            }, 8000);
+        } else {
+            Toast.makeText(UserSettings.this, "Data has been updated.", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     private boolean ValidateName() {
         name = new_name.getText().toString();
@@ -234,7 +236,6 @@ public class UserSettings extends AppCompatActivity {
             new_email.setError("No changes detected.");
             new_email.requestFocus();
             return false;
-
         } else {
             assert oldEmail != null;
             AuthCredential authCredential = EmailAuthProvider.getCredential(oldEmail, oldPass);
@@ -243,15 +244,28 @@ public class UserSettings extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     user.updateEmail(email).addOnCompleteListener(task1 -> {
                         if (task1.isSuccessful()) {
-                            HashMap hashMap = new HashMap();
+                            HashMap<String, Object> hashMap = new HashMap<>();
                             hashMap.put("EmailId", email);
-                            ref.child(uid).updateChildren(hashMap);
+                            ref.child(uid).updateChildren(hashMap)
+                                    .addOnCompleteListener(task2 -> {
+                                        if (task2.isSuccessful()) {
+                                            Toast.makeText(UserSettings.this, "Email updated successfully.", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(UserSettings.this, "Failed to update email in the database.", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                        } else {
+                            Toast.makeText(UserSettings.this, "Failed to update email.", Toast.LENGTH_SHORT).show();
                         }
                     });
+                } else {
+                    Toast.makeText(UserSettings.this, "Failed to reauthenticate.", Toast.LENGTH_SHORT).show();
                 }
-            }); return true;
+            });
+            return true;
         }
     }
+
 
     private boolean ValidatePass() {
         pass = new_pass.getText().toString();

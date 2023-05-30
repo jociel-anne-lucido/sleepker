@@ -48,7 +48,7 @@ public class Clock extends AppCompatActivity {
         record_button = findViewById(R.id.record_card);
         sleep_button = findViewById(R.id.sleep_card);
 
-        button_profile.setOnClickListener(v -> startActivity(new Intent(Clock.this, UserSettings.class)));
+        button_profile.setOnClickListener(v -> startActivity(new Intent(Clock.this, Settings.class)));
         moon_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Tracker.class)));
         notes_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Todo.class)));
         music_button.setOnClickListener(v -> startActivity(new Intent(Clock.this, Music.class)));

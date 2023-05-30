@@ -8,11 +8,14 @@
     <color name="boxbg">#9FC3C4</color>
     <color name="boxprev">#9FC3C4</color>
     <color name="button">#55737D</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#364B5B</color>
     <color name="white">#F2F5F4</color>
     <color name="whitesmoke">#A9A9A9</color>
     <color name="buttons">#C8E2E3</color>
     <color name="navig">#629D9E</color>
     <color name="edit">#E3EDF1</color>
+    <color name="bg1">#dde3e5</color>
+    <color name="bg">#E3EDF1</color>
+    <color name="line">#EAF2F2</color>
     <color name= "outline" tools:override= "true">#364B5B</color>
 </resources>
