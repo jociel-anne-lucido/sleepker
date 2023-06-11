@@ -103,7 +103,7 @@ public class UserSettings extends AppCompatActivity {
             startActivity(new Intent(UserSettings.this, LoginActivity.class));
         });
 
-        button_back.setOnClickListener(v -> startActivity(new Intent(UserSettings.this, Clock.class)));
+        button_back.setOnClickListener(v -> startActivity(new Intent(UserSettings.this, Settings.class)));
 
         button_update.setOnClickListener(v -> UpdateData());
         button_profile.setOnClickListener(new View.OnClickListener() {

@@ -985,7 +985,7 @@
                                     android:id="@+id/emailtxt"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="rjhstudio@gmail.com"
+                                    android:text="sleepkerapp@gmail.com"
                                     android:layout_marginTop="3dp"
                                     android:layout_marginBottom="3dp"
                                     android:lineSpacingExtra="1dp"

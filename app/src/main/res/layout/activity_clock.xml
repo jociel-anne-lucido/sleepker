@@ -426,6 +426,7 @@
                     android:id="@+id/profile"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
+                    android:scaleType="fitXY"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="36dp"
                     android:background="@drawable/user_pics"

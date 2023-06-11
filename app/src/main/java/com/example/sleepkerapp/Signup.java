@@ -84,14 +84,12 @@ public class Signup extends AppCompatActivity {
                         public void onClick(View view) {
                             alertDialog.dismiss();
                             checkBox.setChecked(true);
-                            Toast.makeText(Signup.this, "Accept", Toast.LENGTH_SHORT).show();
                         }
                     });
                     view.findViewById(R.id.decline_button).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             alertDialog.dismiss();
-                            Toast.makeText(Signup.this, "Decline", Toast.LENGTH_SHORT).show();
                             checkBox.setChecked(false);
                         }
                     });

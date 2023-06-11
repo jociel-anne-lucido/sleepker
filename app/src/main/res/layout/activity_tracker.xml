@@ -35,8 +35,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/con1"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="23dp"
-                android:layout_marginRight="23dp">
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp">
 
                 <TextView
                     android:id="@+id/sleep_txt"

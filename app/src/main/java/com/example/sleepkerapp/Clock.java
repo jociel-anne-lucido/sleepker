@@ -57,6 +57,17 @@ public class Clock extends AppCompatActivity {
         ShowDate();
         ShowGreetings();
 
+        auth = FirebaseAuth.getInstance();
+        ref = FirebaseDatabase.getInstance().getReference().child("UserData");
+        storageReference = FirebaseStorage.getInstance().getReference();
+        StorageReference profileRef = storageReference.child("users/"+auth.getCurrentUser().getUid()+"/profile.jpg");
+        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(button_profile);
+            }
+        });
+
 
         BottomNavigationView bottomNavigationView= (BottomNavigationView)findViewById(R.id.bottom_nav);
         bottomNavigationView.setSelectedItemId(R.id.home);

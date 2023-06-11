@@ -218,6 +218,7 @@
                     android:textColor="@color/heading"
                     app:hintAnimationEnabled="false"
                     app:hintEnabled="false"
+                    app:passwordToggleTint="@color/subtitle"
                     android:inputType="textVisiblePassword|textPassword"
                     app:layout_constraintEnd_toEndOf="@+id/logout_button"
                     app:layout_constraintStart_toStartOf="@+id/nameView"

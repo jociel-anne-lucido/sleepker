@@ -48,7 +48,7 @@
     <string name="todo">Before going to sleep, right down a list of things that have been swirling around your head today.</string>
     <!-- Terms -->
 
-    <string name="intro">These Terms of Use constitute a legal agreement (the “agreement”) between you and Sleepker, a service provided by Letalu.co. (“us”, “we”) for the use of the Sleepker mobile app (hereafter referred to as “the app” or “Sleepker”), the computer systems and files used by the application, and all related services, features and content provided by Sleepker within the app, on the website or social media channels.</string>
+    <string name="intro">These Terms of Use constitute a legal agreement (the “agreement”) between you and Sleepker, a service provided by RJH Studio (“us”, “we”) for the use of the Sleepker mobile app (hereafter referred to as “the app” or “Sleepker”), the computer systems and files used by the application, and all related services, features and content provided by Sleepker within the app, on the website or social media channels.</string>
     <string name="terms">Please read this agreement carefully. By using Sleepker’s services, you acknowledge your acceptance of and agreement to the terms in this agreement. If you do not agree to any of the terms in this agreement, please do not use the app.</string>
     <string name="terms1">We may make modifications to this agreement occasionally. Continued use of the app after the effective date of the updated version will indicate your acceptance of the new agreement.</string>
 
@@ -72,7 +72,7 @@
     <string name="equip"> Full use of Sleepker’s service requires the use of a mobile device and adequate software/hardware specifications. The maintenance and security of your device may impact upon the performance of Sleepker. It is your responsibility to check your equipment’s suitability to deliver the app’s features.</string>
 
     <string name="ip"> All rights, including any trademarks, service marks, trade names and copyrighted content (collectively “Intellectual Property”) presented within the app are the property of Letalu.co. We allow you a license to access Sleepker for personal and non-commercial use in accordance with the terms of this agreement.</string>
-    <string name="ip1"> Any rights that are not permitted within this agreement are reserved by Letalu.co. If you wish to use any features of Sleepker’s app for non-personal purposes, including but not limited to software, name, logo, domain name, unique terminologies or any feature associated with the Sleepker brand, you must obtain permission from the company. You can request this by contacting sleepkerapp@gmail.com</string>
+    <string name="ip1"> Any rights that are not permitted within this agreement are reserved by RJH Studio If you wish to use any features of Sleepker’s app for non-personal purposes, including but not limited to software, name, logo, domain name, unique terminologies or any feature associated with the Sleepker brand, you must obtain permission from the company. You can request this by contacting sleepkerapp@gmail.com</string>
 
     <string name="copyright"> If you believe that any content within the app infringes your copyright, you may request it be removed for the app by providing the following information:</string>
     <string name="cp1"> \u2022 Identification of the copyrighted material you believe to be infringed. This requires a description of the material and its location.</string>
